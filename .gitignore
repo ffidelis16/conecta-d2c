@@ -1,0 +1,4 @@
+.playwright-cli/
+node_modules/
+output/playwright/
+outputs/*.inspect.ndjson
