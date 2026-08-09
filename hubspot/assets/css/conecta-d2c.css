@@ -13,7 +13,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scrollbar-gutter: stable both-edges; }
 body.conecta-page { margin: 0; color: var(--cd-ink); font-family: "Plus Jakarta Sans", Arial, sans-serif; font-size: 16px; line-height: 1.5; background: #fff; }
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
@@ -66,17 +66,17 @@ h3 { margin-bottom: 10px; line-height: 1.25; }
 .conecta-nav.is-scrolled .button--nav { min-height: 40px; background: var(--cd-blue); border-color: var(--cd-blue); color: #fff; }
 
 /* Hub */
-.hub-hero, .event-hero { padding-top: 170px; background: linear-gradient(to bottom, var(--cd-blue) 0 80px, #fff 80px 100%); }
-.hub-hero { padding-bottom: 86px; overflow: hidden; }
+.hub-hero, .event-hero { padding-top: 155px; background: linear-gradient(to bottom, var(--cd-blue) 0 80px, #fff 80px 100%); }
+.hub-hero { padding-bottom: 120px; overflow: hidden; }
 .hub-hero__grid { display: grid; grid-template-columns: minmax(0, 520px) minmax(500px, 603px); align-items: start; justify-content: space-between; gap: 0; }
 .conecta-mark { width: 158px; height: 59px; margin-bottom: 22px; }
 .hub-hero h1 { max-width: 520px; font-size: clamp(44px, 3.7vw, 56px); font-weight: 400; line-height: 1.03; }
-.hub-hero h1 span { display: block; margin-top: 12px; color: var(--cd-blue); font-size: .56em; font-weight: 400; letter-spacing: -.035em; line-height: 1.18; }
+.hub-hero h1 span { display: block; margin-top: 2px; color: var(--cd-blue); font-size: .56em; font-weight: 400; letter-spacing: -.035em; line-height: 1.18; }
 .hub-hero__lead { max-width: 480px; margin: 24px 0 34px; font-size: 14px; line-height: 1.48; }
 .hub-hero .button { min-height: 40px; padding: 10px 22px; font-size: 12px; }
 .hub-hero__visual { position: relative; min-height: 426px; padding: 0; }
 .hub-hero__image { position: relative; z-index: 1; width: 100%; height: 360px; border-radius: 24px; object-fit: cover; object-position: 65% center; box-shadow: 0 18px 44px rgba(0,31,62,.16); }
-.hub-hero__community-seal { position: absolute; z-index: 2; top: 18px; left: -43px; width: 110px; height: 110px; }
+.hub-hero__community-seal { position: absolute; z-index: 2; top: 16px; left: 52%; width: 110px; height: 110px; transform: translateX(-50%); }
 .next-event-card { position: absolute; z-index: 3; bottom: -6px; left: 34px; width: min(292px, 72%); padding: 20px 22px; border-radius: 20px; background: #fff; box-shadow: 0 18px 44px rgba(0,31,62,.16); }
 .next-event-card__top { display: flex; justify-content: space-between; color: var(--cd-blue); font-size: 12px; font-weight: 800; letter-spacing: .1em; }
 .next-event-card__top strong { font-size: 23px; letter-spacing: 0; line-height: 1; }
