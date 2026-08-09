@@ -7,6 +7,8 @@ Este diretório contém dois templates exclusivos do Design Manager:
 
 Ambos carregam apenas `assets/css/conecta-d2c.css` e `assets/js/conecta-d2c.js`. Não editar templates compartilhados da Nuvemshop.
 
+Não abra esses templates diretamente por `file://`: as expressões `get_asset_url` são HubL. Para revisão sem portal, use os arquivos gerados em `../preview/`.
+
 ## Configuração antes de publicar
 
 1. Faça upload de `assets/` e `data/agenda-conecta-d2c.csv` para a estrutura equivalente no HubSpot.

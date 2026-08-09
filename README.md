@@ -8,6 +8,16 @@ A agenda pública será alimentada por uma tabela atualizável, publicada como C
 
 O modelo editável está em `outputs/modelo-tabela-agenda-conecta-d2c.xlsx`.
 
+## Prévia local
+
+Os arquivos em `hubspot/templates/` são fontes HubL e só recebem CSS, JavaScript e imagens quando renderizados pelo HubSpot. Para revisar no navegador sem publicar, abra `preview/index.html` (ou diretamente `preview/hub.html` e `preview/evento.html`).
+
+Depois de alterar um template, atualize a prévia com:
+
+```powershell
+node scripts/build-local-preview.mjs
+```
+
 ## Escopo implementado localmente
 
 - Hub de eventos com agenda pesquisável.
