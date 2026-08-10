@@ -327,7 +327,8 @@ html.motion-ready .conecta-hub [data-motion-arrival].is-visible .regional-card__
 .footer-socials a:nth-child(1) svg, .footer-socials a:nth-child(3) svg { fill: none; }
 .conecta-footer__bottom { display: flex; min-height: 201px; align-items: center; justify-content: space-between; gap: 40px; }
 .conecta-footer__bottom > img:first-child { width: 463px; max-width: 50%; height: 71px; transform: translateY(15px); object-fit: contain; object-position: left center; }
-.conecta-footer__brand { width: 397px; max-width: 34%; height: auto; transform: translateY(15px); filter: brightness(0) saturate(100%) invert(25%) sepia(92%) saturate(1767%) hue-rotate(199deg) brightness(89%) contrast(101%); }
+.conecta-footer__brand-link { display: block; width: 397px; max-width: 34%; transform: translateY(15px); }
+.conecta-footer__brand { display: block; width: 100%; max-width: 100%; height: auto; filter: brightness(0) saturate(100%) invert(25%) sepia(92%) saturate(1767%) hue-rotate(199deg) brightness(89%) contrast(101%); }
 html.motion-ready .conecta-hub [data-motion-footer] .footer-socials a { opacity: 0; transform: translateY(8px); }
 html.motion-ready .conecta-hub [data-motion-footer].is-visible .footer-socials a { animation: cd-motion-rise .32s var(--cd-ease-out) forwards; }
 html.motion-ready .conecta-hub [data-motion-footer].is-visible .footer-socials a:nth-child(1) { animation-delay: 0ms; }
@@ -494,10 +495,10 @@ html.motion-ready .conecta-hub .reveal.is-visible { opacity: 1; transform: trans
   .conecta-footer__meta > p { margin-bottom: 20px; font-size: 11px; line-height: 1.6; }
   .footer-meta__right { justify-content: space-between; gap: 16px; }
   .footer-socials { gap: 12px; }
-  .conecta-footer__bottom { min-height: 0; padding: 24px 0 36px; }
-  .conecta-footer__bottom > img:first-child { width: 208px; height: auto; max-width: 60%; }
-  .conecta-footer__bottom > img:first-child, .conecta-footer__brand { transform: none; }
-  .conecta-footer__brand { width: 126px; max-width: 36%; }
+  .conecta-footer__bottom { min-height: 0; gap: clamp(4px, 2vw, 10px); padding: 24px 0 36px; }
+  .conecta-footer__bottom > img:first-child { width: 57%; height: auto; max-width: 57%; }
+  .conecta-footer__bottom > img:first-child, .conecta-footer__brand-link { transform: none; }
+  .conecta-footer__brand-link { width: 34%; max-width: 34%; min-width: 0; flex: 0 1 34%; }
   .gallery-lightbox { padding: 14px; }
   .gallery-lightbox__panel { padding: 22px; border-radius: 22px; }
   .gallery-lightbox figure img { max-height: 58vh; border-radius: 14px; }
