@@ -733,3 +733,166 @@ html.motion-ready .conecta-event [data-motion-footer].is-visible .footer-socials
   .event-footer .conecta-footer__bottom > img:first-child { width: 56%; height: auto; }
   .event-footer .conecta-footer__brand-link { width: 34%; }
 }
+
+/* Fortaleza: reprodução do frame final do Figma. Não altera a página Hub. */
+body.conecta-event { overflow-x: clip; }
+
+body.conecta-event .button > span[aria-hidden="true"],
+body.conecta-event .text-link > span[aria-hidden="true"] { display: inline-block; transform-origin: left center; transition: transform .18s var(--cd-ease-out); }
+body.conecta-event .button:hover > span[aria-hidden="true"],
+body.conecta-event .button:focus-visible > span[aria-hidden="true"],
+body.conecta-event .text-link:hover > span[aria-hidden="true"],
+body.conecta-event .text-link:focus-visible > span[aria-hidden="true"] { transform: translateX(4px) scaleX(1.18); }
+body.conecta-event .text-link::after { position: absolute; right: 0; bottom: 0; left: 0; height: 1px; background: currentColor; content: ""; transform: scaleX(0); transform-origin: left; transition: transform .22s var(--cd-ease-out); }
+body.conecta-event .text-link:hover::after,
+body.conecta-event .text-link:focus-visible::after { transform: scaleX(1); }
+
+.event-nav .conecta-nav__inner { grid-template-columns: 160px minmax(0, 1fr) auto; }
+.event-nav__actions { display: flex; align-items: center; gap: 26px; }
+.event-nav__login { font-size: 13px; font-weight: 700; white-space: nowrap; }
+.event-nav .conecta-nav__links { gap: 23px; font-size: 12px; }
+.event-nav .conecta-nav__links a span { margin-left: 3px; font-size: 13px; }
+.event-nav.is-scrolled .event-nav__login { color: var(--cd-navy); }
+
+@media (min-width: 761px) {
+  .conecta-event .event-hero { height: 938px; padding: 80px 0 0; overflow: visible; background: linear-gradient(to bottom, var(--cd-blue) 0 80px, #fff 80px 100%); }
+  .conecta-event .event-hero__grid { display: grid; min-height: 858px; grid-template-columns: 579px minmax(0, 1fr); align-items: start; gap: 98px; }
+  .conecta-event .event-hero__content { position: relative; z-index: 2; padding-top: 115px; }
+  .conecta-event .event-hero .conecta-mark { width: 145px; height: auto; margin-bottom: 10px; }
+  .conecta-event .event-hero .eyebrow { margin-bottom: 0; color: #9bd4ff; font-size: 14px; line-height: 1.25; }
+  .conecta-event .event-hero h1 { max-width: 579px; margin: 48px 0 12px; font-size: 60px; font-weight: 400; letter-spacing: -.054em; line-height: 72px; }
+  .conecta-event .event-hero__content > p:not(.eyebrow) { max-width: 565px; margin: 0 0 39px; font-size: 13px; line-height: 20.25px; }
+  .conecta-event .event-hero .button { min-width: 0; min-height: 52px; padding: 12px 24px; font-size: 12px; }
+  .conecta-event .event-hero .button-group .button:first-child { width: 226px; }
+  .conecta-event .event-hero .button-group .button:last-child { width: 225px; }
+  .conecta-event .event-hero__visual { position: relative; min-height: 858px; height: 858px; margin: 0 calc(-1 * var(--cd-gutter)) 0 0; }
+  .conecta-event .event-hero__visual > img { width: 100%; height: 858px; border-radius: 0; object-fit: cover; object-position: center; }
+  .event-hero__community-seal { top: 126px; left: -56px; width: 144px; height: 144px; }
+  .conecta-event .quick-facts { right: 80px; bottom: 31px; width: 523px; min-height: 182px; padding: 18px 26px 16px; border-radius: 22px; box-shadow: 0 18px 44px rgba(0,31,62,.19); }
+  .conecta-event .quick-facts__heading { margin-bottom: 13px; }
+  .quick-facts__heading p { font-size: 12px; }
+  .conecta-event .quick-facts__items { grid-template-columns: 1.2fr 1fr 1.18fr; gap: 8px; }
+  .quick-facts__items > span { padding: 9px 11px; }
+  .conecta-event .quick-facts > p:last-child { margin-top: 11px; }
+
+  .conecta-event .venue-section { height: 800px; padding: 0; background: #f8f8f8; }
+  .conecta-event .venue-section__grid { display: grid; height: 800px; grid-template-columns: 620px minmax(0, 1fr); align-items: start; gap: 117px; }
+  .conecta-event .venue-gallery { width: 620px; min-height: 561px; margin-top: 119px; }
+  .conecta-event .venue-gallery__main { position: absolute; top: 0; left: -5px; width: 396px; height: 496px; border-radius: 30px; object-fit: cover; object-position: center; }
+  .conecta-event .venue-gallery__detail { position: absolute; z-index: 2; top: 90px; right: auto; left: 318px; width: 242px; height: 242px; border: 0; border-radius: 28px; box-shadow: 0 12px 26px rgba(0,31,62,.12); object-fit: cover; object-position: center; }
+  .conecta-event .venue-gallery__food { position: absolute; z-index: 3; right: auto; bottom: auto; left: 193px; top: 388px; width: 309px; height: 173px; border: 0; border-radius: 25px; box-shadow: 0 12px 26px rgba(0,31,62,.1); object-fit: cover; object-position: center; }
+  .conecta-event .venue-section__grid > div:last-child { padding-top: 197px; }
+  .conecta-event .venue-section .eyebrow { margin-bottom: 24px; font-size: 11px; }
+  .conecta-event .venue-section h2 { max-width: 388px; margin-bottom: 18px; font-size: 46px; line-height: 50px; }
+  .conecta-event .venue-section p:not(.eyebrow) { max-width: 498px; margin-bottom: 12px; font-size: 13px; line-height: 20px; }
+  .conecta-event .venue-section .button { min-height: 52px; padding: 12px 22px; font-size: 12px; }
+
+  .conecta-event .event-context { height: 638px; padding: 0; background: #fff; }
+  .conecta-event .event-context__grid { display: grid; height: 638px; grid-template-columns: 602px 540px; align-items: start; gap: 138px; }
+  .conecta-event .event-context__grid > div:first-child { padding-top: 120px; }
+  .conecta-event .event-context .eyebrow { margin-bottom: 26px; font-size: 11px; }
+  .conecta-event .event-context h2 { max-width: 618px; margin-bottom: 35px; font-size: 46px; line-height: 50px; }
+  .conecta-event .event-context__grid > div > p:last-child { max-width: 602px; font-size: 13px; line-height: 20px; }
+  .conecta-event .attendees-card { width: 540px; min-height: 402px; margin-top: 120px; padding: 56px 43px 42px; border-radius: 24px; }
+  .conecta-event .attendees-card .eyebrow { margin-bottom: 19px; font-size: 10px; }
+  .conecta-event .attendees-card h3 { margin-bottom: 27px; font-size: 30px; font-weight: 400; letter-spacing: -.05em; line-height: 1.14; }
+  .conecta-event .attendees-card ul { gap: 10px; font-size: 13px; }
+
+  .conecta-event .event-proof-strip { height: 237px; padding: 60px 0 0; background: var(--cd-soft); }
+  .conecta-event .event-proof-strip > p { margin-bottom: 23px; font-size: 14px; }
+  .conecta-event .event-proof-strip .proof-strip__track img { height: 51px; }
+
+  .conecta-event .program-section { height: 775px; padding: 102px 0 0; }
+  .conecta-event .program-section .section-heading { margin-bottom: 29px; }
+  .conecta-event .program-section .section-heading--split { grid-template-columns: 679px 391px; align-items: end; gap: 181px; }
+  .conecta-event .program-section .eyebrow { margin-bottom: 20px; font-size: 11px; }
+  .conecta-event .program-section h2 { max-width: 679px; margin: 0; font-size: 46px; line-height: 50px; }
+  .conecta-event .program-section .section-heading > p { max-width: 391px; margin: 0 0 5px; font-size: 13px; line-height: 20px; }
+  .conecta-event .program-grid { grid-template-columns: repeat(3, 400px); gap: 30px; }
+  .conecta-event .program-grid li { min-height: 390px; height: 390px; border-radius: 20px; }
+  .conecta-event .program-card__media { height: 190px; }
+  .conecta-event .program-card__body { position: relative; min-height: 200px; padding: 20px 26px 22px; }
+  .conecta-event .program-card__body > span { position: absolute; top: 210px; right: 26px; margin: 0; font-size: 28px; font-weight: 500; }
+  .conecta-event .program-card__body h3 { margin: 52px 0 12px; font-size: 16px; }
+  .conecta-event .program-card__body p { font-size: 12px; line-height: 17px; }
+  .conecta-event .program-card__media span { top: 19px; left: 24px; width: 28px; height: 28px; }
+
+  .conecta-event .guests-section { height: 907px; padding: 120px 0 0; }
+  .conecta-event .guests-section .section-heading { margin-bottom: 87px; }
+  .conecta-event .guests-section .section-heading--split { grid-template-columns: 532px 430px; align-items: end; gap: 288px; }
+  .conecta-event .guests-section .eyebrow { margin-bottom: 20px; font-size: 11px; }
+  .conecta-event .guests-section h2 { max-width: 532px; margin: 0; font-size: 46px; line-height: 50px; }
+  .conecta-event .guests-section .section-heading > p { max-width: 430px; margin: 0 0 5px; font-size: 13px; line-height: 20px; }
+  .conecta-event .guest-grid { grid-template-columns: 540px 330px 350px; gap: 30px; }
+  .conecta-event .guest-card { height: 480px; border-radius: 24px; }
+  .conecta-event .guest-card > img, .conecta-event .guest-card--lead > img { height: 290px; }
+  .conecta-event .guest-card > div:last-child { padding: 27px 26px; }
+  .conecta-event .guest-card .eyebrow { margin-bottom: 14px; font-size: 10px; }
+  .conecta-event .guest-card h3 { margin-bottom: 12px; font-size: 21px; font-weight: 500; }
+  .conecta-event .guest-card p:not(.eyebrow) { font-size: 12px; line-height: 17px; }
+  .conecta-event .guest-card__pair, .conecta-event .guest-card__pair img { height: 290px; }
+  .conecta-event .guest-card--invited > div:last-child { padding: 24px 26px; }
+  .conecta-event .guest-card--invited h3:nth-of-type(2) { margin-top: 18px; }
+
+  .conecta-event .partners-section { height: 216px; padding: 0; }
+  .conecta-event .partners-section .container { display: grid; height: 216px; grid-template-columns: 290px 1fr; align-items: center; gap: 127px; }
+  .conecta-event .partners-section .eyebrow { margin-bottom: 10px; font-size: 10px; }
+  .conecta-event .partners-section h2 { font-size: 20px; line-height: 23px; }
+  .conecta-event .partner-logos { grid-template-columns: repeat(4, 1fr); gap: 35px; }
+  .conecta-event .partner-logos img { max-width: 175px; max-height: 100px; }
+
+  .conecta-event .location-section { height: 664px; padding: 120px 0; }
+  .conecta-event .location-section__grid { display: grid; grid-template-columns: 676px minmax(0, 1fr); align-items: start; gap: 64px; }
+  .conecta-event .location-visuals { grid-template-columns: 198px 453px; gap: 25px; height: 424px; }
+  .conecta-event .location-visuals .location-map, .conecta-event .location-photo { border-radius: 22px; }
+  .conecta-event .location-section .eyebrow { margin-bottom: 24px; font-size: 11px; }
+  .conecta-event .location-section h2 { margin-bottom: 22px; font-size: 46px; line-height: 50px; }
+  .conecta-event .location-section p:not(.eyebrow) { margin-bottom: 22px; font-size: 13px; line-height: 20px; }
+  .conecta-event .location-list { gap: 13px; margin-bottom: 23px; font-size: 13px; line-height: 20px; }
+  .conecta-event .location-list li { padding-left: 34px; }
+  .conecta-event .location-section .text-link { font-size: 12px; }
+
+  .conecta-event .event-final-cta { height: 701px; padding: 0; }
+  .conecta-event .event-final-cta__card { display: grid; height: 701px; min-height: 0; grid-template-columns: 694px minmax(0, 1fr); align-items: start; gap: 114px; }
+  .conecta-event .event-final-cta__card > div { padding: 120px 0 0; }
+  .conecta-event .event-final-cta .eyebrow { margin-bottom: 19px; font-size: 11px; }
+  .conecta-event .event-final-cta h2 { max-width: 694px; margin-bottom: 14px; font-size: 46px; line-height: 50px; }
+  .conecta-event .event-final-cta > .event-final-cta__card p:not(.eyebrow) { max-width: 576px; margin-bottom: 23px; font-size: 13px; line-height: 20px; }
+  .conecta-event .event-final-cta .button { min-height: 52px; padding: 12px 24px; font-size: 12px; }
+  .event-final-cta__image { width: calc(100% + var(--cd-gutter)); height: 701px; margin-right: calc(-1 * var(--cd-gutter)); border-radius: 0; object-position: center; }
+
+  .conecta-event .event-footer { height: 495px; padding: 44px 0 0; }
+  .conecta-event .event-footer .conecta-footer__meta { min-height: 110px; }
+  .conecta-event .event-footer .conecta-footer__bottom { min-height: 192px; }
+  .conecta-event .event-footer .conecta-footer__bottom > img:first-child { width: 463px; height: 71px; }
+  .conecta-event .event-footer .conecta-footer__brand-link { width: 397px; }
+}
+
+@media (max-width: 1180px) and (min-width: 761px) {
+  .conecta-event .event-hero__grid { grid-template-columns: minmax(0, 579px) minmax(0, 1fr); gap: clamp(42px, 6vw, 98px); }
+  .conecta-event .venue-section__grid { grid-template-columns: minmax(500px, 620px) minmax(0, 1fr); gap: 70px; }
+  .conecta-event .event-context__grid { grid-template-columns: minmax(0, 1fr) 450px; gap: 70px; }
+  .conecta-event .event-context__grid > div:first-child { max-width: 602px; }
+  .conecta-event .attendees-card { width: 450px; }
+  .conecta-event .program-section .section-heading--split { grid-template-columns: minmax(0, 1fr) 330px; gap: 75px; }
+  .conecta-event .program-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .conecta-event .guests-section .section-heading--split { grid-template-columns: minmax(0, 1fr) 330px; gap: 85px; }
+  .conecta-event .guest-grid { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+  .conecta-event .location-section__grid { grid-template-columns: 590px minmax(0, 1fr); gap: 50px; }
+  .conecta-event .location-visuals { grid-template-columns: 174px minmax(0, 1fr); }
+  .conecta-event .event-final-cta__card { grid-template-columns: minmax(0, 1fr) minmax(0, .72fr); gap: 70px; }
+}
+
+@media (max-width: 760px) {
+  .conecta-event .event-hero { height: auto; padding: 116px 0 68px; }
+  .conecta-event .event-hero h1 { margin: 28px 0 18px; font-size: 39px; line-height: 1.13; }
+  .conecta-event .event-hero__visual { margin-top: 34px; }
+  .conecta-event .event-hero__visual > img { border-radius: 26px; object-position: center; }
+  .conecta-event .venue-gallery__detail, .conecta-event .venue-gallery__food { border: 0; box-shadow: 0 10px 22px rgba(0,31,62,.12); }
+  .conecta-event .venue-gallery__food { left: auto; }
+  .conecta-event .event-final-cta { height: auto; }
+  .conecta-event .event-footer { height: auto; }
+  .conecta-event .event-footer .conecta-footer__meta, .conecta-event .event-footer .conecta-footer__bottom { min-height: 0; }
+  .conecta-event .event-footer .conecta-footer__bottom > img:first-child { width: 56%; height: auto; }
+  .conecta-event .event-footer .conecta-footer__brand-link { width: 34%; }
+}
