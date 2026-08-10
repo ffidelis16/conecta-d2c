@@ -10,6 +10,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0050c3">
+  <script>document.documentElement.classList.add("motion-ready");</script>
   <title>{{ page_meta.html_title }}</title>
   <meta name="description" content="{{ page_meta.meta_description|escape_attr }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,31 +21,161 @@
 </head>
 <body class="conecta-page conecta-event" data-conecta-app data-page="event" data-hubspot-portal-id="8180620" data-form-regional-interest="" data-form-event-pre-registration="" data-form-event-registration="">
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <header class="conecta-nav" data-conecta-nav>
-    <div class="conecta-nav__inner"><a class="brand" href="https://www.nuvemshop.com.br/" aria-label="Nuvemshop"><img src="{{ get_asset_url('../assets/images/nuvemshop-logo.svg') }}" alt="Nuvemshop" width="159" height="26"></a><button class="conecta-nav__toggle" type="button" aria-expanded="false" aria-controls="conecta-nav-links" data-nav-toggle><span class="sr-only">Abrir navegação</span><span></span><span></span><span></span></button><nav class="conecta-nav__links" id="conecta-nav-links" aria-label="Navegação do evento"><a href="#experiencia">A experiência</a><a href="#programacao">Programação</a><a href="#local">Local e acesso</a></nav><button class="button button--nav" type="button" data-open-form="event_registration" data-cta="nav-event-registration" data-event-id="fortaleza-2026-08-20" data-event-name="Conecta D2C Fortaleza">Confirmar presença</button></div>
+
+  <header class="conecta-nav event-nav" data-conecta-nav>
+    <div class="conecta-nav__inner">
+      <a class="brand" href="https://www.nuvemshop.com.br/" aria-label="Nuvemshop">
+        <img src="{{ get_asset_url('../assets/images/nuvemshop-logo.svg') }}" alt="Nuvemshop" width="159" height="26">
+      </a>
+      <button class="conecta-nav__toggle" type="button" aria-expanded="false" aria-controls="conecta-nav-links" data-nav-toggle>
+        <span class="sr-only">Abrir navegação</span><span></span><span></span><span></span>
+      </button>
+      <nav class="conecta-nav__links" id="conecta-nav-links" aria-label="Navegação Nuvemshop">
+        <a href="https://www.nuvemshop.com.br/">Soluções <span aria-hidden="true">⌄</span></a>
+        <a href="https://www.nuvemshop.com.br/">Plataforma <span aria-hidden="true">⌄</span></a>
+        <a href="https://www.nuvemshop.com.br/planos-e-precos">Preços</a>
+        <a href="https://www.nuvemshop.com.br/">Recursos <span aria-hidden="true">⌄</span></a>
+        <a href="https://www.nuvemshop.com.br/">Parceiros <span aria-hidden="true">⌄</span></a>
+      </nav>
+      <div class="event-nav__actions">
+        <a class="event-nav__login" href="https://www.nuvemshop.com.br/login">◉&nbsp; Login</a>
+        <a class="button button--nav" href="https://www.nuvemshop.com.br/">Criar loja grátis</a>
+      </div>
+    </div>
   </header>
 
   <main id="conteudo">
     <section class="event-hero section" id="topo">
-      <div class="container event-hero__grid"><div class="event-hero__content reveal"><img class="conecta-mark" src="{{ get_asset_url('../assets/images/logo-conecta-d2c.svg') }}" alt="Conecta D2C" width="158" height="59"><p class="eyebrow">FORTALEZA · CE</p><h1>Negócios, conteúdos e conexões em um fim de tarde <em>à beira-mar.</em></h1><p>No dia 20 de agosto, <strong>Nuvemshop</strong> e <strong>Salte Commerce</strong> reúnem marcas, lideranças e especialistas no <strong>Esttaleiro Parrilla do Mar</strong> para trocar experiências, ampliar repertório e criar conexões de negócio.</p><div class="button-group"><button class="button" type="button" data-open-form="event_registration" data-cta="hero-event-registration" data-event-id="fortaleza-2026-08-20" data-event-name="Conecta D2C Fortaleza">Confirmar presença <span aria-hidden="true">→</span></button><a class="button button--outline" href="#experiencia">Conhecer a experiência</a></div></div><div class="event-hero__visual reveal"><img src="{{ get_asset_url('../assets/images/fortaleza-hero.png') }}" alt="Orla de Fortaleza no pôr do sol" width="1536" height="1024" fetchpriority="high"><article class="quick-facts"><p>FORTALEZA, CE</p><div><span><small>DATA</small><strong>20 de agosto</strong></span><span><small>HORÁRIO</small><strong>16h30</strong></span><span><small>LOCAL</small><strong>Cais do Porto</strong></span></div><p><strong>Esttaleiro Parrilla do Mar</strong> · somente para convidados</p></article></div></div>
+      <div class="container event-hero__grid">
+        <div class="event-hero__content reveal">
+          <img class="conecta-mark" src="{{ get_asset_url('../assets/images/logo-conecta-d2c.svg') }}" alt="Conecta D2C" width="158" height="59">
+          <p class="eyebrow">FORTALEZA · CE</p>
+          <h1>Negócios, conteúdos e conexões em um fim de tarde <em>à beira-mar.</em></h1>
+          <p>No dia 20 de agosto, <strong>Nuvemshop</strong> e <strong>Salte Commerce</strong> reúnem marcas, lideranças e especialistas no <strong>Esttaleiro Parrilla do Mar</strong> para trocar experiências, ampliar repertório e criar conexões de negócio.</p>
+          <div class="button-group">
+            <button class="button" type="button" data-open-form="event_registration" data-cta="hero-event-registration" data-event-id="fortaleza-2026-08-20" data-event-name="Conecta D2C Fortaleza">Confirmar presença <span aria-hidden="true">→</span></button>
+            <a class="button button--outline" href="#experiencia">Conhecer a experiência <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="event-hero__visual reveal">
+          <img src="{{ get_asset_url('../assets/images/fortaleza-venue-hero.webp') }}" alt="Esttaleiro Parrilla do Mar em Fortaleza ao pôr do sol" width="1536" height="1024" fetchpriority="high">
+          <span class="event-hero__community-seal" aria-hidden="true">
+            <img class="event-hero__community-seal-ring" src="{{ get_asset_url('../assets/images/selo-d2c.svg') }}" alt="">
+            <img class="event-hero__community-seal-icon" src="{{ get_asset_url('../assets/images/selo-d2c-icon.svg') }}" alt="">
+          </span>
+          <article class="quick-facts" aria-label="Informações do evento">
+            <div class="quick-facts__heading"><p>FORTALEZA, CE</p><span aria-hidden="true">☀</span></div>
+            <div class="quick-facts__items">
+              <span><small>DATA</small><strong>20 de agosto</strong></span>
+              <span><small>HORÁRIO</small><strong>16h30</strong></span>
+              <span><small>LOCAL</small><strong>Cais do Porto</strong></span>
+            </div>
+            <p><strong>Esttaleiro Parrilla do Mar</strong> · somente para convidados</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section class="venue-section section section--soft" id="experiencia"><div class="container venue-section__grid"><div class="venue-gallery reveal"><img class="venue-gallery__main" src="{{ get_asset_url('../assets/images/conecta-experience.webp') }}" alt="Experiência de uma edição Conecta D2C" width="1200" height="1274" loading="lazy"><img class="venue-gallery__detail" src="{{ get_asset_url('../assets/images/conecta-detail.webp') }}" alt="Detalhe da experiência Conecta D2C" width="800" height="650" loading="lazy"></div><div class="reveal"><p class="eyebrow">A EXPERIÊNCIA COMEÇA PELO LUGAR</p><h2>O cenário não é só fundo. <em>É parte do encontro.</em></h2><p>No <strong>Esttaleiro Parrilla do Mar</strong>, no Cais do Porto, o encontro acontece entre pôr do sol, gastronomia e o mar. Um ambiente pensado para conteúdo aplicável, conversas próximas e conexões fora do formato convencional de evento.</p><a class="button" href="#local">Ver local e acesso <span aria-hidden="true">→</span></a></div></div></section>
+    <section class="venue-section section section--soft" id="experiencia">
+      <div class="container venue-section__grid">
+        <div class="venue-gallery reveal">
+          <img class="venue-gallery__main" src="{{ get_asset_url('../assets/images/fortaleza-sunset.webp') }}" alt="Pôr do sol visto do Esttaleiro Parrilla do Mar" width="2048" height="2048" loading="lazy">
+          <img class="venue-gallery__detail" src="{{ get_asset_url('../assets/images/fortaleza-terrace.webp') }}" alt="Terraço do Esttaleiro Parrilla do Mar" width="2048" height="2048" loading="lazy">
+          <img class="venue-gallery__food" src="{{ get_asset_url('../assets/images/fortaleza-food.webp') }}" alt="Gastronomia do Esttaleiro Parrilla do Mar" width="2048" height="2048" loading="lazy">
+        </div>
+        <div class="reveal">
+          <p class="eyebrow">A EXPERIÊNCIA COMEÇA PELO LUGAR</p>
+          <h2>O cenário não é só fundo. <em>É parte do encontro.</em></h2>
+          <p>No <strong>Esttaleiro Parrilla do Mar</strong>, no Cais do Porto, o encontro acontece entre pôr do sol, gastronomia e o mar. Um ambiente pensado para conteúdo aplicável, conversas próximas e conexões fora do formato convencional de evento.</p>
+          <a class="button" href="#local">Ver local e acesso <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
 
-    <section class="event-context section" id="contexto"><div class="container event-context__grid"><div class="reveal"><p class="eyebrow">POR QUE ESTA EDIÇÃO EXISTE</p><h2>Uma conversa próxima sobre os desafios de <em>construir e fazer crescer marcas no comércio digital.</em></h2><p>Na edição de Fortaleza, fundadores, lideranças, gestores e especialistas do ecossistema cearense colocam experiências reais na mesa: decisões, aprendizados, referências e caminhos que estão testando agora.</p></div><article class="attendees-card reveal"><p class="eyebrow">QUEM ESTARÁ NA SALA</p><h3>Uma sala formada por quem constrói o comércio digital da região.</h3><ul><li>Fundadores e lideranças de marcas</li><li>Gestores de e-commerce e marketing</li><li>Especialistas e parceiros do ecossistema</li></ul></article></div></section>
+    <section class="event-context section" id="contexto">
+      <div class="container event-context__grid">
+        <div class="reveal">
+          <p class="eyebrow">POR QUE ESTA EDIÇÃO EXISTE</p>
+          <h2>Uma conversa próxima sobre os desafios de <em>construir e fazer crescer marcas no comércio digital.</em></h2>
+          <p>Na edição de Fortaleza, fundadores, lideranças, gestores e especialistas do ecossistema cearense colocam experiências reais na mesa: decisões, aprendizados, referências e caminhos que estão testando agora.</p>
+        </div>
+        <article class="attendees-card reveal">
+          <p class="eyebrow">QUEM ESTARÁ NA SALA</p>
+          <h3>Uma sala formada por quem constrói o comércio digital da região.</h3>
+          <ul><li>Fundadores e lideranças de marcas</li><li>Gestores de e-commerce e marketing</li><li>Especialistas e parceiros do ecossistema</li></ul>
+        </article>
+      </div>
+    </section>
 
-    <section class="program-section section" id="programacao"><div class="container"><div class="section-heading section-heading--split"><div><p class="eyebrow">UMA TARDE PARA</p><h2>Conteúdo, troca e experiência no mesmo encontro.</h2></div><p>Uma programação leve, próxima e focada em conversa relevante para quem toma decisões no e-commerce.</p></div><ol class="program-grid"><li class="reveal"><span>01</span><h3>Chegada e recepção</h3><p>Tempo para chegar, conhecer o espaço e iniciar as primeiras conversas.</p></li><li class="reveal"><span>02</span><h3>Conteúdo e conexões</h3><p>Trocas sobre operação, crescimento e os desafios de fazer marcas avançarem.</p></li><li class="reveal"><span>03</span><h3>Experiência à beira-mar</h3><p>Um fim de tarde pensado para estender boas conversas e relações.</p></li></ol></div></section>
+    <section class="proof-strip event-proof-strip" aria-label="Lojas que vendem com a Nuvemshop">
+      <p>Algumas das mais de 100 mil lojas que vendem com a gente</p>
+      <div class="proof-strip__marquee" aria-hidden="true"><div class="proof-strip__track"><img src="{{ get_asset_url('../assets/images/store-logos.png') }}" alt=""><img src="{{ get_asset_url('../assets/images/store-logos.png') }}" alt=""></div></div>
+    </section>
 
-    <section class="guests-section section" id="convidados"><div class="container"><div class="section-heading"><p class="eyebrow">CONVIDADOS</p><h2>Quem recebe e participa desta edição.</h2></div><div class="guest-grid"><article class="guest-card"><img src="{{ get_asset_url('../assets/images/tati-e-erlon.jpg') }}" alt="Tati Carneiro e Erlon Felipe" width="800" height="533" loading="lazy"><div><h3>Tati Carneiro + Erlon Felipe</h3><p>Salte Commerce</p></div></article><article class="guest-card"><img src="{{ get_asset_url('../assets/images/maria-lucia.jpg') }}" alt="Maria Lucia Negrão" width="800" height="533" loading="lazy"><div><h3>Maria Lucia Negrão</h3><p>Lenita</p></div></article><article class="guest-card"><img src="{{ get_asset_url('../assets/images/gabriela-dias.jpg') }}" alt="Gabriela Dias" width="800" height="533" loading="lazy"><div><h3>Gabriela Dias</h3><p>Afterclick</p></div></article><article class="guest-card"><img src="{{ get_asset_url('../assets/images/flavio-matheus.jpeg') }}" alt="Flávio Matheus" width="800" height="533" loading="lazy"><div><h3>Flávio Matheus</h3><p>YSSA Marketing</p></div></article></div></div></section>
+    <section class="program-section section" id="programacao">
+      <div class="container">
+        <div class="section-heading section-heading--split">
+          <div><p class="eyebrow">UMA TARDE PARA</p><h2>Conteúdo, troca e experiência no mesmo encontro.</h2></div>
+          <p>Sem palco distante ou formalidade: a tarde alterna conteúdo, conversa e tempo para as conexões acontecerem.</p>
+        </div>
+        <ol class="program-grid">
+          <li class="reveal"><div class="program-card__media"><img src="{{ get_asset_url('../assets/images/program-reception.webp') }}" alt="Público em uma edição do Conecta D2C" width="2048" height="2048" loading="lazy"><span aria-hidden="true">◌</span></div><div class="program-card__body"><span>01</span><h3>Painel especial</h3><p>Experiências e perspectivas de quem está construindo marcas e negócios digitais.</p></div></li>
+          <li class="reveal"><div class="program-card__media"><img src="{{ get_asset_url('../assets/images/program-connections.webp') }}" alt="Convidados reunidos em uma edição do Conecta D2C" width="2048" height="2048" loading="lazy"><span aria-hidden="true">↔</span></div><div class="program-card__body"><span>02</span><h3>Conexões entre convidados</h3><p>Tempo de verdade para aproximar marcas, especialistas e parceiros da região.</p></div></li>
+          <li class="reveal"><div class="program-card__media"><img src="{{ get_asset_url('../assets/images/fortaleza-terrace.webp') }}" alt="Vista do Esttaleiro Parrilla do Mar" width="2048" height="2048" loading="lazy"><span aria-hidden="true">✦</span></div><div class="program-card__body"><span>03</span><h3>Experiência no Esttaleiro</h3><p>Um fim de tarde para estender as boas conversas e relações.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="guests-section section" id="convidados">
+      <div class="container">
+        <div class="section-heading section-heading--split">
+          <div><p class="eyebrow">CONVIDADOS</p><h2>Quem recebe e participa desta edição.</h2></div>
+          <p>Quem conduz o encontro e traz novas perspectivas para a conversa desta edição.</p>
+        </div>
+        <div class="guest-grid">
+          <article class="guest-card guest-card--lead reveal"><img src="{{ get_asset_url('../assets/images/tati-e-erlon-fortaleza.jpg') }}" alt="Tati Carneiro e Erlon Felipe" width="1600" height="1067" loading="lazy"><div><p class="eyebrow">REALIZAÇÃO E CONDUÇÃO</p><h3>Tati Carneiro + Erlon Felipe</h3><p>Fundadora e CEO · COO e Head de Projetos · Salte Commerce</p></div></article>
+          <article class="guest-card reveal"><img src="{{ get_asset_url('../assets/images/maria-lucia-fortaleza.webp') }}" alt="Maria Lúcia Negrão" width="1600" height="1067" loading="lazy"><div><p class="eyebrow">PAINEL ESPECIAL</p><h3>Maria Lúcia Negrão</h3><p>CEO da Lenita</p></div></article>
+          <article class="guest-card guest-card--invited reveal"><div class="guest-card__pair"><img src="{{ get_asset_url('../assets/images/gabriella-tavares.jpg') }}" alt="Gabriella Tavares" width="800" height="800" loading="lazy"><img src="{{ get_asset_url('../assets/images/vivi-almada.jpg') }}" alt="Vivi Almada" width="800" height="800" loading="lazy"></div><div><p class="eyebrow">PRESENÇAS CONVIDADAS</p><h3>Gabriella Tavares</h3><p>Fashion Influencer</p><h3>Vivi Almada</h3><p>Empresária e Influencer</p></div></article>
+        </div>
+      </div>
+    </section>
 
     <section class="partners-section"><div class="container"><div><p class="eyebrow">COM PARTICIPAÇÃO DE</p><h2>Ecossistema que amplia a experiência.</h2></div><div class="partner-logos"><img src="{{ get_asset_url('../assets/images/salte-logo.png') }}" alt="Salte Commerce" loading="lazy"><img src="{{ get_asset_url('../assets/images/revi-logo.png') }}" alt="Revi" loading="lazy"><img src="{{ get_asset_url('../assets/images/afterclick-logo.png') }}" alt="Afterclick" loading="lazy"><img src="{{ get_asset_url('../assets/images/yssa-logo.png') }}" alt="YSSA" loading="lazy"></div></div></section>
 
-    <section class="location-section section section--soft" id="local"><div class="container location-section__grid"><div class="location-map reveal"><img src="{{ get_asset_url('../assets/images/fortaleza-hero.png') }}" alt="Vista aérea de Fortaleza" width="1536" height="1024" loading="lazy"><span>Esttaleiro<br>Parrilla do Mar</span></div><div class="reveal"><p class="eyebrow">LOCAL E ACESSO</p><h2>Uma tarde para <em>trocar referências, ampliar repertório e criar conexões</em> que continuam depois do encontro.</h2><p><strong>Esttaleiro Parrilla do Mar</strong><br>Cais do Porto · Fortaleza, CE<br>20 de agosto · 16h30</p><a class="button" href="https://maps.google.com/?q=Esttaleiro+Parrilla+do+Mar+Fortaleza" target="_blank" rel="noopener">Abrir no mapa <span aria-hidden="true">→</span></a></div></div></section>
+    <section class="location-section section" id="local">
+      <div class="container location-section__grid">
+        <div class="location-visuals reveal">
+          <div class="location-map"><img src="{{ get_asset_url('../assets/images/fortaleza-map.webp') }}" alt="Mapa ilustrado do Cais do Porto, em Fortaleza" width="1080" height="1920" loading="lazy"><span>CAIS DO<br>PORTO</span></div>
+          <img class="location-photo" src="{{ get_asset_url('../assets/images/fortaleza-venue-hero.webp') }}" alt="Esttaleiro Parrilla do Mar ao entardecer" width="1536" height="1024" loading="lazy">
+        </div>
+        <div class="reveal">
+          <p class="eyebrow">TUDO PARA CHEGAR SEM DÚVIDA</p>
+          <h2><em>Esttaleiro<br>Parrilla do Mar</em></h2>
+          <p>Rua Benedito Macedo, 50 · Cais do Porto · Fortaleza, CE</p>
+          <ul class="location-list"><li>Chegada a partir de 16h30</li><li>Somente para convidados</li><li>Orientações de acesso serão enviadas aos convidados confirmados</li></ul>
+          <a class="text-link" href="https://maps.google.com/?q=Esttaleiro+Parrilla+do+Mar+Fortaleza" target="_blank" rel="noopener">Abrir no mapa <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
 
-    <section class="event-final-cta section"><div class="container"><p class="eyebrow">FORTALEZA · 20 DE AGOSTO</p><h2>Uma conversa que começa no encontro e segue na prática.</h2><button class="button button--light" type="button" data-open-form="event_registration" data-cta="final-event-registration" data-event-id="fortaleza-2026-08-20" data-event-name="Conecta D2C Fortaleza">Confirmar presença <span aria-hidden="true">→</span></button></div></section>
+    <section class="event-final-cta section">
+      <div class="container event-final-cta__card">
+        <div class="reveal"><p class="eyebrow">20 DE AGOSTO · FORTALEZA</p><h2>Uma tarde para <em>trocar referências, ampliar repertório e criar conexões</em> que continuam depois do encontro.</h2><p>Confirme sua presença no Conecta D2C Fortaleza e encontre marcas, lideranças e especialistas do comércio digital.</p><button class="button" type="button" data-open-form="event_registration" data-cta="final-event-registration" data-event-id="fortaleza-2026-08-20" data-event-name="Conecta D2C Fortaleza">Confirmar presença <span aria-hidden="true">→</span></button></div>
+        <img class="event-final-cta__image reveal" src="{{ get_asset_url('../assets/images/fortaleza-hero.png') }}" alt="Orla de Fortaleza ao pôr do sol" width="1536" height="1024" loading="lazy">
+      </div>
+    </section>
   </main>
 
-  <footer class="conecta-footer"><div class="container conecta-footer__grid"><div><a href="https://www.nuvemshop.com.br/"><img src="{{ get_asset_url('../assets/images/nuvemshop-logo.svg') }}" alt="Nuvemshop" width="159" height="26"></a><p>Eventos que aproximam quem constrói o comércio digital.</p></div><div><h2>Conecta D2C</h2><a href="/eventos/conecta-d2c">Agenda</a><a href="#programacao">Programação</a><a href="#local">Local e acesso</a></div><div><h2>Links</h2><a href="https://www.nuvemshop.com.br/">Nuvemshop</a><a href="https://atendimento.nuvemshop.com.br/">Central de Atendimento</a><a href="https://www.nuvemshop.com.br/termos-de-uso">Termos</a><a href="https://www.nuvemshop.com.br/politica-de-privacidade">Privacidade</a></div></div><div class="container conecta-footer__legal">2011–2026 © Nuvemshop · Termos · Privacidade · Cookies</div></footer>
+  <footer class="conecta-footer event-footer" data-motion-footer>
+    <div class="container conecta-footer__meta">
+      <p>2011–2026 © Nuvemshop | Termos | Privacidade | Cookies | Mapa do site</p>
+      <div class="footer-meta__right">
+        <span class="footer-country"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M3.5 12h17M12 3.5c2.8 3 2.8 14 0 17M12 3.5c-2.8 3-2.8 14 0 17"></path></svg>Brasil⌄</span>
+        <div class="footer-socials"><a href="https://www.instagram.com/nuvemshop/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.4" cy="6.7" r="1"></circle></svg></a><a href="https://www.youtube.com/@nuvemshop" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor" stroke="none"></rect><path d="m10 9 5 3-5 3Z" fill="#fff" stroke="none"></path></svg></a><a href="https://x.com/nuvemshop" target="_blank" rel="noopener noreferrer" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5 18.5 19.5M19 4.5 5.5 19.5" stroke="currentColor" stroke-width="2.5"></path></svg></a><a href="https://www.linkedin.com/company/nuvemshop/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2" fill="currentColor" stroke="none"></rect><path d="M7 10v7M7 7v.1M11 17v-4c0-1.7 1-3 2.8-3S17 11.3 17 13v4M11 10v7" stroke="#fff" stroke-width="1.8"></path></svg></a><a href="https://www.facebook.com/nuvemshop/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.8 21v-8h2.8l.4-3h-3.2V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.4V10H7.5v3h2.9v8h3.4Z" fill="currentColor" stroke="none"></path></svg></a></div>
+      </div>
+    </div>
+    <div class="container conecta-footer__bottom"><img src="{{ get_asset_url('../assets/images/footer-abccomm.png') }}" alt="Melhor plataforma de e-commerce"><a class="conecta-footer__brand-link" href="https://www.nuvemshop.com.br/"><img class="conecta-footer__brand" src="{{ get_asset_url('../assets/images/nuvemshop-logo.svg') }}" alt="Nuvemshop" width="317" height="52"></a></div>
+  </footer>
 
   <section class="form-modal" role="dialog" aria-modal="true" aria-labelledby="form-modal-title" aria-hidden="true" data-form-modal><div class="form-modal__backdrop" data-close-form></div><div class="form-modal__panel" role="document"><button class="form-modal__close" type="button" aria-label="Fechar formulário" data-close-form>×</button><p class="eyebrow" data-form-modal-eyebrow>CONEXÕES LOCAIS</p><h2 id="form-modal-title" data-form-modal-title>Confirmar presença</h2><p data-form-modal-description>Preencha seus dados para solicitar sua participação. A confirmação será enviada por e-mail, conforme a disponibilidade.</p><div class="form-modal__embed" data-form-modal-embed></div></div></section>
   <script src="{{ get_asset_url('../assets/js/conecta-d2c.js') }}" defer></script>
