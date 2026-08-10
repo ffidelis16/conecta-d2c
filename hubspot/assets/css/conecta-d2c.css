@@ -141,18 +141,22 @@ h3 { margin-bottom: 10px; line-height: 1.25; }
 .section-heading--inverse .eyebrow { color: #dceeff; }
 .past-section .section-heading--inverse > p { color: #fff; }
 .section-heading--inverse h2 { color: #fff; }
+.past-section .section-heading--split { align-items: start; }
+.past-section .section-heading--split > p { margin: 32px 0 0; }
 .past-carousel { overflow: hidden; }
 .past-carousel__track { display: flex; gap: 25px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
 .past-carousel__track::-webkit-scrollbar { display: none; }
-.past-card { min-width: 310px; height: 340px; overflow: hidden; border-radius: 24px; background: #fff; color: var(--cd-navy); scroll-snap-align: start; }
+.past-card { position: relative; min-width: 310px; height: 340px; overflow: hidden; border-radius: 24px; background: #fff; color: var(--cd-navy); cursor: zoom-in; scroll-snap-align: start; transition: transform .28s ease, box-shadow .28s ease; }
 .past-card:first-child { min-width: 480px; }
-.past-card img { width: 100%; height: 222px; object-fit: cover; }
-.past-card div { height: 118px; padding: 20px 24px; background: rgba(220,235,255,.82); }
-.past-card:nth-child(4) div { background: rgba(255,255,255,.82); }
+.past-card img { width: 100%; height: 222px; object-fit: cover; transition: transform .48s cubic-bezier(.2,.75,.25,1); }
+.past-card div { position: relative; z-index: 1; height: 118px; padding: 20px 24px; background: #fff; }
 .past-card h3 { margin: 0 0 3px; font-size: 17px; }
 .past-card p { margin: 0; color: var(--cd-muted); font-size: 12px; }
+.past-card:hover, .past-card:focus-visible { transform: translateY(-6px); box-shadow: 0 18px 34px rgba(0,31,62,.22); }
+.past-card:hover > img, .past-card:focus-visible > img { transform: scale(1.06); }
+.past-card:focus-visible { outline: 3px solid #84caff; outline-offset: 4px; }
 .carousel-controls { display: flex; gap: 10px; margin-top: 22px; }
-.carousel-controls button { width: 38px; height: 38px; border: 1px solid rgba(255,255,255,.65); border-radius: 50%; background: transparent; color: #fff; font-size: 18px; }
+.carousel-controls button { display: grid; width: 38px; height: 38px; place-items: center; padding: 0; border: 1px solid rgba(255,255,255,.65); border-radius: 50%; background: transparent; color: #fff; font-size: 18px; line-height: 1; }
 .regional-section { height: 470px; padding: 96px 0 97px; overflow: hidden; background: #f7f7f7; }
 .regional-card { position: relative; display: flex; height: 277px; align-items: center; overflow: hidden; padding: 54px 64px; border-radius: 30px; background: #fff; box-shadow: 0 10px 30px rgba(0,31,62,.1); }
 .regional-card__content { position: relative; z-index: 2; max-width: 720px; }
@@ -245,6 +249,22 @@ h3 { margin-bottom: 10px; line-height: 1.25; }
 .conecta-footer__bottom { display: flex; min-height: 201px; align-items: center; justify-content: space-between; gap: 40px; }
 .conecta-footer__bottom > img:first-child { width: 463px; max-width: 50%; height: 71px; transform: translateY(15px); object-fit: contain; object-position: left center; }
 .conecta-footer__brand { width: 397px; max-width: 34%; height: auto; transform: translateY(15px); filter: brightness(0) saturate(100%) invert(25%) sepia(92%) saturate(1767%) hue-rotate(199deg) brightness(89%) contrast(101%); }
+
+/* Galeria opcional das edições anteriores. */
+.gallery-lightbox { position: fixed; z-index: 320; inset: 0; display: grid; place-items: center; padding: 24px; visibility: hidden; opacity: 0; transition: opacity .22s ease, visibility .22s ease; }
+.gallery-lightbox.is-open { visibility: visible; opacity: 1; }
+.gallery-lightbox__backdrop { position: absolute; inset: 0; background: rgba(0,20,54,.84); backdrop-filter: blur(8px); }
+.gallery-lightbox__panel { position: relative; z-index: 1; width: min(100%, 980px); padding: 30px; border-radius: 28px; background: #fff; box-shadow: 0 20px 60px rgba(0,31,62,.36); }
+.gallery-lightbox__panel .eyebrow { margin-bottom: 16px; }
+.gallery-lightbox figure { margin: 0; }
+.gallery-lightbox figure img { width: 100%; max-height: min(66vh, 650px); border-radius: 18px; object-fit: contain; background: var(--cd-navy); }
+.gallery-lightbox figcaption { min-height: 20px; padding-top: 12px; color: var(--cd-muted); font-size: 14px; }
+.gallery-lightbox__close { position: absolute; top: 16px; right: 16px; z-index: 1; display: grid; width: 38px; height: 38px; place-items: center; padding: 0; border: 0; border-radius: 50%; background: rgba(255,255,255,.94); color: var(--cd-navy); font-size: 28px; line-height: 1; }
+.gallery-lightbox__controls { display: flex; align-items: center; justify-content: center; gap: 16px; padding-top: 16px; }
+.gallery-lightbox__controls button { display: grid; width: 42px; height: 42px; place-items: center; padding: 0; border: 1px solid var(--cd-blue); border-radius: 50%; background: #fff; color: var(--cd-blue); font-size: 20px; line-height: 1; }
+.gallery-lightbox__controls button:disabled { cursor: default; opacity: .36; }
+.gallery-lightbox__controls span { min-width: 42px; color: var(--cd-muted); font-size: 13px; font-weight: 700; text-align: center; }
+body.gallery-lightbox-open { overflow: hidden; }
 .form-modal { position: fixed; z-index: 300; inset: 0; display: grid; place-items: center; padding: 24px; visibility: hidden; opacity: 0; transition: opacity .22s ease, visibility .22s ease; }
 .form-modal.is-open { visibility: visible; opacity: 1; }
 .form-modal__backdrop { position: absolute; inset: 0; background: rgba(0,31,62,.68); backdrop-filter: blur(4px); }
@@ -334,6 +354,7 @@ body.form-modal-open { overflow: hidden; }
   .proof-strip > p { width: min(339px, 100% - 54px); margin-right: auto; margin-left: auto; font-size: 14px; }
   .proof-strip > img { width: 1440px; }
   .past-section .section-heading { margin-bottom: 28px; }
+  .past-section .section-heading--split > p { margin-top: 16px; }
   .past-card { min-width: 270px; }
   .past-card:first-child { min-width: 270px; }
   .past-card img { height: 214px; }
@@ -384,6 +405,9 @@ body.form-modal-open { overflow: hidden; }
   .conecta-footer__bottom > img:first-child { width: 208px; height: auto; max-width: 60%; }
   .conecta-footer__bottom > img:first-child, .conecta-footer__brand { transform: none; }
   .conecta-footer__brand { width: 126px; max-width: 36%; }
+  .gallery-lightbox { padding: 14px; }
+  .gallery-lightbox__panel { padding: 22px; border-radius: 22px; }
+  .gallery-lightbox figure img { max-height: 58vh; border-radius: 14px; }
   .form-modal { padding: 14px; }
   .form-modal__panel { max-height: calc(100vh - 28px); padding: 36px 22px 24px; border-radius: 24px; }
   .form-modal__panel h2 { font-size: 28px; }

@@ -201,6 +201,86 @@
     carousel.querySelector("[data-carousel-next]")?.addEventListener("click", () => trackElement?.scrollBy({ left: 315, behavior: "smooth" }));
   });
 
+  const galleryLightbox = document.querySelector("[data-gallery-lightbox]");
+  const galleryImage = galleryLightbox?.querySelector("[data-gallery-lightbox-image]");
+  const galleryTitle = galleryLightbox?.querySelector("[data-gallery-title]");
+  const galleryCaption = galleryLightbox?.querySelector("[data-gallery-lightbox-caption]");
+  const galleryCounter = galleryLightbox?.querySelector("[data-gallery-counter]");
+  const galleryPrevious = galleryLightbox?.querySelector("[data-gallery-prev]");
+  const galleryNext = galleryLightbox?.querySelector("[data-gallery-next]");
+  let galleryItems = [];
+  let galleryIndex = 0;
+  let galleryLastFocus = null;
+
+  const renderGallery = () => {
+    const item = galleryItems[galleryIndex];
+    if (!item || !galleryImage || !galleryCaption || !galleryCounter) return;
+    galleryImage.src = item.src;
+    galleryImage.alt = item.alt;
+    galleryCaption.textContent = item.caption;
+    galleryCounter.textContent = `${galleryIndex + 1} / ${galleryItems.length}`;
+    if (galleryPrevious) galleryPrevious.disabled = galleryItems.length < 2;
+    if (galleryNext) galleryNext.disabled = galleryItems.length < 2;
+  };
+
+  const closeGallery = () => {
+    if (!galleryLightbox?.classList.contains("is-open")) return;
+    galleryLightbox.classList.remove("is-open");
+    galleryLightbox.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("gallery-lightbox-open");
+    if (galleryLastFocus instanceof HTMLElement) galleryLastFocus.focus();
+  };
+
+  const openGallery = (card) => {
+    if (!galleryLightbox || !galleryImage) return;
+    const title = card.querySelector("h3")?.textContent?.trim() || "Edição anterior";
+    galleryItems = Array.from(card.querySelectorAll("[data-gallery-image]")).map((item) => ({
+      src: item instanceof HTMLImageElement ? item.currentSrc || item.src : item.getAttribute("href") || "",
+      alt: item.getAttribute("data-gallery-alt") || item.getAttribute("alt") || title,
+      caption: item.getAttribute("data-gallery-caption") || title,
+    })).filter((item) => item.src);
+    if (!galleryItems.length) return;
+    galleryIndex = 0;
+    galleryLastFocus = card;
+    if (galleryTitle) galleryTitle.textContent = title;
+    renderGallery();
+    galleryLightbox.classList.add("is-open");
+    galleryLightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("gallery-lightbox-open");
+    requestAnimationFrame(() => galleryLightbox.querySelector("[data-gallery-close]")?.focus());
+  };
+
+  const moveGallery = (direction) => {
+    if (galleryItems.length < 2) return;
+    galleryIndex = (galleryIndex + direction + galleryItems.length) % galleryItems.length;
+    renderGallery();
+  };
+
+  document.querySelectorAll("[data-gallery-carousel]").forEach((carousel) => {
+    const maxCards = Number(carousel.dataset.maxCards || 10);
+    const cards = Array.from(carousel.querySelectorAll(".past-card")).slice(0, maxCards);
+    cards.forEach((card) => {
+      card.addEventListener("click", (event) => {
+        if (event.target.closest("a, button")) return;
+        openGallery(card);
+      });
+      card.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        openGallery(card);
+      });
+    });
+  });
+  galleryLightbox?.querySelectorAll("[data-gallery-close]").forEach((button) => button.addEventListener("click", closeGallery));
+  galleryPrevious?.addEventListener("click", () => moveGallery(-1));
+  galleryNext?.addEventListener("click", () => moveGallery(1));
+  document.addEventListener("keydown", (event) => {
+    if (!galleryLightbox?.classList.contains("is-open")) return;
+    if (event.key === "Escape") closeGallery();
+    if (event.key === "ArrowLeft") moveGallery(-1);
+    if (event.key === "ArrowRight") moveGallery(1);
+  });
+
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reducedMotion || !("IntersectionObserver" in window)) {
     document.querySelectorAll(".reveal").forEach((element) => element.classList.add("is-visible"));

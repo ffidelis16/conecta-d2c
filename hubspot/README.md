@@ -22,6 +22,12 @@ Não abra esses templates diretamente por `file://`: as expressões `get_asset_u
 
 O CSV em `data/` é uma amostra visual baseada no Figma. Antes da publicação, valide cidade, data, local, parceiros, URLs e CTA com a operação. A documentação entregue ao cliente explica o modelo de tabela e a rotina de atualização.
 
+## Edições anteriores
+
+- O carrossel aceita até 10 elementos `.past-card`; adicione somente edições publicadas, sem placeholders.
+- O `img[data-gallery-image]` de cada card é a primeira imagem da galeria. Para acrescentar fotos a uma edição, inclua dentro do mesmo card links ocultos no formato `<a hidden data-gallery-image href="URL_DA_IMAGEM" data-gallery-alt="Descrição" data-gallery-caption="Legenda"></a>`.
+- Ao clicar no card, a galeria abre em lightbox. As setas do lightbox e as teclas ←/→ navegam as fotos; `Esc` fecha a visualização.
+
 ## Limites conhecidos
 
 - O formulário é exibido em lightbox e a marcação está pronta; os GUIDs não foram preenchidos porque o mapa dos três fluxos ainda será revisado.
