@@ -28,6 +28,12 @@ O CSV em `data/` é uma amostra visual baseada no Figma. Antes da publicação, 
 - O `img[data-gallery-image]` de cada card é a primeira imagem da galeria. Para acrescentar fotos a uma edição, inclua dentro do mesmo card links ocultos no formato `<a hidden data-gallery-image href="URL_DA_IMAGEM" data-gallery-alt="Descrição" data-gallery-caption="Legenda"></a>`.
 - Ao clicar no card, a galeria abre em lightbox. As setas do lightbox e as teclas ←/→ navegam as fotos; `Esc` fecha a visualização.
 
+## Motion do Hub
+
+- A linguagem de movimento usa CSS e JavaScript nativos: entrada editorial do hero, abertura da agenda, filtro da tabela, microinterações de CTAs, cards e lightboxes.
+- O sistema respeita `prefers-reduced-motion`; nesse modo, os elementos permanecem imediatamente disponíveis, sem movimentos decorativos.
+- Para ampliar a busca da agenda sem alterar o layout, a coluna opcional `search_aliases` do CSV aceita termos complementares separados por espaço, como `interior paulista`.
+
 ## Limites conhecidos
 
 - O formulário é exibido em lightbox e a marcação está pronta; os GUIDs não foram preenchidos porque o mapa dos três fluxos ainda será revisado.

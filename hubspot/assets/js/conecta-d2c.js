@@ -21,6 +21,7 @@
 
   const normalizeText = (value) => String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
   const pageType = app.dataset.page || "hub";
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const formConfig = {
     regional_interest: {
@@ -47,6 +48,19 @@
   let lastFocus = null;
   let formScriptPromise = null;
   let modalContext = {};
+
+  const runAfterCtaResponse = (trigger, callback) => {
+    if (pageType !== "hub" || !(trigger instanceof HTMLElement) || reducedMotion) {
+      callback();
+      return;
+    }
+    trigger.classList.remove("is-activating");
+    requestAnimationFrame(() => trigger.classList.add("is-activating"));
+    window.setTimeout(() => {
+      trigger.classList.remove("is-activating");
+      callback();
+    }, 120);
+  };
 
   const focusableElements = () => modal ? Array.from(modal.querySelectorAll("button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])")) : [];
 
@@ -138,14 +152,14 @@
     trigger.addEventListener("click", () => {
       const type = trigger.dataset.openForm;
       track("cta_click", { cta: trigger.dataset.cta || "cta", form_context: type, page_type: pageType });
-      openForm(type, trigger);
+      runAfterCtaResponse(trigger, () => openForm(type, trigger));
     });
   });
   document.querySelectorAll("[data-close-form]").forEach((trigger) => trigger.addEventListener("click", closeForm));
 
   const trackAndOpenForm = (type, trigger) => {
     track("cta_click", { cta: trigger.dataset.cta || "cta", form_context: type, page_type: pageType });
-    openForm(type, trigger);
+    runAfterCtaResponse(trigger, () => openForm(type, trigger));
   };
 
   document.addEventListener("keydown", (event) => {
@@ -183,9 +197,24 @@
   const nav = document.querySelector("[data-conecta-nav]");
   const navToggle = nav?.querySelector("[data-nav-toggle]");
   const navLinks = nav?.querySelector(".conecta-nav__links");
-  const updateNav = () => nav?.classList.toggle("is-scrolled", window.scrollY > 64);
+  const scrollProgress = nav?.querySelector("[data-scroll-progress]");
+  let pendingScrollUpdate = false;
+  const updateNav = () => {
+    nav?.classList.toggle("is-scrolled", window.scrollY > 64);
+    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollableHeight > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollableHeight)) : 0;
+    scrollProgress?.style.setProperty("--scroll-progress", String(progress));
+  };
+  const scheduleNavUpdate = () => {
+    if (pendingScrollUpdate) return;
+    pendingScrollUpdate = true;
+    requestAnimationFrame(() => {
+      updateNav();
+      pendingScrollUpdate = false;
+    });
+  };
   updateNav();
-  window.addEventListener("scroll", updateNav, { passive: true });
+  window.addEventListener("scroll", scheduleNavUpdate, { passive: true });
   navToggle?.addEventListener("click", () => {
     const open = navLinks.classList.toggle("is-open");
     navToggle.setAttribute("aria-expanded", String(open));
@@ -262,13 +291,29 @@
     cards.forEach((card) => {
       card.addEventListener("click", (event) => {
         if (event.target.closest("a, button")) return;
-        openGallery(card);
+        runAfterCtaResponse(card, () => openGallery(card));
       });
       card.addEventListener("keydown", (event) => {
         if (event.key !== "Enter" && event.key !== " ") return;
         event.preventDefault();
-        openGallery(card);
+        runAfterCtaResponse(card, () => openGallery(card));
       });
+      if (!reducedMotion) {
+        card.addEventListener("pointermove", (event) => {
+          if (event.pointerType === "touch") return;
+          const bounds = card.getBoundingClientRect();
+          const imageHeight = Math.min(bounds.height, 222);
+          const offsetX = (event.clientX - bounds.left - bounds.width / 2) / (bounds.width / 2);
+          const localY = Math.min(imageHeight, Math.max(0, event.clientY - bounds.top));
+          const offsetY = (localY - imageHeight / 2) / (imageHeight / 2);
+          card.style.setProperty("--image-x", `${(-offsetX * 7).toFixed(2)}px`);
+          card.style.setProperty("--image-y", `${(-offsetY * 5).toFixed(2)}px`);
+        });
+        card.addEventListener("pointerleave", () => {
+          card.style.removeProperty("--image-x");
+          card.style.removeProperty("--image-y");
+        });
+      }
     });
   });
   galleryLightbox?.querySelectorAll("[data-gallery-close]").forEach((button) => button.addEventListener("click", closeGallery));
@@ -281,9 +326,9 @@
     if (event.key === "ArrowRight") moveGallery(1);
   });
 
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const revealTargets = document.querySelectorAll(".reveal, [data-motion-flow], [data-motion-carousel], [data-motion-arrival], [data-motion-footer]");
   if (reducedMotion || !("IntersectionObserver" in window)) {
-    document.querySelectorAll(".reveal").forEach((element) => element.classList.add("is-visible"));
+    revealTargets.forEach((element) => element.classList.add("is-visible"));
   } else {
     const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -291,7 +336,7 @@
         observer.unobserve(entry.target);
       }
     }), { threshold: .12, rootMargin: "0px 0px -8% 0px" });
-    document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+    revealTargets.forEach((element) => observer.observe(element));
   }
 
   if (pageType !== "hub") return;
@@ -399,6 +444,13 @@
     return new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "short" }).format(new Date(year, month - 1, day)).replace(".", "").toUpperCase();
   };
 
+  const appendCtaArrow = (element) => {
+    const arrow = document.createElement("span");
+    arrow.setAttribute("aria-hidden", "true");
+    arrow.textContent = "→";
+    element.appendChild(arrow);
+  };
+
   const actionForEvent = (event) => {
     if (event.cta_type === "none" || event.status === "past") return null;
     if (event.event_url && safeUrl(event.event_url)) {
@@ -406,6 +458,7 @@
       link.className = "button";
       link.href = safeUrl(event.event_url);
       link.textContent = "Ver edição";
+      appendCtaArrow(link);
       link.addEventListener("click", () => track("cta_click", { cta: "agenda-event-page", event_id: event.event_id || undefined, page_type: pageType }));
       return link;
     }
@@ -417,24 +470,42 @@
     button.dataset.eventName = event.event_name || "";
     button.dataset.cta = "agenda-event";
     button.textContent = button.dataset.openForm === "regional_interest" ? "Cadastrar interesse" : "Pré-cadastro";
+    appendCtaArrow(button);
     button.addEventListener("click", () => trackAndOpenForm(button.dataset.openForm, button));
     return button;
   };
 
-  const createRow = (event) => {
+  const createRow = (event, { distance } = {}) => {
     const row = document.createElement("article");
     row.className = "agenda-row";
+    row.style.viewTransitionName = `agenda-${String(event.event_id || event.event_name || "edition").replace(/[^a-z0-9_-]/gi, "-").toLowerCase()}`;
     const date = document.createElement("p");
     date.className = "agenda-row__date";
     date.textContent = formatDate(event.date);
     const title = document.createElement("h3");
     title.textContent = `${event.city || event.event_name || "Nova edição"}${event.state ? ` / ${event.state}` : ""}`;
     const details = document.createElement("p");
-    details.textContent = [event.theme, event.venue, event.time && `${event.time}`].filter(Boolean).join(" · ") || "Mais informações em breve";
+    details.textContent = [event.theme, event.venue, event.time && `${event.time}`, Number.isFinite(distance) && `${Math.round(distance)} km de você`].filter(Boolean).join(" · ") || "Mais informações em breve";
     row.append(date, title, details);
     const action = actionForEvent(event);
     if (action) row.appendChild(action);
     return row;
+  };
+
+  const markAgendaEntries = () => {
+    agendaResults?.querySelectorAll(".agenda-row, .agenda-empty").forEach((element, index) => {
+      element.classList.add("is-entering");
+      element.style.setProperty("--motion-index", String(index));
+    });
+  };
+
+  const runAgendaUpdate = (update, withTransition = false) => {
+    const canTransition = withTransition && !reducedMotion && agendaPanel?.classList.contains("is-open") && typeof document.startViewTransition === "function";
+    if (canTransition) {
+      document.startViewTransition(update);
+      return;
+    }
+    update();
   };
 
   const activeEvents = () => events.filter((event) => event.published && event.status !== "past").sort((a, b) => a.display_order - b.display_order);
@@ -453,79 +524,88 @@
       .map((event) => ({ event, distance: distanceInKilometers(origin, event) }))
       .sort((a, b) => a.distance - b.distance)
       .slice(0, 3);
-    agendaResults.replaceChildren();
-    agendaPagination.replaceChildren();
-    nearest.forEach(({ event }) => agendaResults.appendChild(createRow(event)));
-    agendaSummary.textContent = nearest.length ? `${nearest.length} ${nearest.length === 1 ? "edição próxima" : "edições próximas"}` : "Nenhuma edição próxima encontrada";
+    runAgendaUpdate(() => {
+      agendaResults.replaceChildren();
+      agendaPagination.replaceChildren();
+      nearest.forEach(({ event, distance }) => agendaResults.appendChild(createRow(event, { distance })));
+      markAgendaEntries();
+      agendaSummary.textContent = nearest.length ? `${nearest.length} ${nearest.length === 1 ? "edição próxima" : "edições próximas"}` : "Nenhuma edição próxima encontrada";
+    }, true);
   };
-  const renderAgenda = () => {
+  const renderAgenda = ({ withTransition = false } = {}) => {
     if (!agendaResults || !agendaSummary || !agendaPagination) return;
-    const search = normalizeText(agendaSearch?.value);
-    const list = activeEvents().filter((event) => !search || [event.city, event.state, event.region, event.event_name, event.theme].some((value) => normalizeText(value).includes(search)));
-    const totalPages = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
-    currentPage = Math.min(currentPage, totalPages);
-    const pageItems = list.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
-    agendaResults.replaceChildren();
-    agendaPagination.replaceChildren();
-    if (!pageItems.length) {
-      const empty = document.createElement("div");
-      empty.className = "agenda-empty";
-      const message = document.createElement("p");
-      message.textContent = "Não encontramos uma edição para essa busca. Receba avisos quando o Conecta D2C chegar perto de você.";
-      const action = document.createElement("button");
-      action.type = "button";
-      action.className = "button button--outline";
-      action.dataset.openForm = "regional_interest";
-      action.dataset.cta = "agenda-empty";
-      action.textContent = "Receber avisos";
-      action.addEventListener("click", () => trackAndOpenForm("regional_interest", action));
-      empty.append(message, action);
-      if (search && eventsWithCoordinates().length) {
-        const nearestAction = document.createElement("button");
-        const nearestStatus = document.createElement("p");
-        nearestAction.type = "button";
-        nearestAction.className = "button button--text";
-        nearestAction.textContent = "Ver até 3 edições mais próximas";
-        nearestAction.addEventListener("click", () => {
-          track("agenda_nearest_requested", { page_type: pageType });
-          if (!navigator.geolocation) {
-            nearestStatus.textContent = "Seu navegador não disponibiliza a localização. Você ainda pode receber avisos para sua região.";
-            return;
-          }
-          nearestAction.disabled = true;
-          nearestAction.textContent = "Buscando edições próximas…";
-          navigator.geolocation.getCurrentPosition(
-            ({ coords }) => renderNearestEvents({ latitude: coords.latitude, longitude: coords.longitude }),
-            () => {
-              nearestAction.disabled = false;
-              nearestAction.textContent = "Tentar localizar novamente";
-              nearestStatus.textContent = "Não foi possível acessar sua localização. Você ainda pode receber avisos para sua região.";
-            },
-            { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 },
-          );
-        });
-        empty.append(nearestAction, nearestStatus);
+    runAgendaUpdate(() => {
+      const search = normalizeText(agendaSearch?.value);
+      const list = activeEvents().filter((event) => !search || [event.city, event.state, event.region, event.event_name, event.theme, event.search_aliases].some((value) => normalizeText(value).includes(search)));
+      const totalPages = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
+      currentPage = Math.min(currentPage, totalPages);
+      const pageItems = list.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+      agendaResults.replaceChildren();
+      agendaPagination.replaceChildren();
+      if (!pageItems.length) {
+        const empty = document.createElement("div");
+        empty.className = "agenda-empty";
+        const message = document.createElement("p");
+        message.textContent = "Não encontramos uma edição para essa busca. Receba avisos quando o Conecta D2C chegar perto de você.";
+        const action = document.createElement("button");
+        action.type = "button";
+        action.className = "button button--outline";
+        action.dataset.openForm = "regional_interest";
+        action.dataset.cta = "agenda-empty";
+        action.textContent = "Receber avisos";
+        appendCtaArrow(action);
+        action.addEventListener("click", () => trackAndOpenForm("regional_interest", action));
+        empty.append(message, action);
+        if (search && eventsWithCoordinates().length) {
+          const nearestAction = document.createElement("button");
+          const nearestStatus = document.createElement("p");
+          nearestAction.type = "button";
+          nearestAction.className = "button button--text";
+          nearestAction.textContent = "Ver até 3 edições mais próximas";
+          appendCtaArrow(nearestAction);
+          nearestAction.addEventListener("click", () => {
+            track("agenda_nearest_requested", { page_type: pageType });
+            if (!navigator.geolocation) {
+              nearestStatus.textContent = "Seu navegador não disponibiliza a localização. Você ainda pode receber avisos para sua região.";
+              return;
+            }
+            nearestAction.disabled = true;
+            nearestAction.textContent = "Buscando edições próximas…";
+            navigator.geolocation.getCurrentPosition(
+              ({ coords }) => renderNearestEvents({ latitude: coords.latitude, longitude: coords.longitude }),
+              () => {
+                nearestAction.disabled = false;
+                nearestAction.textContent = "Tentar localizar novamente";
+                nearestStatus.textContent = "Não foi possível acessar sua localização. Você ainda pode receber avisos para sua região.";
+              },
+              { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 },
+            );
+          });
+          empty.append(nearestAction, nearestStatus);
+        }
+        agendaResults.appendChild(empty);
+        markAgendaEntries();
+        agendaSummary.textContent = "Nenhuma edição encontrada";
+        return;
       }
-      agendaResults.appendChild(empty);
-      agendaSummary.textContent = "Nenhuma edição encontrada";
-      return;
-    }
-    pageItems.forEach((event) => agendaResults.appendChild(createRow(event)));
-    agendaSummary.textContent = `${list.length} ${list.length === 1 ? "edição encontrada" : "edições encontradas"}`;
-    if (totalPages > 1) {
-      for (let page = 1; page <= totalPages; page += 1) {
-        const button = document.createElement("button");
-        button.type = "button";
-        button.textContent = String(page);
-        if (page === currentPage) button.setAttribute("aria-current", "page");
-        button.addEventListener("click", () => {
-          currentPage = page;
-          renderAgenda();
-          agendaPanel?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
-        });
-        agendaPagination.appendChild(button);
+      pageItems.forEach((event) => agendaResults.appendChild(createRow(event)));
+      markAgendaEntries();
+      agendaSummary.textContent = `${list.length} ${list.length === 1 ? "edição encontrada" : "edições encontradas"}`;
+      if (totalPages > 1) {
+        for (let page = 1; page <= totalPages; page += 1) {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.textContent = String(page);
+          if (page === currentPage) button.setAttribute("aria-current", "page");
+          button.addEventListener("click", () => {
+            currentPage = page;
+            renderAgenda({ withTransition: true });
+            agendaPanel?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+          });
+          agendaPagination.appendChild(button);
+        }
       }
-    }
+    }, withTransition);
   };
 
   const loadAgenda = async () => {
@@ -547,17 +627,23 @@
   };
 
   agendaToggle?.addEventListener("click", () => {
-    const opening = agendaPanel.hidden;
-    agendaPanel.hidden = !opening;
+    const opening = !agendaPanel?.classList.contains("is-open");
+    agendaPanel?.classList.toggle("is-open", opening);
+    agendaPanel?.setAttribute("aria-hidden", String(!opening));
+    if (agendaPanel) agendaPanel.inert = !opening;
+    agendaToggle.classList.toggle("is-open", opening);
     agendaToggle.setAttribute("aria-expanded", String(opening));
-    agendaToggle.innerHTML = opening ? "Fechar agenda <span aria-hidden=\"true\">−</span>" : "Abrir agenda <span aria-hidden=\"true\">+</span>";
+    const label = agendaToggle.querySelector("[data-agenda-toggle-label]");
+    if (label) label.textContent = opening ? "Fechar agenda" : "Abrir agenda";
     if (opening) {
       track("agenda_open", { page_type: pageType });
       loadAgenda();
     }
   });
+  let agendaSearchTimer = 0;
   agendaSearch?.addEventListener("input", () => {
     currentPage = 1;
-    renderAgenda();
+    window.clearTimeout(agendaSearchTimer);
+    agendaSearchTimer = window.setTimeout(() => renderAgenda({ withTransition: true }), 80);
   });
 })();

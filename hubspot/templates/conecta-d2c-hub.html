@@ -10,6 +10,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0050c3">
+  <script>document.documentElement.classList.add("motion-ready");</script>
   <title>{{ page_meta.html_title }}</title>
   <meta name="description" content="{{ page_meta.meta_description|escape_attr }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +24,7 @@
 
   <header class="conecta-nav" data-conecta-nav>
     <div class="conecta-nav__inner">
+      <span class="conecta-nav__progress" aria-hidden="true" data-scroll-progress></span>
       <a class="brand" href="#topo" aria-label="Conecta D2C, início">
         <img src="{{ get_asset_url('../assets/images/nuvemshop-logo.svg') }}" alt="Nuvemshop" width="159" height="26">
       </a>
@@ -41,16 +43,21 @@
   <main id="conteudo">
     <section class="hub-hero section" id="topo">
       <div class="container hub-hero__grid">
-        <div class="hub-hero__content reveal">
+        <div class="hub-hero__content" data-hero-copy>
           <img class="conecta-mark" src="{{ get_asset_url('../assets/images/logo-conecta-d2c.svg') }}" alt="Conecta D2C" width="158" height="59">
-          <h1>Encontre a<br>próxima edição do<br><em>Conecta D2C</em><span>em diferentes cidades do Brasil.</span></h1>
+          <h1 class="hub-hero__title">
+            <span class="hero-title__line"><span>Encontre a</span></span>
+            <span class="hero-title__line"><span>próxima edição do</span></span>
+            <span class="hero-title__line hero-title__line--display"><em>Conecta D2C</em></span>
+            <span class="hero-title__line hero-title__line--subtitle"><span>em diferentes cidades do Brasil.</span></span>
+          </h1>
           <p class="hub-hero__lead">Eventos presenciais da Nuvemshop, construídos com parceiros locais para reunir marcas, lideranças e especialistas do comércio digital.</p>
           <div class="button-group">
             <a class="button" href="#agenda">Ver próximas edições <span aria-hidden="true">→</span></a>
             <a class="button button--outline" href="#como-funciona">Como funciona</a>
           </div>
         </div>
-        <div class="hub-hero__visual reveal">
+        <div class="hub-hero__visual" data-hero-visual>
           <img class="hub-hero__image" src="{{ get_asset_url('../assets/images/fortaleza-hub-solar.png') }}" alt="Orla de Fortaleza ao pôr do sol" width="1536" height="1024" fetchpriority="high">
           <img class="hub-hero__community-seal" src="{{ get_asset_url('../assets/images/selo-d2c.svg') }}" alt="" width="147" height="147" aria-hidden="true">
           <article class="next-event-card" data-next-event-card>
@@ -65,7 +72,7 @@
 
     <section class="agenda-section section section--soft" id="agenda" aria-labelledby="agenda-title">
       <div class="container">
-        <div class="section-heading section-heading--split">
+        <div class="section-heading section-heading--split reveal">
           <div>
             <p class="eyebrow">AGENDA</p>
             <h2 id="agenda-title">Próximas edições</h2>
@@ -97,21 +104,25 @@
             </article>
           </div>
         </div>
-        <button class="button button--outline agenda-toggle" type="button" id="agenda-toggle" aria-expanded="false" aria-controls="agenda-panel" data-agenda-toggle>Abrir agenda <span aria-hidden="true">+</span></button>
-        <div class="agenda-panel" id="agenda-panel" hidden data-agenda-panel>
-          <div class="agenda-panel__toolbar">
-            <label class="agenda-search" for="agenda-search"><span class="sr-only">Buscar cidade ou região</span><input id="agenda-search" type="search" placeholder="Busque por cidade, estado ou região" autocomplete="off" data-agenda-search><span aria-hidden="true">⌕</span></label>
-            <p data-agenda-summary aria-live="polite">Carregando agenda…</p>
+        <button class="button button--outline agenda-toggle" type="button" id="agenda-toggle" aria-expanded="false" aria-controls="agenda-panel" data-agenda-toggle><span data-agenda-toggle-label>Abrir agenda</span><span class="agenda-toggle__symbol" aria-hidden="true">+</span></button>
+        <div class="agenda-panel" id="agenda-panel" aria-hidden="true" inert data-agenda-panel>
+          <div class="agenda-panel__clip">
+            <div class="agenda-panel__surface">
+              <div class="agenda-panel__toolbar">
+                <label class="agenda-search" for="agenda-search"><span class="sr-only">Buscar cidade ou região</span><input id="agenda-search" type="search" placeholder="Busque por cidade, estado ou região" autocomplete="off" data-agenda-search><span aria-hidden="true">⌕</span></label>
+                <p data-agenda-summary aria-live="polite">Carregando agenda…</p>
+              </div>
+              <div class="agenda-results" data-agenda-results></div>
+              <div class="agenda-pagination" data-agenda-pagination aria-label="Paginação da agenda"></div>
+            </div>
           </div>
-          <div class="agenda-results" data-agenda-results></div>
-          <div class="agenda-pagination" data-agenda-pagination aria-label="Paginação da agenda"></div>
         </div>
       </div>
     </section>
 
-    <section class="section how-section" id="como-funciona" aria-labelledby="how-title">
+    <section class="section how-section" id="como-funciona" aria-labelledby="how-title" data-motion-flow>
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <p class="eyebrow">COMO FUNCIONA</p>
           <h2 id="how-title">Cada cidade dá forma a uma edição única</h2>
           <p>Com parceiros que conhecem o mercado local, cada encontro transforma desafios reais em temas relevantes, experiências próximas e conexões com potencial de negócio.</p>
@@ -131,12 +142,12 @@
 
     <section class="past-section section" id="edicoes-anteriores" aria-labelledby="past-title">
       <div class="container">
-        <div class="section-heading section-heading--split section-heading--inverse">
+        <div class="section-heading section-heading--split section-heading--inverse reveal">
           <div><p class="eyebrow">EDIÇÕES ANTERIORES</p><h2 id="past-title">Toda edição deixa um<br>novo ponto no mapa.</h2></div>
           <p>Encontros que reuniram marcas, parceiros e especialistas em diferentes cidades.</p>
         </div>
         <!-- Até 10 cards: para adicionar uma galeria, inclua links [data-gallery-image] ocultos dentro do card. -->
-        <div class="past-carousel" data-carousel data-gallery-carousel data-max-cards="10">
+        <div class="past-carousel" data-carousel data-gallery-carousel data-max-cards="10" data-motion-carousel>
           <div class="past-carousel__track" data-carousel-track>
             <article class="past-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Abrir galeria da edição Rio de Janeiro"><img data-gallery-image src="{{ get_asset_url('../assets/images/rio-de-janeiro.webp') }}" alt="Edição anterior no Rio de Janeiro" width="800" height="533"><div><h3>Rio de Janeiro / RJ</h3><p>Parceiro · tema · ano</p></div></article>
             <article class="past-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Abrir galeria da edição Franca"><img data-gallery-image src="{{ get_asset_url('../assets/images/franca.webp') }}" alt="Edição anterior em Franca" width="800" height="450"><div><h3>Franca / SP</h3><p>Parceiro · tema · ano</p></div></article>
@@ -150,7 +161,7 @@
 
     <section class="regional-section" id="avisos" aria-labelledby="regional-title">
       <div class="container">
-        <div class="regional-card reveal">
+        <div class="regional-card reveal" data-motion-arrival>
           <div class="regional-card__content">
             <p class="eyebrow"><img src="{{ get_asset_url('../assets/images/agenda-local.svg') }}" alt="" aria-hidden="true">SUA CIDADE AINDA NÃO ESTÁ NA AGENDA?</p>
             <h2 id="regional-title">Receba avisos sobre os próximos eventos na sua região.</h2>
@@ -163,7 +174,7 @@
     </section>
   </main>
 
-  <footer class="conecta-footer">
+  <footer class="conecta-footer" data-motion-footer>
     <div class="container conecta-footer__links">
       <div><h2>Plataforma</h2><a href="https://www.nuvemshop.com.br/">Loja virtual</a><a href="https://www.nuvemshop.com.br/planos-e-precos">Planos e preços</a><a href="https://www.nuvemshop.com.br/migrar-para-nuvemshop">Migrar minha loja</a><a href="https://www.nuvemshop.com.br/">Plano grátis</a><a href="https://www.nuvemshop.com.br/nuvemshop-next">Nuvemshop Next</a><a class="footer-more" href="https://www.nuvemshop.com.br/">Ver mais links</a></div>
       <div><h2>Recursos</h2><a href="https://www.nuvemshop.com.br/funcionalidades">Funcionalidades</a><a href="https://www.nuvemshop.com.br/canais-de-venda">Canais de venda</a><a href="https://www.nuvemshop.com.br/loja-de-aplicativos">Loja de aplicativos</a><a href="https://www.nuvemshop.com.br/loja-de-temas">Loja de temas</a><a href="https://www.nuvemshop.com.br/ferramentas">Ferramentas gratuitas</a></div>
