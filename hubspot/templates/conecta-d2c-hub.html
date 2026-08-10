@@ -140,7 +140,12 @@
 
     <section class="proof-strip" aria-label="Lojas que vendem com a Nuvemshop">
       <p>Algumas das mais de 100 mil lojas que vendem com a gente</p>
-      <img src="{{ get_asset_url('../assets/images/store-logos.png') }}" alt="Marcas que vendem com a Nuvemshop" width="1440" height="51">
+      <div class="proof-strip__marquee">
+        <div class="proof-strip__track">
+          <img src="{{ get_asset_url('../assets/images/store-logos.png') }}" alt="Marcas que vendem com a Nuvemshop" width="1440" height="51">
+          <img src="{{ get_asset_url('../assets/images/store-logos.png') }}" alt="" width="1440" height="51" aria-hidden="true">
+        </div>
+      </div>
     </section>
 
     <section class="past-section section" id="edicoes-anteriores" aria-labelledby="past-title">

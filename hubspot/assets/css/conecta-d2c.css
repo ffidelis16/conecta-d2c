@@ -199,7 +199,12 @@ html.motion-ready .conecta-hub .how-section.is-visible::after { opacity: 1; tran
 .principle-card p:last-child { margin: 0; color: var(--cd-navy); font-size: 13px; line-height: 1.55; }
 .proof-strip { display: flex; height: 237px; flex-direction: column; align-items: center; overflow: hidden; padding: 75px 0 70px; background: var(--cd-soft); text-align: center; }
 .proof-strip > p { margin-bottom: 23px; color: var(--cd-blue); font-size: 14px; font-weight: 700; }
-.proof-strip > img { flex: 0 0 auto; width: 1440px; max-width: none; height: 51px; object-fit: contain; }
+.proof-strip__marquee { width: 100%; overflow: hidden; }
+.proof-strip__track { display: flex; width: max-content; animation: cd-logos-marquee 32s linear infinite; will-change: transform; }
+.proof-strip__track img { display: block; flex: 0 0 auto; width: 1440px; max-width: none; height: 51px; object-fit: contain; }
+@keyframes cd-logos-marquee {
+  to { transform: translateX(-50%); }
+}
 
 .past-section { padding: 89.5px 0 98px; background: var(--cd-blue); color: #fff; }
 .section-heading--inverse .eyebrow { color: #dceeff; }
@@ -446,7 +451,7 @@ html.motion-ready .conecta-hub .reveal.is-visible { opacity: 1; transform: trans
   .how-section h2 { white-space: normal; }
   .proof-strip { height: auto; padding: 38px 0; }
   .proof-strip > p { width: min(339px, 100% - 54px); margin-right: auto; margin-left: auto; font-size: 14px; }
-  .proof-strip > img { width: 1440px; }
+  .proof-strip__track img { width: 1440px; }
   .past-section .section-heading { margin-bottom: 28px; }
   .past-section .section-heading--split > p { margin-top: 16px; }
   .past-card { min-width: 270px; }
