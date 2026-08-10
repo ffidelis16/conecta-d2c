@@ -369,6 +369,7 @@ body.conecta-hub .form-modal.is-open .form-modal__panel { transform: translateY(
 .form-modal__close { position: absolute; top: 16px; right: 16px; width: 38px; height: 38px; border: 0; border-radius: 50%; background: var(--cd-soft); color: var(--cd-navy); font-size: 28px; line-height: 1; }
 .form-modal__embed { min-height: 110px; }
 .form-modal__embed hs-form-frame { display: block; width: 100%; }
+.form-modal__embed iframe { display: block; width: 100% !important; max-width: 100%; border: 0; }
 .form-modal__pending { padding: 18px; border-radius: 14px; background: var(--cd-soft); color: var(--cd-muted); font-size: 14px; }
 body.form-modal-open { overflow: hidden; }
 
@@ -895,4 +896,656 @@ body.conecta-event .text-link:focus-visible::after { transform: scaleX(1); }
   .conecta-event .event-footer .conecta-footer__meta, .conecta-event .event-footer .conecta-footer__bottom { min-height: 0; }
   .conecta-event .event-footer .conecta-footer__bottom > img:first-child { width: 56%; height: auto; }
   .conecta-event .event-footer .conecta-footer__brand-link { width: 34%; }
+}
+
+/* Hero de Fortaleza: medidas e acabamento do frame final. */
+.event-nav .conecta-nav__inner { grid-template-columns: 1fr auto; }
+.event-nav__confirm { min-width: 226px; }
+
+@media (min-width: 761px) {
+  .conecta-event .event-hero__content { padding-top: 115px; }
+  .conecta-event .event-hero .eyebrow { margin: 0; color: #9ac9e6; font-size: 36px; font-weight: 700; letter-spacing: 2px; line-height: 65px; }
+  .conecta-event .event-hero h1 { margin: 16px 0 12px; font-size: 60px; font-weight: 400; line-height: 72px; }
+  .conecta-event .event-hero__content > p:not(.eyebrow) { margin-bottom: 39px; font-size: 17px; line-height: 27px; }
+  .conecta-event .event-hero__visual { overflow: hidden; }
+  .conecta-event .event-hero__visual::after { position: absolute; z-index: 1; inset: 0; background: rgba(0,80,195,.12); content: ""; pointer-events: none; }
+  .conecta-event .event-hero__visual > img { position: relative; z-index: 0; object-position: right center; image-rendering: auto; }
+  .event-hero__community-seal, .conecta-event .quick-facts { z-index: 2; }
+  .conecta-event .quick-facts { right: 80px; bottom: 120px; width: 523px; height: 182px; min-height: 0; padding: 0; border-radius: 24px; box-shadow: 0 18px 46px rgba(0,31,62,.15); }
+  .conecta-event .quick-facts__heading { height: 62px; margin: 0; padding: 24px 28px 0; }
+  .quick-facts__heading p { color: var(--cd-blue); font-size: 18px; font-weight: 800; letter-spacing: 0; line-height: 18px; text-transform: uppercase; }
+  .quick-facts__heading > img { width: 20px; height: 20px; }
+  .conecta-event .quick-facts__items { display: grid; grid-template-columns: 163px 127px 160px; gap: 9px; margin-left: 28px; }
+  .quick-facts__items > .quick-fact { display: grid; height: 63px; grid-template-columns: 20px minmax(0, 1fr); align-items: start; gap: 13px; padding: 10px 12px; border: 1px solid var(--cd-line); border-radius: 18px; }
+  .quick-fact > img { width: 20px; height: 20px; object-fit: contain; }
+  .quick-fact > span { display: grid; gap: 1px; }
+  .quick-facts__items small { color: var(--cd-muted); font-size: 11px; font-weight: 700; letter-spacing: 1.1px; line-height: 14px; }
+  .quick-facts__items strong { color: var(--cd-ink); font-size: 15px; font-weight: 700; letter-spacing: 0; line-height: 20px; white-space: nowrap; }
+  .conecta-event .quick-facts__venue { height: 38px; margin: 11px 0 0 28px; padding: 3px 0 0 8px; border-left: 1px solid var(--cd-line); color: var(--cd-muted); font-size: 13px; line-height: 18px; }
+  .conecta-event .quick-facts__venue strong { color: var(--cd-blue); font-size: 17px; font-weight: 500; }
+}
+
+@media (max-width: 760px) {
+  .event-nav__confirm { display: inline-flex !important; width: auto; min-width: 0; min-height: 40px; padding: 10px 16px; font-size: 11px; }
+  .event-nav__confirm > span { display: none; }
+  .conecta-event .event-hero .eyebrow { color: #9ac9e6; font-size: 25px; font-weight: 700; letter-spacing: 1px; line-height: 1.3; }
+  .event-hero__desktop-break { display: none; }
+  .conecta-event .event-hero__visual { overflow: hidden; }
+  .conecta-event .event-hero__visual::after { position: absolute; z-index: 1; inset: 0; background: rgba(0,80,195,.1); content: ""; pointer-events: none; }
+  .conecta-event .event-hero__visual > img { position: relative; z-index: 0; object-position: right center; }
+  .event-hero__community-seal, .conecta-event .quick-facts { z-index: 2; }
+  .conecta-event .quick-facts { padding: 18px; }
+  .quick-facts__heading > img { width: 20px; height: 20px; }
+  .quick-facts__items > .quick-fact { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 12px; align-items: center; }
+  .quick-fact > img { width: 20px; height: 20px; }
+  .quick-fact > span { display: grid; }
+}
+
+/* Mantém a inscrição no primeiro enquadramento em laptops baixos sem alterar o desktop alto. */
+@media (min-width: 761px) and (max-height: 850px) {
+  .conecta-event .event-hero { height: 670px; padding-top: 80px; }
+  .conecta-event .event-hero__grid { min-height: 590px; }
+  .conecta-event .event-hero__content { min-height: 590px; padding-top: 75px; }
+  .conecta-event .event-hero .conecta-mark { width: 128px; margin-bottom: 7px; }
+  .conecta-event .event-hero .eyebrow { font-size: 30px; line-height: 44px; }
+  .conecta-event .event-hero h1 { margin: 12px 0 8px; font-size: 52px; line-height: 56px; }
+  .conecta-event .event-hero__content > p:not(.eyebrow) { max-width: 550px; margin: 0; font-size: 14px; line-height: 21px; }
+  .conecta-event .event-hero .button-group { position: absolute; bottom: 20px; left: 0; }
+  .conecta-event .event-hero__visual, .conecta-event .event-hero__visual > img { min-height: 590px; height: 590px; }
+  .event-hero__community-seal { top: 76px; }
+  .conecta-event .quick-facts { bottom: 20px; }
+}
+
+/* Correção de contenção e alinhamento do card de Fortaleza. */
+@media (min-width: 761px) {
+  .conecta-event .event-hero__visual { overflow: visible; }
+  .conecta-event .quick-facts { right: auto; left: 50%; transform: translateX(-50%); }
+  .conecta-event .quick-fact > span { gap: 1px; padding: 0; border: 0; border-radius: 0; background: transparent; }
+}
+
+@media (max-width: 760px) {
+  .conecta-event .event-hero { overflow: visible; }
+  .conecta-event .event-hero__visual { overflow: visible; }
+  .conecta-event .quick-facts { position: relative; right: auto; bottom: auto; left: auto; width: 100%; height: auto; min-height: 0; margin: 16px 0 0; padding: 20px; border-radius: 22px; transform: none; }
+  .conecta-event .quick-facts__heading { margin-bottom: 14px; }
+  .conecta-event .quick-facts__items { display: grid; grid-template-columns: 1fr; gap: 9px; margin: 0; }
+  .conecta-event .quick-facts__items > .quick-fact { min-height: 58px; padding: 10px 12px; border: 1px solid var(--cd-line); border-radius: 14px; }
+  .conecta-event .quick-fact > span { gap: 1px; padding: 0; border: 0; border-radius: 0; background: transparent; }
+  .conecta-event .quick-facts__venue { height: auto; margin: 14px 0 0; padding: 0; border: 0; font-size: 12px; }
+  .conecta-event .quick-facts__venue strong { font-size: 14px; }
+}
+
+/* Espaço de respiro do hero e contenção contra overflow horizontal. */
+html:has(body.conecta-event), body.conecta-event { max-width: 100%; overflow-x: hidden; }
+body.conecta-event main { max-width: 100%; overflow-x: clip; }
+
+@media (min-width: 761px) and (max-height: 850px) {
+  .conecta-event .event-hero { height: 740px; }
+  .conecta-event .event-hero__grid { min-height: 660px; }
+  .conecta-event .event-hero__content { min-height: 660px; }
+  .conecta-event .event-hero .button-group { bottom: 90px; }
+  .conecta-event .event-hero__visual, .conecta-event .event-hero__visual > img { min-height: 660px; height: 660px; }
+  .conecta-event .quick-facts { bottom: 90px; }
+}
+
+@media (max-width: 760px) {
+  .event-nav .brand img { width: 104px; height: auto; }
+  .event-nav__confirm { flex: 0 0 auto; min-height: 36px; padding: 8px 12px; font-size: 10px; line-height: 1; white-space: nowrap; }
+  .conecta-event .event-hero { padding-bottom: 90px; }
+}
+
+/* Perfil dos convidados. */
+.attendees-card__eyebrow { display: flex; align-items: center; gap: 16px; }
+.attendees-card__eyebrow > img { width: 30px; height: 30px; flex: 0 0 30px; }
+.attendees-card__eyebrow .eyebrow { display: flex; align-items: center; min-height: 30px; margin: 0; line-height: 1; transform: translateY(7px); }
+
+@media (min-width: 761px) {
+  .conecta-event .attendees-card { min-height: 338px; padding: 42px 43px 30px; }
+  .conecta-event .attendees-card__eyebrow { margin-bottom: 15px; }
+  .conecta-event .attendees-card h3 { margin-bottom: 20px; }
+}
+
+@media (max-width: 760px) {
+  .conecta-event .attendees-card__eyebrow { margin-bottom: 14px; }
+}
+
+/* Programa: medidas e hierarquia do frame final de Fortaleza. */
+@media (min-width: 761px) {
+  .conecta-event .program-section .section-heading--split { align-items: start; }
+  .conecta-event .program-section .section-heading > p {
+    align-self: start;
+    max-width: 391px;
+    margin: 34px 0 0;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 27px;
+  }
+  .conecta-event .program-section .eyebrow { color: #fff; font-size: 13px; line-height: 14px; }
+  .conecta-event .program-section h2 { font-size: 46px; line-height: 50px; }
+  .conecta-event .program-grid li { overflow: hidden; border-radius: 24px; background: #fff8ef; }
+  .conecta-event .program-card__media { height: 190px; border-radius: 24px 24px 0 0; }
+  .conecta-event .program-card__media img { border-radius: 24px 24px 0 0; }
+  .conecta-event .program-card__body {
+    position: relative;
+    display: block;
+    min-height: 200px;
+    height: 200px;
+    padding: 0 26px;
+    background: #fff8ef;
+  }
+  .conecta-event .program-card__icon {
+    position: absolute;
+    top: 30px;
+    left: 26px;
+    display: block;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+  }
+  .conecta-event .program-card__body > span {
+    position: absolute;
+    top: 14px;
+    right: 26px;
+    margin: 0;
+    color: #0050c3;
+    font-size: 29px;
+    font-weight: 500;
+    letter-spacing: -.03em;
+    line-height: 34px;
+  }
+  .conecta-event .program-card__body h3 {
+    position: absolute;
+    top: 70px;
+    right: 26px;
+    left: 26px;
+    margin: 0;
+    color: #000b19;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -.04em;
+    line-height: 26px;
+  }
+  .conecta-event .program-card__body p {
+    position: absolute;
+    top: 112px;
+    right: 26px;
+    left: 26px;
+    margin: 0;
+    color: #010b23;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+  }
+}
+
+@media (max-width: 760px) {
+  .conecta-event .program-section .section-heading > p { color: #fff; font-size: 16px; font-weight: 500; line-height: 24px; }
+  .conecta-event .program-grid li { overflow: hidden; border-radius: 22px; background: #fff8ef; }
+  .conecta-event .program-card__media { height: 195px; border-radius: 22px 22px 0 0; }
+  .conecta-event .program-card__media img { border-radius: 22px 22px 0 0; }
+  .conecta-event .program-card__body { position: relative; display: block; min-height: 214px; padding: 0 22px 24px; background: #fff8ef; }
+  .conecta-event .program-card__icon { position: absolute; top: 25px; left: 22px; display: block; width: 22px; height: 22px; object-fit: contain; }
+  .conecta-event .program-card__body > span { position: absolute; top: 14px; right: 22px; margin: 0; color: #0050c3; font-size: 27px; font-weight: 500; line-height: 32px; }
+  .conecta-event .program-card__body h3 { position: absolute; top: 66px; right: 22px; left: 22px; margin: 0; color: #000b19; font-size: 20px; line-height: 25px; }
+  .conecta-event .program-card__body p { position: absolute; top: 104px; right: 22px; left: 22px; margin: 0; color: #010b23; font-size: 15px; line-height: 21px; }
+}
+
+/* Tipografia e cartões das seções de programação e convidados. */
+@media (min-width: 761px) {
+  .conecta-event .program-section .section-heading,
+  .conecta-event .guests-section .section-heading { margin-bottom: 32px; }
+  .conecta-event .program-section h2,
+  .conecta-event .guests-section h2 { font-weight: 400; }
+  .conecta-event .program-section .section-heading > p,
+  .conecta-event .guests-section .section-heading > p {
+    align-self: start;
+    margin-top: 34px;
+    color: currentColor;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 23px;
+  }
+  .conecta-event .program-section .section-heading > p { color: #fff; }
+  .conecta-event .guests-section .section-heading--split { align-items: start; }
+  .conecta-event .guests-section .section-heading > p { color: #486781; }
+
+  .conecta-event .guest-card { display: flex; min-width: 0; flex-direction: column; height: 480px; overflow: hidden; border-radius: 24px; }
+  .conecta-event .guest-card > img,
+  .conecta-event .guest-card--lead > img { display: block; width: 100%; height: 290px; flex: 0 0 290px; border-radius: 24px 24px 0 0; object-fit: cover; }
+  .conecta-event .guest-card__pair { display: grid; height: 290px; flex: 0 0 290px; overflow: hidden; padding: 0; border-radius: 24px 24px 0 0; }
+  .conecta-event .guest-card__pair img { display: block; width: 100%; height: 290px; border-radius: 0; }
+  .conecta-event .guest-card__pair img:first-child { border-radius: 24px 0 0 0; }
+  .conecta-event .guest-card__pair img:last-child { border-radius: 0 24px 0 0; }
+  .conecta-event .guest-card__meta,
+  .conecta-event .guest-card > div:last-child { min-width: 0; padding: 20px 26px 22px; }
+  .conecta-event .guest-card .eyebrow { margin: 0 0 7px; color: #60748c; font-size: 10px; font-weight: 700; letter-spacing: .075em; line-height: 14px; }
+  .conecta-event .guest-card h3 { margin: 0 0 3px; color: #000b19; font-size: 16px; font-weight: 700; letter-spacing: -.035em; line-height: 20px; }
+  .conecta-event .guest-card p:not(.eyebrow) { margin: 0; color: #486781; font-size: 12px; font-weight: 400; line-height: 16px; }
+  .conecta-event .guest-card--invited .guest-card__meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; row-gap: 3px; background: var(--cd-green); }
+  .conecta-event .guest-card--invited .eyebrow { grid-column: 1 / -1; margin-bottom: 4px; color: #286e4b; }
+  .conecta-event .guest-card--invited .guest-card__person { min-width: 0; }
+  .conecta-event .guest-card--invited h3 { font-size: 15px; line-height: 19px; }
+  .conecta-event .guest-card--invited p:not(.eyebrow) { font-size: 11px; line-height: 15px; }
+}
+
+/* Entre 1181 e 1439 px, o canvas do Figma deixa de caber dentro da área útil.
+   As colunas passam a ser fluidas antes de qualquer elemento criar overflow. */
+@media (min-width: 1181px) and (max-width: 1439px) {
+  .conecta-event .event-hero__grid { grid-template-columns: minmax(0, .95fr) minmax(0, 1fr); gap: clamp(42px, 6vw, 78px); }
+  .conecta-event .event-hero__visual { margin-right: calc(-1 * var(--cd-gutter)); }
+  .conecta-event .venue-section,
+  .conecta-event .event-context,
+  .conecta-event .program-section,
+  .conecta-event .guests-section,
+  .conecta-event .location-section,
+  .conecta-event .event-final-cta { height: auto; }
+  .conecta-event .venue-section { padding: 100px 0; }
+  .conecta-event .venue-section__grid { height: auto; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); gap: 64px; }
+  .conecta-event .venue-gallery { width: 100%; margin-top: 0; }
+  .conecta-event .venue-section__grid > div:last-child { padding-top: 75px; }
+  .conecta-event .event-context { padding: 100px 0; }
+  .conecta-event .event-context__grid { height: auto; grid-template-columns: minmax(0, 1fr) minmax(390px, .82fr); gap: 64px; }
+  .conecta-event .event-context__grid > div:first-child { padding-top: 0; }
+  .conecta-event .attendees-card { width: auto; margin-top: 0; }
+  .conecta-event .program-section,
+  .conecta-event .guests-section { padding: 100px 0; }
+  .conecta-event .program-section .section-heading--split,
+  .conecta-event .guests-section .section-heading--split { grid-template-columns: minmax(0, 1fr) minmax(270px, .68fr); gap: clamp(48px, 6vw, 75px); }
+  .conecta-event .program-grid,
+  .conecta-event .guest-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .conecta-event .program-grid li { min-width: 0; }
+  .conecta-event .location-section { padding: 100px 0; }
+  .conecta-event .location-section__grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 48px; }
+  .conecta-event .location-visuals { grid-template-columns: minmax(150px, .32fr) minmax(0, 1fr); width: 100%; }
+  .conecta-event .event-final-cta { padding: 0; }
+  .conecta-event .event-final-cta__card { height: auto; grid-template-columns: minmax(0, 1fr) minmax(0, .78fr); gap: 56px; }
+  .conecta-event .event-final-cta__card > div { padding-top: 100px; }
+  .conecta-event .event-final-cta__image { width: 100%; height: 620px; margin-right: 0; }
+  .conecta-event .partners-section .container { grid-template-columns: 250px minmax(0, 1fr); gap: 64px; }
+}
+
+@media (max-width: 760px) {
+  .conecta-event .program-section .section-heading > p,
+  .conecta-event .guests-section .section-heading > p { font-size: 16px; font-weight: 400; line-height: 23px; }
+  .conecta-event .program-section .section-heading,
+  .conecta-event .guests-section .section-heading { margin-bottom: 28px; }
+  .conecta-event .guest-card { overflow: hidden; border-radius: 22px; }
+  .conecta-event .guest-card__pair { overflow: hidden; border-radius: 22px 22px 0 0; }
+  .conecta-event .guest-card__pair img:first-child { border-radius: 22px 0 0 0; }
+  .conecta-event .guest-card__pair img:last-child { border-radius: 0 22px 0 0; }
+  .conecta-event .guest-card__meta { padding: 18px 20px 21px; }
+  .conecta-event .guest-card .eyebrow { margin-bottom: 7px; font-size: 10px; line-height: 14px; }
+  .conecta-event .guest-card h3 { margin-bottom: 3px; font-size: 16px; line-height: 20px; }
+  .conecta-event .guest-card p:not(.eyebrow) { font-size: 12px; line-height: 16px; }
+  .conecta-event .guest-card--invited .guest-card__meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 14px; background: var(--cd-green); }
+  .conecta-event .guest-card--invited .eyebrow { grid-column: 1 / -1; margin-bottom: 4px; }
+  .conecta-event .guest-card--invited h3 { font-size: 15px; line-height: 19px; }
+}
+
+@media (min-width: 761px) and (max-width: 1180px) {
+  .conecta-event .event-hero__visual { min-width: 0; }
+  .conecta-event .quick-facts { width: min(523px, calc(100% - 24px)); }
+  .conecta-event .quick-facts__items { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-left: 16px; }
+  .conecta-event .quick-facts__items > .quick-fact { min-width: 0; padding-right: 8px; padding-left: 8px; }
+  .quick-facts__items strong { white-space: normal; }
+  .conecta-event .venue-gallery { width: 100%; }
+  .conecta-event .venue-gallery__main { width: 64%; }
+  .conecta-event .venue-gallery__detail { left: 51%; width: 42%; }
+  .conecta-event .venue-gallery__food { left: 31%; width: 53%; }
+  .conecta-event .attendees-card { width: 100%; min-width: 0; }
+}
+
+/* CTA final: ocupa a largura real do layout e a foto chega à borda direita. */
+.conecta-event .event-final-cta .container { max-width: none; }
+.conecta-event .event-final-cta__image { max-width: none; }
+.conecta-event .event-final-cta__note { max-width: 390px; margin: 12px 0 0; color: #506984; font-size: 12px; line-height: 18px; }
+
+/* As convidadas mantêm o respiro verde também nos quatro cantos das fotos. */
+.conecta-event .guest-card--invited .guest-card__pair img,
+.conecta-event .guest-card--invited .guest-card__pair img:first-child,
+.conecta-event .guest-card--invited .guest-card__pair img:last-child {
+  border-radius: 24px;
+}
+
+/* Blocos editoriais centralizados pela altura útil de cada conjunto visual. */
+@media (min-width: 761px) {
+  .conecta-event .venue-section__grid > div:last-child {
+    align-self: center;
+    padding-top: 0;
+  }
+
+  .conecta-event .location-section__grid > div:last-child {
+    align-self: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .conecta-event .event-final-cta__card { grid-template-columns: 694px minmax(0, 1fr); gap: 86px; }
+}
+
+@media (min-width: 761px) and (max-width: 1439px) {
+  .conecta-event .event-final-cta__card { grid-template-columns: minmax(0, 694px) minmax(0, 1fr); gap: clamp(42px, 6vw, 82px); }
+  .conecta-event .event-final-cta__image { width: calc(100% + var(--cd-gutter)); margin-right: calc(-1 * var(--cd-gutter)); }
+}
+
+@media (max-width: 760px) {
+  .conecta-event .event-final-cta .container { max-width: none; }
+  .conecta-event .event-final-cta__note { font-size: 11px; line-height: 16px; }
+}
+
+/* Rodapé compacto da página individual. */
+.conecta-event .event-footer { height: auto; padding: 0; }
+.conecta-event .event-footer .conecta-footer__meta { min-height: 88px; padding: 0; }
+.conecta-event .event-footer .conecta-footer__bottom { min-height: 144px; padding: 18px 0; }
+
+@media (min-width: 761px) {
+  .conecta-event .event-footer .conecta-footer__bottom > img:first-child { width: 360px; height: 55px; transform: none; }
+  .conecta-event .event-footer .conecta-footer__brand-link { width: 320px; max-width: 34%; transform: none; }
+}
+
+@media (max-width: 760px) {
+  .conecta-event .event-footer .conecta-footer__meta { min-height: 0; padding: 24px 0; }
+  .conecta-event .event-footer .conecta-footer__bottom { min-height: 0; padding: 20px 0 26px; }
+}
+
+/* Escala tipográfica única da página individual: o subtítulo do hero é a referência. */
+body.conecta-event {
+  --event-text: #001f3e;
+  --event-text-muted: #486781;
+  --event-body-size: 18px;
+  --event-body-line: 27px;
+  --event-card-size: 17px;
+  --event-card-line: 25px;
+  --event-micro-size: 15px;
+  --event-micro-line: 21px;
+}
+
+.conecta-event .event-hero__content > p:not(.eyebrow),
+.conecta-event .venue-section p:not(.eyebrow),
+.conecta-event .event-context__grid > div > p:last-child,
+.conecta-event .guests-section .section-heading > p,
+.conecta-event .location-section p:not(.eyebrow),
+.conecta-event .location-list,
+.conecta-event .event-final-cta > .event-final-cta__card p:not(.eyebrow) {
+  color: var(--event-text);
+  font-size: var(--event-body-size);
+  font-weight: 400;
+  line-height: var(--event-body-line);
+}
+
+/* O hero define a cadência vertical usada pelos corpos de texto. */
+.conecta-event .event-hero__content > p:not(.eyebrow) {
+  margin-bottom: 34px;
+}
+
+.conecta-event .venue-section p:not(.eyebrow) { margin-bottom: 27px; }
+.conecta-event .event-context__grid > div > p:last-child { margin-bottom: 0; }
+.conecta-event .location-section p:not(.eyebrow) { margin-bottom: 18px; }
+.conecta-event .location-list { gap: 10px; margin-bottom: 21px; }
+.conecta-event .event-final-cta > .event-final-cta__card p:not(.eyebrow) { margin-bottom: 27px; }
+
+/* Textos sobre azul ou marinho permanecem brancos para contraste. */
+.conecta-event .program-section .section-heading > p,
+.conecta-event .attendees-card ul,
+.conecta-event .partners-section h2 { color: #fff; }
+.conecta-event .program-section .section-heading > p {
+  font-size: var(--event-body-size);
+  font-weight: 400;
+  line-height: var(--event-body-line);
+}
+.conecta-event .attendees-card ul {
+  gap: 10px;
+  font-size: var(--event-card-size);
+  font-weight: 400;
+  line-height: var(--event-card-line);
+}
+
+/* Corpos de cards: um ponto abaixo do corpo editorial. */
+.conecta-event .program-card__body p,
+.conecta-event .guest-card p:not(.eyebrow),
+.conecta-event .quick-facts__items strong {
+  color: var(--event-text);
+  font-size: var(--event-card-size);
+  font-weight: 400;
+  line-height: var(--event-card-line);
+}
+
+.conecta-event .guest-card p:not(.eyebrow) { margin: 0; }
+.conecta-event .quick-facts__items strong { font-weight: 700; }
+
+/* Informações auxiliares e legais ficam três pontos abaixo, em azul atenuado. */
+.conecta-event .quick-facts__venue,
+.conecta-event .quick-facts > p:last-child,
+.conecta-event .event-final-cta__note,
+.conecta-event .event-footer .conecta-footer__meta > p,
+.conecta-event .event-footer .footer-country,
+.conecta-event .event-footer .conecta-footer__links a,
+.conecta-event .form-modal__panel > p:not(.eyebrow) {
+  color: var(--event-text-muted);
+  font-size: var(--event-micro-size);
+  font-weight: 400;
+  line-height: var(--event-micro-line);
+}
+
+@media (min-width: 761px) and (max-height: 850px) {
+  body.conecta-event {
+    --event-body-size: 15px;
+    --event-body-line: 21px;
+    --event-card-size: 14px;
+    --event-card-line: 20px;
+    --event-micro-size: 12px;
+    --event-micro-line: 17px;
+  }
+}
+
+@media (max-width: 760px) {
+  body.conecta-event {
+    --event-body-size: 16px;
+    --event-body-line: 24px;
+    --event-card-size: 15px;
+    --event-card-line: 22px;
+    --event-micro-size: 13px;
+    --event-micro-line: 18px;
+  }
+}
+
+/* Duplicatas existem apenas para a continuidade do letreiro em telas pequenas. */
+.conecta-event .partner-logos img[aria-hidden="true"] { display: none; }
+
+@keyframes cd-event-partners-marquee {
+  to { transform: translateX(calc(-50% - 16px)); }
+}
+
+@media (max-width: 760px) {
+  /* Programação aberta: cada momento tem área de leitura e toque própria. */
+  .conecta-event .program-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .conecta-event .program-grid li {
+    width: 100%;
+    min-height: 0;
+    flex: 0 0 auto;
+  }
+
+  /* Evita uma última linha isolada no texto auxiliar dos convidados. */
+  .conecta-event .guests-section .section-heading > p {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Cada retrato mantém os quatro cantos visíveis sobre o fundo verde. */
+  .conecta-event .guest-card--invited .guest-card__pair {
+    overflow: visible;
+    border-radius: 0;
+  }
+
+  .conecta-event .guest-card--invited .guest-card__pair img,
+  .conecta-event .guest-card--invited .guest-card__pair img:first-child,
+  .conecta-event .guest-card--invited .guest-card__pair img:last-child {
+    border-radius: 18px;
+  }
+
+  /* A etiqueta ocupa uma linha própria antes dos dois nomes. */
+  .conecta-event .guest-card--invited > .guest-card__meta:last-child {
+    column-gap: 16px;
+    row-gap: 10px;
+    padding: 24px 20px 24px !important;
+  }
+
+  .conecta-event .guest-card--invited .eyebrow {
+    display: block;
+    min-height: 16px;
+    margin: 0;
+    color: #286e4b;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    line-height: 16px;
+  }
+
+  /* Labels de interface acompanham a escala sem competir com os títulos. */
+  .conecta-event .program-section .eyebrow,
+  .conecta-event .guests-section > .container > .eyebrow,
+  .conecta-event .attendees-card .eyebrow,
+  .conecta-event .partners-section .eyebrow,
+  .conecta-event .guest-card .eyebrow {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .conecta-event .quick-facts__items small {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  /* Parceiros em um letreiro contínuo, sem a grade comprimida do mobile. */
+  .conecta-event .partners-section,
+  .conecta-event .partners-section .container { overflow: hidden; }
+
+  .conecta-event .partner-logos {
+    display: flex;
+    width: max-content;
+    min-width: max-content;
+    align-items: center;
+    gap: 32px;
+    margin-top: 26px;
+    animation: cd-event-partners-marquee 24s linear infinite;
+    will-change: transform;
+  }
+
+  .conecta-event .partner-logos img,
+  .conecta-event .partner-logos img[aria-hidden="true"] {
+    display: block;
+    width: 86px;
+    max-width: none;
+    height: 36px;
+    margin: 0;
+    flex: 0 0 86px;
+    object-fit: contain;
+  }
+
+  .conecta-event .partner-logos:hover { animation-play-state: paused; }
+
+  /* Encerramento editorial alinhado ao centro, antes da imagem final. */
+  .conecta-event .event-final-cta,
+  .conecta-event .event-final-cta__card > div,
+  .conecta-event .event-final-cta h2,
+  .conecta-event .event-final-cta p {
+    text-align: center;
+  }
+
+  .conecta-event .event-final-cta__card > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .conecta-event .event-final-cta__note { max-width: 320px; }
+}
+
+/* Interações da página individual: mesma resposta tátil aplicada no Hub. */
+body.conecta-event .button.is-activating > span[aria-hidden="true"],
+body.conecta-event .text-link.is-activating > span[aria-hidden="true"] {
+  transform: translateX(4px) scaleX(1.18);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .conecta-event .venue-gallery__main,
+  .conecta-event .venue-gallery__detail,
+  .conecta-event .venue-gallery__food {
+    transition: transform .5s var(--cd-ease-gentle), box-shadow .5s var(--cd-ease-gentle);
+    will-change: transform;
+  }
+
+  .conecta-event .venue-gallery:hover .venue-gallery__main { transform: scale(1.014); }
+  .conecta-event .venue-gallery:hover .venue-gallery__detail { transform: translate3d(-7px, -5px, 0) scale(1.018); }
+  .conecta-event .venue-gallery:hover .venue-gallery__food { transform: translate3d(6px, -4px, 0) scale(1.018); }
+
+  .conecta-event .program-grid li,
+  .conecta-event .guest-card {
+    transition: transform .28s var(--cd-ease-out), box-shadow .28s var(--cd-ease-out);
+  }
+
+  .conecta-event .program-grid li:hover,
+  .conecta-event .guest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 30px rgba(0,31,62,.16);
+  }
+}
+
+/* Lightbox de inscrição: painel editorial + formulário oficial do Next Sessions. */
+.conecta-event .form-modal { z-index: 420; padding: 28px; }
+.conecta-event .form-modal__backdrop { background: rgba(0,31,62,.76); backdrop-filter: blur(10px); }
+.conecta-event .form-modal__panel {
+  width: min(100%, 960px);
+  max-height: min(760px, calc(100vh - 56px));
+  overflow: auto;
+  padding: 0;
+  border-radius: 30px;
+  box-shadow: 0 28px 80px rgba(0,17,43,.38);
+  transform: translateY(18px) scale(.98);
+  transition: transform .28s var(--cd-ease-out);
+}
+.conecta-event .form-modal.is-open .form-modal__panel { transform: translateY(0) scale(1); }
+.conecta-event .form-modal__layout { display: grid; grid-template-columns: minmax(260px, .82fr) minmax(0, 1.18fr); min-height: 520px; }
+.conecta-event .form-modal__intro {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 54px 48px;
+  background: radial-gradient(circle at 8% 8%, rgba(126,200,255,.24), transparent 34%), #001f3e;
+  color: #fff;
+}
+.conecta-event .form-modal__intro .eyebrow { margin-bottom: 20px; color: #8effbd; font-size: 12px; }
+.conecta-event .form-modal__intro h2 { max-width: 330px; margin-bottom: 18px; color: #fff; font-size: clamp(34px, 3.2vw, 47px); font-weight: 400; line-height: 1.02; }
+.conecta-event .form-modal__intro > p:not(.eyebrow) { max-width: 330px; margin: 0; color: #fff; font-size: 16px; line-height: 24px; }
+.conecta-event .form-modal__intro .form-modal__note { margin-top: 30px; color: #a7c7df; font-size: 13px; line-height: 19px; }
+.conecta-event .form-modal__form { display: flex; align-items: center; padding: 52px 48px; background: #fff; }
+.conecta-event .form-modal__embed { width: 100%; min-height: 260px; }
+.conecta-event .form-modal__embed[aria-busy="true"] { display: grid; place-items: center; }
+.conecta-event .form-modal__loading,
+.conecta-event .form-modal__pending { width: 100%; margin: 0; padding: 18px 20px; border-radius: 14px; background: #eef6ff; color: #486781; font-size: 14px; line-height: 21px; text-align: center; }
+.conecta-event .form-modal__loading::before { display: inline-block; width: 13px; height: 13px; margin-right: 9px; border: 2px solid #8dbbeb; border-top-color: #0050c3; border-radius: 50%; content: ""; vertical-align: -2px; animation: cd-form-spin .8s linear infinite; }
+.conecta-event .form-modal__close { top: 18px; right: 18px; z-index: 2; background: rgba(255,255,255,.95); transition: transform .2s var(--cd-ease-out), background .2s ease; }
+.conecta-event .form-modal__close:hover { background: #fff; transform: rotate(90deg); }
+
+@keyframes cd-form-spin {
+  to { transform: rotate(1turn); }
+}
+
+@media (max-width: 760px) {
+  .conecta-event .form-modal { align-items: end; padding: 12px; }
+  .conecta-event .form-modal__panel { width: 100%; max-height: calc(100vh - 24px); border-radius: 26px; }
+  .conecta-event .form-modal__layout { display: block; min-height: 0; }
+  .conecta-event .form-modal__intro { min-height: 0; padding: 42px 26px 30px; }
+  .conecta-event .form-modal__intro h2 { margin-bottom: 13px; font-size: 34px; }
+  .conecta-event .form-modal__intro > p:not(.eyebrow) { font-size: 15px; line-height: 22px; }
+  .conecta-event .form-modal__intro .form-modal__note { margin-top: 18px; font-size: 12px; line-height: 18px; }
+  .conecta-event .form-modal__form { padding: 26px 22px 30px; }
+  .conecta-event .form-modal__embed { min-height: 220px; }
 }

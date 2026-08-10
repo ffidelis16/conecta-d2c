@@ -50,7 +50,7 @@
   let modalContext = {};
 
   const runAfterCtaResponse = (trigger, callback) => {
-    if (pageType !== "hub" || !(trigger instanceof HTMLElement) || reducedMotion) {
+    if (!(trigger instanceof HTMLElement) || reducedMotion) {
       callback();
       return;
     }
@@ -73,15 +73,21 @@
   };
 
   const ensureHubSpotScript = (portalId) => {
-    if (window.customElements && customElements.get("hs-form-frame")) return Promise.resolve();
+    if (window.hbspt && window.hbspt.forms) return Promise.resolve();
     if (formScriptPromise) return formScriptPromise;
 
     formScriptPromise = new Promise((resolve, reject) => {
       const script = document.createElement("script");
-      script.src = `https://js.hsforms.net/forms/embed/${portalId}.js`;
+      script.src = "https://js.hsforms.net/forms/embed/v2.js";
       script.async = true;
       script.dataset.conectaHubspotEmbed = "true";
-      script.onload = resolve;
+      script.onload = () => {
+        if (window.hbspt && window.hbspt.forms) {
+          resolve();
+          return;
+        }
+        reject(new Error(`A API de formulários do portal ${portalId} não foi disponibilizada.`));
+      };
       script.onerror = reject;
       document.head.appendChild(script);
     });
@@ -94,30 +100,57 @@
     if (!config || !target) return;
 
     target.replaceChildren();
+    target.setAttribute("aria-busy", "true");
     if (!config.id) {
       const pending = document.createElement("p");
       pending.className = "form-modal__pending";
       pending.textContent = "O formulário deste fluxo será conectado na configuração final do HubSpot.";
       target.appendChild(pending);
+      target.setAttribute("aria-busy", "false");
       return;
     }
 
+    const loading = document.createElement("p");
+    loading.className = "form-modal__loading";
+    loading.textContent = "Carregando formulário…";
+    target.appendChild(loading);
+
     try {
       await ensureHubSpotScript(app.dataset.hubspotPortalId);
-      const form = document.createElement("hs-form-frame");
-      form.setAttribute("data-portal-id", app.dataset.hubspotPortalId);
-      form.setAttribute("data-form-id", config.id);
-      form.setAttribute("data-region", "na1");
-      form.dataset.formContext = type;
-      form.dataset.eventId = modalContext.eventId || "";
-      form.dataset.eventName = modalContext.eventName || "";
-      target.appendChild(form);
+      const formTarget = document.createElement("div");
+      formTarget.id = `conecta-d2c-hubspot-form-${type}`;
+      formTarget.dataset.formContext = type;
+      formTarget.dataset.eventId = modalContext.eventId || "";
+      formTarget.dataset.eventName = modalContext.eventName || "";
+      target.replaceChildren(formTarget);
+
+      window.hbspt.forms.create({
+        portalId: app.dataset.hubspotPortalId,
+        formId: config.id,
+        target: `#${formTarget.id}`,
+        onFormSubmitted: () => {
+          track("form_submit", {
+            form_context: type,
+            form_id: config.id,
+            event_id: modalContext.eventId || undefined,
+            page_type: pageType,
+          });
+          track("generate_lead", {
+            form_context: type,
+            form_id: config.id,
+            event_id: modalContext.eventId || undefined,
+            page_type: pageType,
+          });
+        },
+      });
     } catch (error) {
       const failure = document.createElement("p");
       failure.className = "form-modal__pending";
       failure.textContent = "Não foi possível carregar o formulário agora. Tente novamente em alguns instantes.";
       target.appendChild(failure);
       track("form_error", { form_context: type, page_type: pageType });
+    } finally {
+      target.setAttribute("aria-busy", "false");
     }
   };
 
