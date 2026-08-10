@@ -51,7 +51,7 @@
           </div>
         </div>
         <div class="hub-hero__visual reveal">
-          <img class="hub-hero__image" src="{{ get_asset_url('../assets/images/fortaleza-hero.png') }}" alt="Orla de Fortaleza ao pôr do sol" width="1536" height="1024" fetchpriority="high">
+          <img class="hub-hero__image" src="{{ get_asset_url('../assets/images/fortaleza-hub-solar.png') }}" alt="Orla de Fortaleza ao pôr do sol" width="1536" height="1024" fetchpriority="high">
           <img class="hub-hero__community-seal" src="{{ get_asset_url('../assets/images/selo-d2c.svg') }}" alt="" width="147" height="147" aria-hidden="true">
           <article class="next-event-card" data-next-event-card>
             <div class="next-event-card__top"><span>PRÓXIMA EDIÇÃO</span><strong>20/08</strong></div>
@@ -74,7 +74,7 @@
         </div>
         <div class="agenda-overview">
           <article class="featured-event-card reveal">
-            <img src="{{ get_asset_url('../assets/images/fortaleza-hero.png') }}" alt="Vista de Fortaleza ao pôr do sol" width="1536" height="1024" loading="lazy">
+            <img src="{{ get_asset_url('../assets/images/fortaleza-hub-solar.png') }}" alt="Vista de Fortaleza ao pôr do sol" width="1536" height="1024" loading="lazy">
             <div class="featured-event-card__body">
               <p class="eyebrow eyebrow--dark">PARA CONVIDADOS</p>
               <p class="event-date">20 AGO · FORTALEZA, CE</p>
@@ -117,16 +117,16 @@
           <p>Com parceiros que conhecem o mercado local, cada encontro transforma desafios reais em temas relevantes, experiências próximas e conexões com potencial de negócio.</p>
         </div>
         <div class="principle-grid" data-horizontal-scroll>
-          <article class="principle-card reveal"><span class="principle-card__icon">⌖</span><p class="eyebrow">REGIÃO</p><h3>Contexto local</h3><p>Cada encontro parte dos desafios de quem vende online naquele mercado.</p></article>
-          <article class="principle-card reveal"><span class="principle-card__icon">✦</span><p class="eyebrow">EXPERIÊNCIA</p><h3>Experiências com identidade</h3><p>Conteúdo aplicável, conversas próximas e atmosfera própria em cada cidade.</p></article>
-          <article class="principle-card reveal"><span class="principle-card__icon">⌁</span><p class="eyebrow">CONEXÃO</p><h3>Curadoria de convidados</h3><p>Marcas, gestores e especialistas selecionados para trocas relevantes.</p></article>
+          <article class="principle-card reveal"><span class="principle-card__icon"><img src="{{ get_asset_url('../assets/images/contexto-local.svg') }}" alt=""></span><p class="eyebrow">REGIÃO</p><h3>Contexto local</h3><p>Cada encontro parte dos desafios de quem vende online naquele mercado.</p></article>
+          <article class="principle-card reveal"><span class="principle-card__icon"><img src="{{ get_asset_url('../assets/images/experiencias.svg') }}" alt=""></span><p class="eyebrow">EXPERIÊNCIA</p><h3>Experiências com identidade</h3><p>Conteúdo aplicável, conversas próximas e atmosfera própria em cada cidade.</p></article>
+          <article class="principle-card reveal"><span class="principle-card__icon"><img src="{{ get_asset_url('../assets/images/curadoria.svg') }}" alt=""></span><p class="eyebrow">CONEXÃO</p><h3>Curadoria de convidados</h3><p>Marcas, gestores e especialistas selecionados para trocas relevantes.</p></article>
         </div>
       </div>
     </section>
 
     <section class="proof-strip" aria-label="Lojas que vendem com a Nuvemshop">
       <p>Algumas das mais de 100 mil lojas que vendem com a gente</p>
-      <div class="proof-strip__track" aria-hidden="true"><span>OSRAM</span><span>TRITON</span><span>DT3</span><span>RENNOVA</span><span>PITADA NATURAL</span><span>ISABELLA MATE</span><span>LV</span><span>CALMA</span></div>
+      <img src="{{ get_asset_url('../assets/images/store-logos.png') }}" alt="Marcas que vendem com a Nuvemshop" width="1440" height="51">
     </section>
 
     <section class="past-section section" id="edicoes-anteriores" aria-labelledby="past-title">
@@ -137,24 +137,47 @@
         </div>
         <div class="past-carousel" data-carousel>
           <div class="past-carousel__track" data-carousel-track>
-            <article class="past-card"><img src="{{ get_asset_url('../assets/images/rio-de-janeiro.webp') }}" alt="Edição anterior no Rio de Janeiro" width="800" height="533" loading="lazy"><div><h3>Rio de Janeiro / RJ</h3><p>Parceiro · tema · ano</p></div></article>
-            <article class="past-card"><img src="{{ get_asset_url('../assets/images/franca.webp') }}" alt="Edição anterior em Franca" width="800" height="450" loading="lazy"><div><h3>Franca / SP</h3><p>Parceiro · tema · ano</p></div></article>
-            <article class="past-card"><img src="{{ get_asset_url('../assets/images/limeira.webp') }}" alt="Edição anterior em Limeira" width="800" height="663" loading="lazy"><div><h3>Limeira / SP</h3><p>Parceiro · tema · ano</p></div></article>
-            <article class="past-card"><img src="{{ get_asset_url('../assets/images/divinopolis.webp') }}" alt="Edição anterior em Divinópolis" width="800" height="533" loading="lazy"><div><h3>Divinópolis / MG</h3><p>Parceiro · tema · ano</p></div></article>
+            <article class="past-card"><img src="{{ get_asset_url('../assets/images/rio-de-janeiro.webp') }}" alt="Edição anterior no Rio de Janeiro" width="800" height="533"><div><h3>Rio de Janeiro / RJ</h3><p>Parceiro · tema · ano</p></div></article>
+            <article class="past-card"><img src="{{ get_asset_url('../assets/images/franca.webp') }}" alt="Edição anterior em Franca" width="800" height="450"><div><h3>Franca / SP</h3><p>Parceiro · tema · ano</p></div></article>
+            <article class="past-card"><img src="{{ get_asset_url('../assets/images/limeira.webp') }}" alt="Edição anterior em Limeira" width="800" height="663"><div><h3>Limeira / SP</h3><p>Parceiro · tema · ano</p></div></article>
+            <article class="past-card"><img src="{{ get_asset_url('../assets/images/divinopolis.webp') }}" alt="Edição anterior em Divinópolis" width="800" height="533"><div><h3>Divinópolis / MG</h3><p>Parceiro · tema · ano</p></div></article>
           </div>
           <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="Ver edições anteriores">←</button><button type="button" data-carousel-next aria-label="Ver próximas edições anteriores">→</button></div>
         </div>
       </div>
     </section>
 
-    <section class="regional-section section" id="avisos" aria-labelledby="regional-title">
-      <div class="container"><div class="regional-card reveal"><div><p class="eyebrow">SUA CIDADE AINDA NÃO ESTÁ NA AGENDA?</p><h2 id="regional-title">Receba avisos sobre os próximos eventos na sua região.</h2><p>Este cadastro não representa inscrição em evento.</p></div><button class="button" type="button" data-open-form="regional_interest" data-cta="regional-section">Receber avisos <span aria-hidden="true">→</span></button></div></div>
+    <section class="regional-section" id="avisos" aria-labelledby="regional-title">
+      <div class="container">
+        <div class="regional-card reveal">
+          <div class="regional-card__content">
+            <p class="eyebrow"><img src="{{ get_asset_url('../assets/images/agenda-local.svg') }}" alt="" aria-hidden="true">SUA CIDADE AINDA NÃO ESTÁ NA AGENDA?</p>
+            <h2 id="regional-title">Receba avisos sobre os próximos eventos na sua região.</h2>
+            <p>Este cadastro não representa inscrição em evento.</p>
+          </div>
+          <img class="regional-card__map" src="{{ get_asset_url('../assets/images/brasil-map.png') }}" alt="" aria-hidden="true" width="595" height="621">
+          <button class="button" type="button" data-open-form="regional_interest" data-cta="regional-section">Receber avisos <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="conecta-footer">
-    <div class="container conecta-footer__grid"><div><img src="{{ get_asset_url('../assets/images/nuvemshop-logo.svg') }}" alt="Nuvemshop" width="159" height="26"><p>Eventos que aproximam quem constrói o comércio digital.</p></div><div><h2>Conecta D2C</h2><a href="#agenda">Agenda</a><a href="#como-funciona">Como funciona</a><a href="#edicoes-anteriores">Edições anteriores</a></div><div><h2>Links</h2><a href="https://www.nuvemshop.com.br/">Nuvemshop</a><a href="https://atendimento.nuvemshop.com.br/">Central de Atendimento</a><a href="https://www.nuvemshop.com.br/termos-de-uso">Termos</a><a href="https://www.nuvemshop.com.br/politica-de-privacidade">Privacidade</a></div></div>
-    <div class="container conecta-footer__legal">2011–2026 © Nuvemshop · Termos · Privacidade · Cookies</div>
+    <div class="container conecta-footer__links">
+      <div><h2>Plataforma</h2><a href="https://www.nuvemshop.com.br/">Loja virtual</a><a href="https://www.nuvemshop.com.br/planos-e-precos">Planos e preços</a><a href="https://www.nuvemshop.com.br/migrar-para-nuvemshop">Migrar minha loja</a><a href="https://www.nuvemshop.com.br/">Plano grátis</a><a href="https://www.nuvemshop.com.br/nuvemshop-next">Nuvemshop Next</a><a class="footer-more" href="https://www.nuvemshop.com.br/">Ver mais links</a></div>
+      <div><h2>Recursos</h2><a href="https://www.nuvemshop.com.br/funcionalidades">Funcionalidades</a><a href="https://www.nuvemshop.com.br/canais-de-venda">Canais de venda</a><a href="https://www.nuvemshop.com.br/loja-de-aplicativos">Loja de aplicativos</a><a href="https://www.nuvemshop.com.br/loja-de-temas">Loja de temas</a><a href="https://www.nuvemshop.com.br/ferramentas">Ferramentas gratuitas</a></div>
+      <div><h2>Aprender</h2><a href="https://www.nuvemshop.com.br/blog/">Blog</a><a href="https://www.nuvemshop.com.br/blog/ecommerce-na-pratica/">E-commerce na Prática</a><a href="https://www.nuvemshop.com.br/masterclass">Masterclass (Eleva)</a><a href="https://www.nuvemshop.com.br/nuvem-commerce">Nuvem Commerce</a><a href="https://www.nuvemshop.com.br/radar-do-ecommerce-d2c">Radar Do E-commerce D2C</a></div>
+      <div><h2>Parceiros</h2><a href="https://www.nuvemshop.com.br/especialistas">Especialistas</a><a href="https://www.nuvemshop.com.br/afiliados">Afiliados</a><a href="https://www.nuvemshop.com.br/tecnologicos">Tecnológicos</a></div>
+      <div><h2>Empresa</h2><a href="https://www.nuvemshop.com.br/">Sobre Nuvemshop</a><a href="https://www.nuvemshop.com.br/trabalhe-conosco">Trabalhe conosco</a><a href="https://atendimento.nuvemshop.com.br/">Central de Atendimento</a><a href="https://status.nuvemshop.com.br/">Status</a><a href="https://www.nuvemshop.com.br/cases-de-sucesso">Cases de sucesso</a></div>
+    </div>
+    <div class="container conecta-footer__meta">
+      <p>2011–2026 © Nuvemshop | Termos | Privacidade | Cookies | Mapa do site</p>
+      <div class="footer-meta__right">
+        <span class="footer-country"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M3.5 12h17M12 3.5c2.8 3 2.8 14 0 17M12 3.5c-2.8 3-2.8 14 0 17"></path></svg>Brasil⌄</span>
+        <div class="footer-socials"><a href="https://www.instagram.com/nuvemshop/" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.4" cy="6.7" r="1"></circle></svg></a><a href="https://www.youtube.com/@nuvemshop" aria-label="YouTube"><img src="{{ get_asset_url('../assets/images/youtube.svg') }}" alt=""></a><a href="https://x.com/nuvemshop" aria-label="X"><img src="{{ get_asset_url('../assets/images/x.svg') }}" alt=""></a><a href="https://www.linkedin.com/company/nuvemshop/" aria-label="LinkedIn"><img src="{{ get_asset_url('../assets/images/linkedin.svg') }}" alt=""></a><a href="https://www.facebook.com/nuvemshop/" aria-label="Facebook"><img src="{{ get_asset_url('../assets/images/facebook.svg') }}" alt=""></a></div>
+      </div>
+    </div>
+    <div class="container conecta-footer__bottom"><img src="{{ get_asset_url('../assets/images/footer-abccomm.png') }}" alt="Melhor plataforma de e-commerce"><img class="conecta-footer__brand" src="{{ get_asset_url('../assets/images/nuvemshop-logo.svg') }}" alt="Nuvemshop" width="317" height="52"></div>
   </footer>
 
   <section class="form-modal" role="dialog" aria-modal="true" aria-labelledby="form-modal-title" aria-hidden="true" data-form-modal>
