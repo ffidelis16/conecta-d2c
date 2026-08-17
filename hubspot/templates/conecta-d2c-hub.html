@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,ital,wght@6..96,600;6..96,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ get_asset_url('../assets/css/conecta-d2c.css') }}">
+  <link rel="stylesheet" href="{{ get_asset_url('../assets/css/conecta-d2c-hub-agencies.css') }}">
   {{ standard_header_includes }}
 </head>
 <body class="conecta-page conecta-hub" data-conecta-app data-page="hub" data-agenda-url="__AGENDA_PUBLIC_URL__" data-hubspot-portal-id="8180620" data-form-regional-interest="" data-form-event-pre-registration="" data-form-event-registration="">
@@ -180,6 +181,35 @@
         </div>
       </div>
     </section>
+    <section class="agency-partners-section" aria-labelledby="agency-partners-title">
+      <div class="container agency-partners__layout">
+        <div class="agency-partners__content reveal">
+          <p class="eyebrow">AGÊNCIAS PARCEIRAS</p>
+          <h2 id="agency-partners-title">Eventos realizados com quem conhece cada mercado de perto.</h2>
+          <p>As agências parceiras da Nuvemshop somam visão local, repertório e relações para que o Conecta D2C reúna as pessoas certas em cada edição, e para que cada encontro possa ser realmente relevante para os participantes.</p>
+          <a class="text-link agency-partners__cta" href="#agenda" data-open-agenda data-cta="agency-partners-agenda">Confira a agenda <span aria-hidden="true">→</span></a>
+        </div>
+        <!-- Marcações temporárias: substituir por logos aprovados, preservando 4 colunas no desktop. -->
+        <ul class="agency-logo-matrix reveal" aria-label="Logotipos de agências parceiras — marcações temporárias">
+          <li class="agency-logo-slot" style="--agency-index: 0" aria-label="Espaço reservado para logo de agência parceira 01"><span class="agency-logo-slot__mark">Agência <small>01</small></span></li>
+          <li class="agency-logo-slot" style="--agency-index: 1" aria-label="Espaço reservado para logo de agência parceira 02"><span class="agency-logo-slot__mark">Agência <small>02</small></span></li>
+          <li class="agency-logo-slot" style="--agency-index: 2" aria-label="Espaço reservado para logo de agência parceira 03"><span class="agency-logo-slot__mark">Agência <small>03</small></span></li>
+          <li class="agency-logo-slot" style="--agency-index: 3" aria-label="Espaço reservado para logo de agência parceira 04"><span class="agency-logo-slot__mark">Agência <small>04</small></span></li>
+          <li class="agency-logo-slot" style="--agency-index: 4" aria-label="Espaço reservado para logo de agência parceira 05"><span class="agency-logo-slot__mark">Agência <small>05</small></span></li>
+          <li class="agency-logo-slot" style="--agency-index: 5" aria-label="Espaço reservado para logo de agência parceira 06"><span class="agency-logo-slot__mark">Agência <small>06</small></span></li>
+          <li class="agency-logo-slot" style="--agency-index: 6" aria-label="Espaço reservado para logo de agência parceira 07"><span class="agency-logo-slot__mark">Agência <small>07</small></span></li>
+          <li class="agency-logo-slot" style="--agency-index: 7" aria-label="Espaço reservado para logo de agência parceira 08"><span class="agency-logo-slot__mark">Agência <small>08</small></span></li>
+          <li class="agency-logo-slot" style="--agency-index: 8" aria-label="Espaço reservado para logo de agência parceira 09"><span class="agency-logo-slot__mark">Agência <small>09</small></span></li>
+          <li class="agency-logo-slot" style="--agency-index: 9" aria-label="Espaço reservado para logo de agência parceira 10"><span class="agency-logo-slot__mark">Agência <small>10</small></span></li>
+          <li class="agency-logo-slot" style="--agency-index: 10" aria-label="Espaço reservado para logo de agência parceira 11"><span class="agency-logo-slot__mark">Agência <small>11</small></span></li>
+          <li class="agency-logo-slot" style="--agency-index: 11" aria-label="Espaço reservado para logo de agência parceira 12"><span class="agency-logo-slot__mark">Agência <small>12</small></span></li>
+          <li class="agency-logo-slot" style="--agency-index: 12" aria-label="Espaço reservado para logo de agência parceira 13"><span class="agency-logo-slot__mark">Agência <small>13</small></span></li>
+          <li class="agency-logo-slot" style="--agency-index: 13" aria-label="Espaço reservado para logo de agência parceira 14"><span class="agency-logo-slot__mark">Agência <small>14</small></span></li>
+          <li class="agency-logo-slot" style="--agency-index: 14" aria-label="Espaço reservado para logo de agência parceira 15"><span class="agency-logo-slot__mark">Agência <small>15</small></span></li>
+          <li class="agency-logo-slot" style="--agency-index: 15" aria-label="Espaço reservado para logo de agência parceira 16"><span class="agency-logo-slot__mark">Agência <small>16</small></span></li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer class="conecta-footer" data-motion-footer>
@@ -216,6 +246,7 @@
   </section>
 
   <script src="{{ get_asset_url('../assets/js/conecta-d2c.js') }}" defer></script>
+  <script src="{{ get_asset_url('../assets/js/conecta-d2c-hub-agencies.js') }}" defer></script>
   {{ standard_footer_includes }}
 </body>
 </html>
