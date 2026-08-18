@@ -32,13 +32,17 @@
     .conecta-event--santa-barbara .partner-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 460px; }
     .conecta-event--santa-barbara .partner-logos__group { display: flex; align-items: center; justify-content: center; gap: 34px; }
     .conecta-event--santa-barbara .partner-logos__base { color: #fff; font-size: 19px; font-weight: 700; letter-spacing: -.04em; }
+    .conecta-event--santa-barbara .event-hero .conecta-mark { margin-bottom: 30px; }
     @media (min-width: 761px) {
       .conecta-event--santa-barbara .event-hero .eyebrow { font-size: clamp(14px, 1.25vw, 20px); letter-spacing: .085em; line-height: 1.25; white-space: nowrap; }
-      .conecta-event--santa-barbara .quick-fact--time strong,
-      .conecta-event--santa-barbara .quick-fact--location strong { display: block; white-space: normal; line-height: 1.08; }
-      .conecta-event--santa-barbara .quick-fact--time strong { font-size: 14px; }
-      .conecta-event--santa-barbara .quick-fact--time strong span { font-size: 11px; }
-      .conecta-event--santa-barbara .quick-fact--location strong { font-size: 13px; }
+      .conecta-event--santa-barbara .quick-facts__items { grid-template-columns: 163px 145px 142px; }
+      .conecta-event--santa-barbara .quick-fact--time strong { display: flex; align-items: center; gap: 4px; white-space: nowrap; font-size: 12px; line-height: 1; }
+      .conecta-event--santa-barbara .quick-fact--time strong span + span::before { margin-right: 4px; content: "–"; }
+      .conecta-event--santa-barbara .quick-fact--location strong { display: block; white-space: normal; font-size: 12.5px; line-height: 1.08; }
+    }
+    @media (min-width: 761px) and (max-height: 850px) {
+      .conecta-event--santa-barbara .event-hero .button-group { position: static; bottom: auto; left: auto; margin-top: 45px; }
+      .conecta-event--santa-barbara .event-hero__content > p:not(.eyebrow) { margin-bottom: 0; }
     }
     @media (max-width: 767px) {
       .conecta-event--santa-barbara .santa-host-placeholder { min-height: 245px; }
@@ -82,7 +86,7 @@
             <div class="quick-facts__heading"><p>Americana, SP</p><img src="../hubspot/assets/images/event-sun.svg" alt="" aria-hidden="true" width="20" height="20"></div>
             <div class="quick-facts__items">
               <div class="quick-fact"><img src="../hubspot/assets/images/event-calendar.svg" alt="" aria-hidden="true" width="20" height="20"><span><small>DATA</small><strong>03 de setembro</strong></span></div>
-              <div class="quick-fact quick-fact--time"><img src="../hubspot/assets/images/event-time.svg" alt="" aria-hidden="true" width="20" height="20"><span><small>HORÁRIO</small><strong>18h30<br><span>às 22h30</span></strong></span></div>
+              <div class="quick-fact quick-fact--time"><img src="../hubspot/assets/images/event-time.svg" alt="" aria-hidden="true" width="20" height="20"><span><small>HORÁRIO</small><strong><span>18h30</span><span>22h30</span></strong></span></div>
               <div class="quick-fact quick-fact--location"><img src="../hubspot/assets/images/event-location.svg" alt="" aria-hidden="true" width="20" height="20"><span><small>LOCAL</small><strong>Empório<br>Dal Giardino</strong></span></div>
             </div>
             <p class="quick-facts__venue"><strong>Vagas limitadas</strong> · pré-inscrição sujeita à avaliação da Nuvemshop</p>
