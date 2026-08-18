@@ -64,32 +64,53 @@
       .conecta-event--santa-barbara .partner-logo--base { width: 142px; }
     }
   
-    /* Local: composição de Fortaleza, com padding vertical simétrico. */
-    @media (min-width: 761px) {
-      .conecta-event--santa-barbara .location-section {
-        height: auto !important;
-        min-height: 0 !important;
-        margin: 0 !important;
-        padding: 100px 0;
-      }
+    /* Local: dimensões fixadas para impedir que a cascata externa altere a composição. */
+    .conecta-event--santa-barbara .location-section {
+      height: auto !important;
+      min-height: 0 !important;
+      margin: 0 !important;
+      padding: 120px 0 !important;
     }
 
-    @media (min-width: 1280px) {
+    .conecta-event--santa-barbara .location-section__grid {
+      min-height: 378px !important;
+      align-items: start !important;
+    }
+
+    .conecta-event--santa-barbara .location-visuals {
+      height: 378px !important;
+      min-height: 378px !important;
+      overflow: hidden;
+    }
+
+    .conecta-event--santa-barbara .location-visuals .location-map,
+    .conecta-event--santa-barbara .location-visuals .location-photo {
+      height: 378px !important;
+      min-height: 0 !important;
+      max-height: 378px !important;
+      transform: none !important;
+    }
+
+    .conecta-event--santa-barbara .location-section .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    @media (max-width: 760px) {
       .conecta-event--santa-barbara .location-section {
-        padding: 120px 0;
+        padding: 80px 0 !important;
       }
 
       .conecta-event--santa-barbara .location-section__grid {
-        min-height: 378px;
-        grid-template-columns: 676px minmax(0, 1fr);
-        align-items: start;
-        gap: 64px;
+        min-height: 316px !important;
       }
 
-      .conecta-event--santa-barbara .location-visuals {
-        grid-template-columns: 198px 453px;
-        gap: 25px;
-        height: 378px;
+      .conecta-event--santa-barbara .location-visuals,
+      .conecta-event--santa-barbara .location-visuals .location-map,
+      .conecta-event--santa-barbara .location-visuals .location-photo {
+        height: 316px !important;
+        min-height: 316px !important;
+        max-height: 316px !important;
       }
     }
 
