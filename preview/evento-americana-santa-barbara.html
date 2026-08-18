@@ -64,16 +64,13 @@
       .conecta-event--santa-barbara .partner-logo--base { width: 142px; }
     }
   
-    /* Local: mesma composição de Fortaleza, com fluxo que preserva o respiro antes do CTA. */
+    /* Local: composição de Fortaleza, com padding vertical simétrico. */
     @media (min-width: 761px) {
       .conecta-event--santa-barbara .location-section {
         height: auto !important;
-        min-height: 0;
-        margin-bottom: 104px;
-      }
-
-      .conecta-event--santa-barbara .location-section__grid {
-        align-items: center;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 100px 0;
       }
     }
 
@@ -83,15 +80,16 @@
       }
 
       .conecta-event--santa-barbara .location-section__grid {
-        min-height: 424px;
+        min-height: 378px;
         grid-template-columns: 676px minmax(0, 1fr);
+        align-items: start;
         gap: 64px;
       }
 
       .conecta-event--santa-barbara .location-visuals {
         grid-template-columns: 198px 453px;
         gap: 25px;
-        height: 424px;
+        height: 378px;
       }
     }
 
