@@ -63,6 +63,38 @@
       .conecta-event--santa-barbara .partner-logo--nuvemshop { width: 124px; }
       .conecta-event--santa-barbara .partner-logo--base { width: 142px; }
     }
+  
+    /* Local: altura elástica impede que os visuais avancem sobre a seção seguinte. */
+    @media (min-width: 761px) {
+      .conecta-event--santa-barbara .location-section {
+        height: auto !important;
+        min-height: 0;
+      }
+
+      .conecta-event--santa-barbara .location-section__grid {
+        align-items: center;
+      }
+    }
+
+    /* Medidas da composição desktop de Fortaleza, sem altura rígida. */
+    @media (min-width: 1280px) {
+      .conecta-event--santa-barbara .location-section {
+        min-height: 664px;
+        padding: 120px 0;
+      }
+
+      .conecta-event--santa-barbara .location-section__grid {
+        min-height: 424px;
+        grid-template-columns: 676px minmax(0, 1fr);
+        gap: 64px;
+      }
+
+      .conecta-event--santa-barbara .location-visuals {
+        grid-template-columns: 198px 453px;
+        gap: 25px;
+        height: 424px;
+      }
+    }
   </style>
 </head>
 <body class="conecta-page conecta-event conecta-event--santa-barbara" data-conecta-app data-page="event" data-hubspot-portal-id="8180620" data-form-regional-interest="" data-form-event-pre-registration="bdb0ccad-d2b3-471a-adf1-9187057e1ab3" data-form-event-registration="">
