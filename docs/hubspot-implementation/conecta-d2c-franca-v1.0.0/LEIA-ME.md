@@ -9,5 +9,5 @@ Base de uploads aplicada: https://8180620.fs1.hubspotusercontent-na1.net/hubfs/8
 Estrutura padrão: developer-files contém HTML, CSS e JavaScript; docs contém instruções; files-upload contém os arquivos a publicar no HubSpot Files.
 
 Preview aprovado: https://ffidelis16.github.io/conecta-d2c/preview/evento-franca.html
-Commit-base: 5043516abfc37a0a0936a882239030cf3b928cd9
+Commit-base: 9fb5e0143d65e89d2dc6ffa165fd7c964eba58dd
 Portal: 8180620 | Form ID: bdb0ccad-d2b3-471a-adf1-9187057e1ab3
