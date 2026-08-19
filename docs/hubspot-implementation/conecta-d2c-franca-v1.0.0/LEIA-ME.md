@@ -6,5 +6,5 @@
 4. Crie a landing page em rascunho e valide formulario, tracking, assets e responsividade antes de publicar.
 
 Preview aprovado: https://ffidelis16.github.io/conecta-d2c/preview/evento-franca.html
-Commit-base: c5b656c9143ee3725a07eafcda5cebc8cff197a6
+Commit-base: 34799da678dec02740b0e82e60aa20ea95479f34
 Portal: 8180620 | Form ID: bdb0ccad-d2b3-471a-adf1-9187057e1ab3
