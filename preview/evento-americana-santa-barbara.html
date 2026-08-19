@@ -27,10 +27,10 @@
   <link rel="stylesheet" href="../hubspot/assets/css/conecta-d2c.css">
   <style>
     .conecta-event--santa-barbara .partners-section { height: 176px; padding: 0; }
-    .conecta-event--santa-barbara .partners-section .container { display: grid; height: 176px; grid-template-columns: 342px minmax(0, 1fr); align-items: center; gap: 74px; }
-    .conecta-event--santa-barbara .partners-section h2 { max-width: 300px; }
-    .conecta-event--santa-barbara .partner-logos { display: flex; width: auto; max-width: none; align-items: center; justify-content: flex-start; }
-    .conecta-event--santa-barbara .partner-logos__group { display: flex; align-items: center; justify-content: flex-start; gap: 28px; }
+    .conecta-event--santa-barbara .partners-section .container { display: grid; height: 176px; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 64px; }
+    .conecta-event--santa-barbara .partners-section h2 { max-width: none; margin: 0; }
+    .conecta-event--santa-barbara .partner-logos { display: flex; width: auto; max-width: none; align-items: center; justify-content: flex-end; }
+    .conecta-event--santa-barbara .partner-logos__group { display: flex; align-items: center; justify-content: flex-end; gap: 28px; }
     .conecta-event--santa-barbara .partner-logos__separator { width: 1px; height: 44px; background: rgba(255,255,255,.36); }
     .conecta-event--santa-barbara .partner-logo--nuvemshop { width: 158px; max-width: none; max-height: none; filter: brightness(0) invert(1); }
     .conecta-event--santa-barbara .partner-logo--base { width: 178px; max-width: none; max-height: none; filter: none; }
@@ -58,6 +58,7 @@
       .conecta-event--santa-barbara .partner-logos__separator { height: 36px; }
       .conecta-event--santa-barbara .partner-logo--nuvemshop { width: 124px; }
       .conecta-event--santa-barbara .partner-logo--base { width: 142px; }
+      .conecta-event--santa-barbara .partners-section h2 { white-space: nowrap; }
     }
   
     /* Local: dimensões fixadas para impedir que a cascata externa altere a composição. */
@@ -250,8 +251,7 @@
     <section class="partners-section" aria-labelledby="partners-title">
       <div class="container">
         <div>
-          <p class="eyebrow">COM PARTICIPAÇÃO DE</p>
-          <h2 id="partners-title">Ecossistema que amplia<br>a experiência.</h2>
+          <h2 id="partners-title">Ecossistema que amplia a experiência.</h2>
         </div>
         <div class="partners-marquee" aria-label="Realização e participação desta edição">
           <div class="partner-logos">
