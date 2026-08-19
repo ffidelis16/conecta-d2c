@@ -31,6 +31,8 @@ jobs:
       - name: Validar conteúdo da entrega
         run: |
           test -f docs/hubspot-implementation/conecta-d2c-franca-v1.0.0/developer-files/conecta-d2c-franca.template.html
+          test -f docs/hubspot-implementation/conecta-d2c-franca-v1.0.0/developer-files/conecta-d2c-franca.css
+          test -f docs/hubspot-implementation/conecta-d2c-franca-v1.0.0/developer-files/conecta-d2c-franca.js
           test -f docs/hubspot-implementation/conecta-d2c-franca-v1.0.0/files-upload/conecta-d2c-franca.css
           test -f docs/hubspot-implementation/conecta-d2c-franca-v1.0.0/files-upload/conecta-d2c-franca.js
           test -f docs/hubspot-implementation/conecta-d2c-franca-v1.0.0/CHECKSUMS-SHA256.txt
