@@ -11,6 +11,7 @@ const delivery = join(deliveryRoot, packageName);
 const uploads = join(delivery, "files-upload");
 const developerFiles = join(delivery, "developer-files");
 const sourcePage = join(root, "preview", "evento-franca.html");
+const sourceStylesheet = join(root, "hubspot", "assets", "css", "conecta-d2c.css");
 const sourceJavascript = join(root, "hubspot", "assets", "js", "conecta-d2c.js");
 const sourceImages = join(root, "hubspot", "assets", "images");
 const version = "1.0.0";
@@ -90,6 +91,7 @@ const listFiles = async (directory) => {
 };
 
 const sourceHtml = await readFile(sourcePage, "utf8");
+const baseCss = await readFile(sourceStylesheet, "utf8");
 const baseJavascript = await readFile(sourceJavascript, "utf8");
 for (const value of [
   formId,
@@ -108,8 +110,8 @@ if (!styles.length || !inlineScripts.length) throw new Error("Estrutura de CSS o
 let template = sourceHtml
   .replace(/<style\b[^>]*>[\s\S]*?<\/style>\s*/gi, "")
   .replace(/<script(?![^>]*\bsrc=)[^>]*>[\s\S]*?<\/script>\s*/gi, "")
+  .replace('<link rel="stylesheet" href="../hubspot/assets/css/conecta-d2c.css">', '<link rel="stylesheet" href="' + assetHubL + '/conecta-d2c-franca.css?v=' + version + '">')
   .replace('<script src="../hubspot/assets/js/conecta-d2c.js" defer=""></script>', '<script src="' + assetHubL + '/conecta-d2c-franca.js?v=' + version + '" defer></script>')
-  .replace("</head>", '  <link rel="stylesheet" href="' + assetHubL + '/conecta-d2c-franca.css?v=' + version + '">\n</head>')
   .replace('data-page="event"', 'data-page="event" data-package-version="' + version + '"');
 
 const preferredNames = new Map([
@@ -161,7 +163,7 @@ for (const name of sharedAssets) {
 }
 if (template.includes("data:image/") || template.includes("../hubspot/assets/")) throw new Error("Template ainda possui asset local.");
 
-const css = "/* Conecta D2C Franca · HubSpot Files · v" + version + " */\n" + styles.join("\n\n");
+const css = "/* Conecta D2C Franca · HubSpot Files · v" + version + " */\n" + baseCss + "\n\n" + styles.join("\n\n");
 const javascript = "/* Conecta D2C Franca · formulário e tracking · v" + version + " */\n" + baseJavascript + "\n\n" + inlineScripts.join("\n\n");
 await writeText(join(uploads, "conecta-d2c-franca.css"), css);
 await writeText(join(uploads, "conecta-d2c-franca.js"), javascript);
