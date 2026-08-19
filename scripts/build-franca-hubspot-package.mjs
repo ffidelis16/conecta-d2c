@@ -113,6 +113,8 @@ let template = sourceHtml
   .replace(/<script(?![^>]*\bsrc=)[^>]*>[\s\S]*?<\/script>\s*/gi, "")
   .replace('<link rel="stylesheet" href="../hubspot/assets/css/conecta-d2c.css">', '<link rel="stylesheet" href="' + assetHubL + '/conecta-d2c-franca.css?v=' + version + '">')
   .replace('<script src="../hubspot/assets/js/conecta-d2c.js" defer=""></script>', '<script src="' + assetHubL + '/conecta-d2c-franca.js?v=' + version + '" defer></script>')
+  .replace("</head>", "  {{ standard_header_includes }}\n</head>")
+  .replace("</body>", "  {{ standard_footer_includes }}\n</body>")
   .replace('data-page="event"', 'data-page="event" data-package-version="' + version + '"');
 
 const preferredNames = new Map([
@@ -164,6 +166,9 @@ for (const name of sharedAssets) {
   template = template.replaceAll("../hubspot/assets/images/" + name, assetHubL + "/" + name);
 }
 if (template.includes("data:image/") || template.includes("../hubspot/assets/")) throw new Error("Template ainda possui asset local.");
+if (!template.includes("{{ standard_header_includes }}") || !template.includes("{{ standard_footer_includes }}")) {
+  throw new Error("Template não recebeu as tags obrigatórias do HubSpot.");
+}
 
 const css = "/* Conecta D2C Franca · HubSpot Files · v" + version + " */\n" + baseCss + "\n\n" + styles.join("\n\n");
 const javascript = "/* Conecta D2C Franca · formulário e tracking · v" + version + " */\n" + baseJavascript + "\n\n" + inlineScripts.join("\n\n");
@@ -173,6 +178,8 @@ await writeText(join(uploads, "conecta-d2c-franca.js"), javascript);
 const hubspotTemplate = '{% set conecta_d2c_franca_asset_base = "' + assetToken + '" %}\n' + template;
 const localPreview = hubspotTemplate
   .replace('{% set conecta_d2c_franca_asset_base = "' + assetToken + '" %}\n', "")
+  .replaceAll("  {{ standard_header_includes }}\n", "")
+  .replaceAll("  {{ standard_footer_includes }}\n", "")
   .replaceAll(assetHubL, "./files-upload");
 await writeText(join(developerFiles, "conecta-d2c-franca.html"), hubspotTemplate);
 await writeText(join(developerFiles, "conecta-d2c-franca.css"), css);
