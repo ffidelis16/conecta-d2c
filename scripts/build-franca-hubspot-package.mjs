@@ -173,6 +173,8 @@ const localPreview = hubspotTemplate
   .replace('{% set conecta_d2c_franca_asset_base = "' + assetToken + '" %}\n', "")
   .replaceAll(assetHubL, "./files-upload");
 await writeText(join(developerFiles, "conecta-d2c-franca.template.html"), hubspotTemplate);
+await writeText(join(developerFiles, "conecta-d2c-franca.css"), css);
+await writeText(join(developerFiles, "conecta-d2c-franca.js"), javascript);
 await writeText(join(delivery, "preview-local.html"), localPreview);
 
 const powershell = [
@@ -204,8 +206,10 @@ await writeText(join(delivery, "LEIA-ME.md"), [
   "",
   "1. Suba integralmente files-upload para uma pasta exclusiva no HubSpot Files.",
   "2. Execute preparar-com-url.ps1 com a URL HTTPS dessa pasta.",
-  "3. Cole developer-files/conecta-d2c-franca-pronto.html em um template exclusivo no Design Manager.",
+  "3. Use os três arquivos de developer-files como fonte para o template exclusivo no Design Manager.",
   "4. Crie a landing page em rascunho e valide formulario, tracking, assets e responsividade antes de publicar.",
+  "",
+  "developer-files contém o HTML, CSS e JavaScript finais; files-upload contém as cópias que devem ser publicadas no HubSpot Files.",
   "",
   "Preview aprovado: https://ffidelis16.github.io/conecta-d2c/preview/evento-franca.html",
   "Commit-base: " + sourceCommit,
