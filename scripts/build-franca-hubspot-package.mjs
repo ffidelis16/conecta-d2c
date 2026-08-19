@@ -17,7 +17,7 @@ const sourceJavascript = join(root, "hubspot", "assets", "js", "conecta-d2c.js")
 const sourceImages = join(root, "hubspot", "assets", "images");
 const version = "1.0.0";
 const sourceCommit = process.env.SOURCE_COMMIT || "nao-informado";
-const assetToken = "__ASSET_BASE_URL__";
+const assetToken = "https://8180620.fs1.hubspotusercontent-na1.net/hubfs/8180620/%5BBR%5D%20conecta-d2c-franca";
 const assetHubL = "{{ conecta_d2c_franca_asset_base }}";
 const formId = "bdb0ccad-d2b3-471a-adf1-9187057e1ab3";
 const portalId = "8180620";
@@ -189,10 +189,11 @@ await writeText(join(delivery, "LEIA-ME.md"), [
   "# Conecta D2C Franca - pacote HubSpot",
   "",
   "1. Suba integralmente files-upload para uma pasta exclusiva no HubSpot Files.",
-  "2. Em developer-files, substitua __ASSET_BASE_URL__ pela URL HTTPS dessa pasta no arquivo HTML.",
+  "2. O HTML de developer-files já aponta para a pasta final de uploads no HubSpot Files.",
   "3. Use os três arquivos de developer-files como fonte para o template exclusivo no Design Manager.",
   "4. Crie a landing page em rascunho e valide formulario, tracking, assets e responsividade antes de publicar.",
   "",
+  "Base de uploads aplicada: https://8180620.fs1.hubspotusercontent-na1.net/hubfs/8180620/%5BBR%5D%20conecta-d2c-franca",
   "Estrutura padrão: developer-files contém HTML, CSS e JavaScript; docs contém instruções; files-upload contém os arquivos a publicar no HubSpot Files.",
   "",
   "Preview aprovado: https://ffidelis16.github.io/conecta-d2c/preview/evento-franca.html",
