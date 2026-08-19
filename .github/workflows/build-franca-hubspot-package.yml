@@ -30,7 +30,8 @@ jobs:
           status=$?
           printf '%s\n' "$output"
           if [ "$status" -ne 0 ]; then
-            message=$(printf '%s\n' "$output" | tail -n 1)
+            message=$(printf '%s\n' "$output" | grep -m1 -E '^(Error|TypeError|RangeError|SyntaxError|ReferenceError|[A-Z]+Error):|ENOENT' || true)
+            if [ -z "$message" ]; then message=$(printf '%s\n' "$output" | head -n 1); fi
             echo "::error title=Diagnóstico temporário do pacote Franca::$message"
             exit "$status"
           fi
