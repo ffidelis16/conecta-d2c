@@ -1,0 +1,51 @@
+name: Gerar pacote final de Franca
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "preview/evento-franca.html"
+      - "scripts/build-franca-hubspot-package.mjs"
+      - ".github/workflows/build-franca-hubspot-package.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: conecta-d2c-franca-package
+  cancel-in-progress: true
+
+jobs:
+  build-package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Gerar pacote HubSpot
+        run: node scripts/build-franca-hubspot-package.mjs
+        env:
+          SOURCE_COMMIT: ${{ github.sha }}
+
+      - name: Validar conteúdo da entrega
+        run: |
+          test -f docs/hubspot-implementation/conecta-d2c-franca-v1.0.0/developer-files/conecta-d2c-franca.template.html
+          test -f docs/hubspot-implementation/conecta-d2c-franca-v1.0.0/files-upload/conecta-d2c-franca.css
+          test -f docs/hubspot-implementation/conecta-d2c-franca-v1.0.0/files-upload/conecta-d2c-franca.js
+          test -f docs/hubspot-implementation/conecta-d2c-franca-v1.0.0/CHECKSUMS-SHA256.txt
+          sha256sum -c docs/hubspot-implementation/conecta-d2c-franca-v1.0.0/CHECKSUMS-SHA256.txt
+
+      - name: Criar arquivo ZIP
+        run: |
+          cd docs/hubspot-implementation
+          rm -f ENTREGA-HUBSPOT-conecta-d2c-franca-v1.0.0.zip
+          zip -rq ENTREGA-HUBSPOT-conecta-d2c-franca-v1.0.0.zip conecta-d2c-franca-v1.0.0
+
+      - name: Versionar pacote final
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/hubspot-implementation/conecta-d2c-franca-v1.0.0 docs/hubspot-implementation/ENTREGA-HUBSPOT-conecta-d2c-franca-v1.0.0.zip
+          git diff --cached --quiet || git commit -m "Gera pacote HubSpot final de Franca"
+          git push
