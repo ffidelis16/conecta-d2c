@@ -34,7 +34,8 @@ jobs:
           test -f docs/hubspot-implementation/conecta-d2c-franca-v1.0.0/files-upload/conecta-d2c-franca.css
           test -f docs/hubspot-implementation/conecta-d2c-franca-v1.0.0/files-upload/conecta-d2c-franca.js
           test -f docs/hubspot-implementation/conecta-d2c-franca-v1.0.0/CHECKSUMS-SHA256.txt
-          sha256sum -c docs/hubspot-implementation/conecta-d2c-franca-v1.0.0/CHECKSUMS-SHA256.txt
+          cd docs/hubspot-implementation/conecta-d2c-franca-v1.0.0
+          sha256sum -c CHECKSUMS-SHA256.txt
 
       - name: Criar arquivo ZIP
         run: |
