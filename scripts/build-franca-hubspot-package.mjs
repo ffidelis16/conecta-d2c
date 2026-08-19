@@ -10,6 +10,7 @@ const deliveryRoot = join(root, "docs", "hubspot-implementation");
 const delivery = join(deliveryRoot, packageName);
 const uploads = join(delivery, "files-upload");
 const developerFiles = join(delivery, "developer-files");
+const documentation = join(delivery, "docs");
 const sourcePage = join(root, "preview", "evento-franca.html");
 const sourceStylesheet = join(root, "hubspot", "assets", "css", "conecta-d2c.css");
 const sourceJavascript = join(root, "hubspot", "assets", "js", "conecta-d2c.js");
@@ -132,6 +133,7 @@ const preferredNames = new Map([
 await rm(delivery, { recursive: true, force: true });
 await mkdir(uploads, { recursive: true });
 await mkdir(developerFiles, { recursive: true });
+await mkdir(documentation, { recursive: true });
 
 const dataAssets = new Map();
 const allocated = new Map();
@@ -172,28 +174,10 @@ const hubspotTemplate = '{% set conecta_d2c_franca_asset_base = "' + assetToken 
 const localPreview = hubspotTemplate
   .replace('{% set conecta_d2c_franca_asset_base = "' + assetToken + '" %}\n', "")
   .replaceAll(assetHubL, "./files-upload");
-await writeText(join(developerFiles, "conecta-d2c-franca.template.html"), hubspotTemplate);
+await writeText(join(developerFiles, "conecta-d2c-franca.html"), hubspotTemplate);
 await writeText(join(developerFiles, "conecta-d2c-franca.css"), css);
 await writeText(join(developerFiles, "conecta-d2c-franca.js"), javascript);
 await writeText(join(delivery, "preview-local.html"), localPreview);
-
-const powershell = [
-  "param(",
-  "  [Parameter(Mandatory = $true)]",
-  "  [ValidatePattern('^https://')]",
-  "  [string]$AssetBaseUrl",
-  ")",
-  "",
-  "$packageDirectory = Split-Path -Parent $MyInvocation.MyCommand.Path",
-  "$source = Join-Path $packageDirectory 'developer-files\\conecta-d2c-franca.template.html'",
-  "$destination = Join-Path $packageDirectory 'developer-files\\conecta-d2c-franca-pronto.html'",
-  "$template = [System.IO.File]::ReadAllText($source)",
-  "$prepared = $template.Replace('" + assetToken + "', $AssetBaseUrl.Trim().TrimEnd('/'))",
-  "if ($prepared -match '" + assetToken + "') { throw 'A URL dos assets nao foi aplicada.' }",
-  "[System.IO.File]::WriteAllText($destination, $prepared, [System.Text.UTF8Encoding]::new($false))",
-  "Write-Host \"HTML pronto: $destination\"",
-].join("\n");
-await writeText(join(delivery, "preparar-com-url.ps1"), powershell);
 
 const uploadFiles = (await listFiles(uploads)).sort();
 const manifestAssets = await Promise.all(uploadFiles.map(async (path) => {
@@ -205,18 +189,18 @@ await writeText(join(delivery, "LEIA-ME.md"), [
   "# Conecta D2C Franca - pacote HubSpot",
   "",
   "1. Suba integralmente files-upload para uma pasta exclusiva no HubSpot Files.",
-  "2. Execute preparar-com-url.ps1 com a URL HTTPS dessa pasta.",
+  "2. Em developer-files, substitua __ASSET_BASE_URL__ pela URL HTTPS dessa pasta no arquivo HTML.",
   "3. Use os três arquivos de developer-files como fonte para o template exclusivo no Design Manager.",
   "4. Crie a landing page em rascunho e valide formulario, tracking, assets e responsividade antes de publicar.",
   "",
-  "developer-files contém o HTML, CSS e JavaScript finais; files-upload contém as cópias que devem ser publicadas no HubSpot Files.",
+  "Estrutura padrão: developer-files contém HTML, CSS e JavaScript; docs contém instruções; files-upload contém os arquivos a publicar no HubSpot Files.",
   "",
   "Preview aprovado: https://ffidelis16.github.io/conecta-d2c/preview/evento-franca.html",
   "Commit-base: " + sourceCommit,
   "Portal: " + portalId + " | Form ID: " + formId,
 ].join("\n"));
 
-await writeText(join(delivery, "METADADOS-DA-PAGINA.md"), [
+await writeText(join(documentation, "METADADOS-DA-PAGINA.md"), [
   "# Metadados",
   "",
   "Titulo: Conecta D2C Franca 2026 | Nuvemshop",
@@ -225,7 +209,7 @@ await writeText(join(delivery, "METADADOS-DA-PAGINA.md"), [
   "OG description: 22 de setembro, no Hangar Voe Solo. Um encontro curado para quem está conduzindo o próximo ciclo do e-commerce em Franca.",
 ].join("\n"));
 
-await writeText(join(delivery, "TRACKING-E-FORMULARIO.md"), [
+await writeText(join(documentation, "TRACKING-E-FORMULARIO.md"), [
   "# Formulário e tracking",
   "",
   "Portal HubSpot: " + portalId,
@@ -236,7 +220,7 @@ await writeText(join(delivery, "TRACKING-E-FORMULARIO.md"), [
   "Validar envio real e uma única ocorrência de form_submit e generate_lead.",
 ].join("\n"));
 
-await writeText(join(delivery, "MANIFESTO-DE-ARQUIVOS.md"), [
+await writeText(join(documentation, "MANIFESTO-DE-ARQUIVOS.md"), [
   "# Manifesto",
   "",
   "Assets de upload:",
