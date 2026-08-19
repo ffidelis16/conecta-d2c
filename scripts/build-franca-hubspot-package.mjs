@@ -112,6 +112,7 @@ let template = sourceHtml
   .replace(/<style\b[^>]*>[\s\S]*?<\/style>\s*/gi, "")
   .replace(/<script(?![^>]*\bsrc=)[^>]*>[\s\S]*?<\/script>\s*/gi, "")
   .replace('<link rel="stylesheet" href="../hubspot/assets/css/conecta-d2c.css">', '<link rel="stylesheet" href="' + assetHubL + '/conecta-d2c-franca.css?v=' + version + '">')
+  .replaceAll('href="assets/favicon-nuvemshop.svg?v=20260818"', 'href="' + assetHubL + '/favicon-nuvemshop.svg?v=' + version + '"')
   .replace('<script src="../hubspot/assets/js/conecta-d2c.js" defer=""></script>', '<script src="' + assetHubL + '/conecta-d2c-franca.js?v=' + version + '" defer></script>')
   .replace("</head>", "  {{ standard_header_includes }}\n</head>")
   .replace("</body>", "  {{ standard_footer_includes }}\n</body>")
@@ -168,6 +169,9 @@ for (const name of sharedAssets) {
 if (template.includes("data:image/") || template.includes("../hubspot/assets/")) throw new Error("Template ainda possui asset local.");
 if (!template.includes("{{ standard_header_includes }}") || !template.includes("{{ standard_footer_includes }}")) {
   throw new Error("Template não recebeu as tags obrigatórias do HubSpot.");
+}
+if (!template.includes(assetHubL + "/favicon-nuvemshop.svg")) {
+  throw new Error("Template não recebeu a URL do favicon.");
 }
 
 const css = "/* Conecta D2C Franca · HubSpot Files · v" + version + " */\n" + baseCss + "\n\n" + styles.join("\n\n");
