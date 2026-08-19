@@ -170,7 +170,7 @@ if (template.includes("data:image/") || template.includes("../hubspot/assets/"))
 if (!template.includes("{{ standard_header_includes }}") || !template.includes("{{ standard_footer_includes }}")) {
   throw new Error("Template não recebeu as tags obrigatórias do HubSpot.");
 }
-if (!template.includes(assetHubL + "/favicon-nuvemshop.svg")) {
+if (!template.includes(assetHubL + "/favicon-nuvemshop.ico")) {
   throw new Error("Template não recebeu a URL do favicon.");
 }
 
