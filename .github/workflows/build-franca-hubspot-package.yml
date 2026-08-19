@@ -24,17 +24,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Gerar pacote HubSpot
-        run: |
-          set +e
-          output=$(node scripts/build-franca-hubspot-package.mjs 2>&1)
-          status=$?
-          printf '%s\n' "$output"
-          if [ "$status" -ne 0 ]; then
-            message=$(printf '%s\n' "$output" | grep -m1 -E '^(Error|TypeError|RangeError|SyntaxError|ReferenceError|[A-Z]+Error):|ENOENT' || true)
-            if [ -z "$message" ]; then message=$(printf '%s\n' "$output" | head -n 1); fi
-            echo "::error title=Diagnóstico temporário do pacote Franca::$message"
-            exit "$status"
-          fi
+        run: node scripts/build-franca-hubspot-package.mjs
         env:
           SOURCE_COMMIT: ${{ github.sha }}
 
