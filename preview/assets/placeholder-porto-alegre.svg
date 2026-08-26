@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Imagem pendente de Porto Alegre</title>
+  <desc id="desc">Marcador temporário para fotografia ainda não fornecida.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#002d68"/>
+      <stop offset="1" stop-color="#0050c3"/>
+    </linearGradient>
+    <pattern id="lines" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="46" height="46" fill="none"/>
+      <path d="M0 1h46" stroke="#84caff" stroke-opacity=".18" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#background)"/>
+  <rect width="1600" height="1000" fill="url(#lines)"/>
+  <g fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="5">
+    <rect x="548" y="294" width="504" height="344" rx="28"/>
+    <circle cx="704" cy="420" r="42"/>
+    <path d="m588 600 145-133 102 86 86-70 92 117"/>
+  </g>
+  <text x="800" y="742" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" text-anchor="middle" letter-spacing="3">IMAGEM PENDENTE</text>
+  <text x="800" y="792" fill="#b9ddff" font-family="Arial, Helvetica, sans-serif" font-size="24" text-anchor="middle">CONEXA D2C PORTO ALEGRE</text>
+</svg>
