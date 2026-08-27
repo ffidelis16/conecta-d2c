@@ -1354,7 +1354,7 @@ body.conecta-event {
 .conecta-event .partner-logos img[aria-hidden="true"] { display: none; }
 
 @keyframes cd-event-partners-marquee {
-  to { transform: translateX(calc(-50% - 16px)); }
+  to { transform: translateX(-50%); }
 }
 
 @media (max-width: 760px) {
@@ -1571,4 +1571,44 @@ body.conecta-event .text-link.is-activating > span[aria-hidden="true"] {
   .conecta-event--porto-alegre .guest-grid { grid-template-columns: 1fr; gap: 16px; }
   .conecta-event--porto-alegre .guest-card { min-height: 0; }
   .conecta-event--porto-alegre .guest-card > .guest-card__photo { height: 210px; flex-basis: 210px; }
+}
+
+/* Faixa de marcas: logos alinhados no desktop e letreiro contínuo no mobile. */
+.conecta-event--porto-alegre .partners-section { height: auto; padding: 38px 0; }
+.conecta-event--porto-alegre .partners-section .container { height: auto; grid-template-columns: minmax(300px, .85fr) minmax(0, 1.15fr); gap: 48px; }
+.conecta-event--porto-alegre .partners-section h2 { max-width: 380px; }
+.conecta-event--porto-alegre .partners-marquee { overflow: hidden; }
+.conecta-event--porto-alegre .partner-logos { display: flex; align-items: center; justify-content: flex-end; gap: 0; }
+.conecta-event--porto-alegre .partner-logos__group { display: flex; min-width: 0; align-items: center; gap: 14px; }
+.conecta-event--porto-alegre .partner-logos__group[aria-hidden="true"] { display: none; }
+.conecta-event--porto-alegre .partner-logos img { display: block; width: auto; height: auto; max-width: none; margin: 0; object-fit: contain; filter: brightness(0) invert(1); }
+.conecta-event--porto-alegre .partner-logos .partner-logo--nuvemshop { width: 104px; }
+.conecta-event--porto-alegre .partner-logos .partner-logo--agrada { width: 100px; filter: none; }
+.conecta-event--porto-alegre .partner-logos .partner-logo--dinamize { width: 94px; }
+.conecta-event--porto-alegre .partner-logos .partner-logo--appmax { width: 96px; filter: none; }
+.conecta-event--porto-alegre .partner-logos .partner-logo--meu-sapato-preto { width: 106px; }
+.conecta-event--porto-alegre .partner-logos__separator { display: block; width: 1px; height: 24px; flex: 0 0 1px; background: rgba(255,255,255,.34); }
+
+@media (min-width: 761px) and (max-width: 1180px) {
+  .conecta-event--porto-alegre .partners-section .container { grid-template-columns: 1fr; gap: 24px; }
+  .conecta-event--porto-alegre .partner-logos { justify-content: flex-start; }
+}
+
+@media (max-width: 760px) {
+  .conecta-event--porto-alegre .partners-section { padding: 44px 0 40px; }
+  .conecta-event--porto-alegre .partners-section .container { display: block; }
+  .conecta-event--porto-alegre .partners-section h2 { max-width: none; margin-bottom: 28px; }
+  .conecta-event--porto-alegre .partner-logos { width: max-content; min-width: max-content; justify-content: flex-start; margin-top: 30px; animation: cd-event-partners-marquee 20s linear infinite; will-change: transform; }
+  .conecta-event--porto-alegre .partner-logos__group { display: flex; gap: 22px; padding-right: 22px; }
+  .conecta-event--porto-alegre .partner-logos__group[aria-hidden="true"] { display: flex; }
+  .conecta-event--porto-alegre .partner-logos .partner-logo--nuvemshop { width: 108px; }
+  .conecta-event--porto-alegre .partner-logos .partner-logo--agrada { width: 104px; }
+  .conecta-event--porto-alegre .partner-logos .partner-logo--dinamize { width: 96px; }
+  .conecta-event--porto-alegre .partner-logos .partner-logo--appmax { width: 98px; }
+  .conecta-event--porto-alegre .partner-logos .partner-logo--meu-sapato-preto { width: 110px; }
+  .conecta-event--porto-alegre .partner-logos__separator { height: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .conecta-event--porto-alegre .partner-logos { animation: none; }
 }
