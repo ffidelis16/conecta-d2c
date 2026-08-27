@@ -1549,3 +1549,26 @@ body.conecta-event .text-link.is-activating > span[aria-hidden="true"] {
   .conecta-event .form-modal__form { padding: 26px 22px 30px; }
   .conecta-event .form-modal__embed { min-height: 220px; }
 }
+
+/* Palestrantes de Porto Alegre: duas linhas de três cards, com retratos enquadrados pelo rosto. */
+.conecta-event--porto-alegre .guests-section { height: auto; padding: 104px 0; }
+.conecta-event--porto-alegre .guest-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.conecta-event--porto-alegre .guest-card { display: flex; min-width: 0; flex-direction: column; height: auto; min-height: 0; }
+.conecta-event--porto-alegre .guest-card > .guest-card__photo { width: 100%; height: 210px; flex: 0 0 210px; object-fit: cover; object-position: 50% 22%; }
+.conecta-event--porto-alegre .guest-card__photo--ana { object-position: 50% 18%; }
+.conecta-event--porto-alegre .guest-card__photo--kelly { object-position: 50% 20%; }
+.conecta-event--porto-alegre .guest-card__photo--carolina { object-position: 50% 18%; }
+.conecta-event--porto-alegre .guest-card__photo--livia { object-position: 50% 20%; }
+.conecta-event--porto-alegre .guest-card__photo--mateus { object-position: 50% 18%; }
+.conecta-event--porto-alegre .guest-card__photo--camila { object-position: 50% 18%; }
+.conecta-event--porto-alegre .guest-card > .guest-card__meta { flex: 0 0 auto; padding: 18px 22px 19px; }
+.conecta-event--porto-alegre .guest-card .eyebrow { margin-bottom: 8px; font-size: 10px; line-height: 14px; }
+.conecta-event--porto-alegre .guest-card h3 { margin-bottom: 5px; font-size: 17px; line-height: 21px; }
+.conecta-event--porto-alegre .guest-card p:not(.eyebrow) { font-size: 12px; line-height: 17px; }
+
+@media (max-width: 760px) {
+  .conecta-event--porto-alegre .guests-section { padding: 76px 0; }
+  .conecta-event--porto-alegre .guest-grid { grid-template-columns: 1fr; gap: 16px; }
+  .conecta-event--porto-alegre .guest-card { min-height: 0; }
+  .conecta-event--porto-alegre .guest-card > .guest-card__photo { height: 210px; flex-basis: 210px; }
+}
