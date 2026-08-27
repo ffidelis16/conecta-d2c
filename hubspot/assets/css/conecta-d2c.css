@@ -1612,3 +1612,12 @@ body.conecta-event .text-link.is-activating > span[aria-hidden="true"] {
 @media (prefers-reduced-motion: reduce) {
   .conecta-event--porto-alegre .partner-logos { animation: none; }
 }
+
+/* Dá fôlego ao texto do Peppo sem ultrapassar o grid da edição. */
+@media (min-width: 1181px) {
+  .conecta-event--porto-alegre .venue-section p:not(.eyebrow) { max-width: 520px; }
+}
+
+@media (min-width: 1181px) and (max-width: 1439px) {
+  .conecta-event--porto-alegre .venue-section__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
