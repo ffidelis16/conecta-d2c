@@ -1621,3 +1621,7 @@ body.conecta-event .text-link.is-activating > span[aria-hidden="true"] {
 @media (min-width: 1181px) and (max-width: 1439px) {
   .conecta-event--porto-alegre .venue-section__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 }
+
+@media (min-width: 1181px) {
+  .conecta-event--porto-alegre .event-context__desktop-line { display: block; }
+}
