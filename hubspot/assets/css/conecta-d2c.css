@@ -127,12 +127,13 @@ html.motion-ready .conecta-hub [data-hero-visual] .next-event-card { animation-d
 .featured-event-card > img { width: 100%; height: 100%; object-fit: cover; object-position: 65% center; transition: transform .5s var(--cd-ease-gentle); }
 .featured-event-card:hover > img, .featured-event-card:focus-within > img { transform: scale(1.025) translate3d(0, -3px, 0); }
 .featured-event-card__body { display: flex; flex-direction: column; padding: 40px 36px 28px; }
-.featured-event-card__content { display: flex; flex: 1; flex-direction: column; justify-content: center; }
+.featured-event-card__content { display: flex; flex: 1; min-height: 0; flex-direction: column; justify-content: flex-start; }
 .featured-event-card__body .eyebrow { margin-bottom: 30px; }
 .event-date { margin-bottom: 12px; color: var(--cd-blue); font-size: 14px; font-weight: 800; }
 .featured-event-card h3 { margin-bottom: 26px; font-size: 28px; font-weight: 600; letter-spacing: -.04em; }
 .featured-event-card__content > p:not(.eyebrow):not(.event-date) { max-width: 280px; margin-bottom: 22px; font-size: 14px; line-height: 1.6; }
 .featured-event-card .button { width: fit-content; }
+.featured-event-card .button--small { min-height: 40px; margin-top: auto; margin-bottom: 15px; padding: 9px 18px; font-size: 12px; }
 .edition-partners { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center; gap: 12px; margin: 0; padding: 15px 0 0; border-top: 1px solid rgba(0,31,62,.13); list-style: none; }
 .edition-partners__item { display: flex; height: 20px; min-width: 0; align-items: center; justify-content: center; overflow: hidden; }
 .edition-partners__item img { display: block; max-width: 100%; max-height: 20px; object-fit: contain; filter: brightness(0) saturate(100%) invert(11%) sepia(33%) saturate(1110%) hue-rotate(168deg) brightness(88%) contrast(104%); opacity: .9; }
@@ -223,14 +224,15 @@ html.motion-ready .conecta-hub .how-section.is-visible::after { opacity: 1; tran
 .past-card { position: relative; min-width: 310px; height: 340px; overflow: hidden; border-radius: 24px; background: #fff; color: var(--cd-navy); cursor: zoom-in; scroll-snap-align: start; transition: box-shadow .28s var(--cd-ease-out); }
 .past-card:first-child { min-width: 480px; }
 .past-card img { width: 100%; height: 222px; object-fit: cover; transition: transform .5s var(--cd-ease-gentle); will-change: transform; }
-.past-card div { position: relative; z-index: 1; height: 118px; padding: 20px 24px; background: #fff; }
-.past-card h3 { margin: 0 0 3px; font-size: 17px; }
-.past-card p { margin: 0; color: var(--cd-muted); font-size: 12px; }
-.past-card--with-partners { height: 370px; }
+.past-card > div { position: relative; z-index: 1; height: 118px; padding: 20px 24px; background: #fff; }
+.past-card__body { display: flex; align-items: center; }
+.past-card__meta { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 16px; }
+.past-card h3 { margin: 0; color: var(--cd-blue); font-size: 17px; }
+.past-card .past-card__date { margin: 0; color: var(--cd-navy); font-size: 11px; font-weight: 700; line-height: 1.2; white-space: nowrap; }
+.past-card--with-partners { height: 360px; }
 .past-card--with-partners > img { height: 222px; }
-.past-card--with-partners .past-card__body { display: flex; height: 148px; flex-direction: column; padding: 16px 24px 14px; }
-.past-card--with-partners .past-card__copy { height: auto; padding: 0; }
-.past-card--with-partners .edition-partners { margin-top: auto; padding-top: 12px; }
+.past-card--with-partners .past-card__body { display: grid; height: 138px; grid-template-rows: 68px minmax(0, 1fr); padding: 0 24px; }
+.past-card--with-partners .edition-partners { align-self: stretch; margin: 0; padding: 0; }
 .past-card--with-partners .edition-partners__item { height: 15px; }
 .past-card--with-partners .edition-partners__item img { max-height: 15px; }
 .past-card--with-partners .edition-partners__item--revi img { width: 54px; height: auto; max-height: none; }
@@ -471,9 +473,10 @@ html.motion-ready .conecta-hub .reveal.is-visible { opacity: 1; transform: trans
   .past-card { min-width: 270px; }
   .past-card:first-child { min-width: 270px; }
   .past-card img { height: 214px; }
-  .past-card--with-partners { height: 356px; }
+  .past-card--with-partners { height: 342px; }
   .past-card--with-partners > img { height: 208px; }
-  .past-card--with-partners .past-card__body { height: 148px; padding: 16px 20px 14px; }
+  .past-card--with-partners .past-card__body { height: 134px; grid-template-rows: 66px minmax(0, 1fr); padding: 0 20px; }
+  .past-card__meta { align-items: flex-start; flex-direction: column; justify-content: center; gap: 4px; }
   .regional-section { height: auto; padding: 70px 0; }
   .regional-card { display: block; height: auto; min-height: 0; padding: 24px; border-radius: 26px; }
   .regional-card h2 { font-size: 29px; }
