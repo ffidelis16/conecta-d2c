@@ -126,12 +126,17 @@ html.motion-ready .conecta-hub [data-hero-visual] .next-event-card { animation-d
 .featured-event-card { display: grid; min-height: 420px; grid-template-columns: 47% 53%; overflow: hidden; border-radius: 28px; background: #fff; box-shadow: 0 12px 36px rgba(0,31,62,.08); }
 .featured-event-card > img { width: 100%; height: 100%; object-fit: cover; object-position: 65% center; transition: transform .5s var(--cd-ease-gentle); }
 .featured-event-card:hover > img, .featured-event-card:focus-within > img { transform: scale(1.025) translate3d(0, -3px, 0); }
-.featured-event-card__body { display: flex; flex-direction: column; justify-content: center; padding: 40px 36px; }
+.featured-event-card__body { display: flex; flex-direction: column; padding: 40px 36px 28px; }
+.featured-event-card__content { display: flex; flex: 1; flex-direction: column; justify-content: center; }
 .featured-event-card__body .eyebrow { margin-bottom: 30px; }
 .event-date { margin-bottom: 12px; color: var(--cd-blue); font-size: 14px; font-weight: 800; }
 .featured-event-card h3 { margin-bottom: 26px; font-size: 28px; font-weight: 600; letter-spacing: -.04em; }
-.featured-event-card__body > p:not(.eyebrow):not(.event-date) { max-width: 280px; margin-bottom: 22px; font-size: 14px; line-height: 1.6; }
+.featured-event-card__content > p:not(.eyebrow):not(.event-date) { max-width: 280px; margin-bottom: 22px; font-size: 14px; line-height: 1.6; }
 .featured-event-card .button { width: fit-content; }
+.edition-partners { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center; gap: 12px; margin: 0; padding: 15px 0 0; border-top: 1px solid rgba(0,31,62,.13); list-style: none; }
+.edition-partners__item { display: flex; height: 20px; min-width: 0; align-items: center; justify-content: center; overflow: hidden; }
+.edition-partners__item img { display: block; max-width: 100%; max-height: 20px; object-fit: contain; filter: brightness(0) saturate(100%) invert(11%) sepia(33%) saturate(1110%) hue-rotate(168deg) brightness(88%) contrast(104%); opacity: .9; }
+.edition-partners__item--revi img { width: 70px; max-width: none; max-height: none; }
 .agenda-asides { display: grid; gap: 30px; }
 .agenda-aside { display: flex; min-height: 195px; flex-direction: column; justify-content: center; padding: 30px 36px; border-radius: 24px; }
 .agenda-aside--blue { background: var(--cd-sky); }
@@ -221,6 +226,14 @@ html.motion-ready .conecta-hub .how-section.is-visible::after { opacity: 1; tran
 .past-card div { position: relative; z-index: 1; height: 118px; padding: 20px 24px; background: #fff; }
 .past-card h3 { margin: 0 0 3px; font-size: 17px; }
 .past-card p { margin: 0; color: var(--cd-muted); font-size: 12px; }
+.past-card--with-partners { height: 370px; }
+.past-card--with-partners > img { height: 222px; }
+.past-card--with-partners .past-card__body { display: flex; height: 148px; flex-direction: column; padding: 16px 24px 14px; }
+.past-card--with-partners .past-card__copy { height: auto; padding: 0; }
+.past-card--with-partners .edition-partners { margin-top: auto; padding-top: 12px; }
+.past-card--with-partners .edition-partners__item { height: 15px; }
+.past-card--with-partners .edition-partners__item img { max-height: 15px; }
+.past-card--with-partners .edition-partners__item--revi img { width: 54px; height: auto; max-height: none; }
 .past-card:hover, .past-card:focus-visible, .past-card.is-activating { box-shadow: 0 18px 34px rgba(0,31,62,.22); }
 .past-card:hover > img { transform: scale(1.025) translate3d(var(--image-x, 0px), var(--image-y, 0px), 0); }
 .past-card:focus-visible > img { transform: scale(1.025) translate3d(0, 0, 0); }
@@ -384,7 +397,7 @@ html.motion-ready .conecta-hub .reveal.is-visible { opacity: 1; transform: trans
   .hub-hero__grid, .event-hero__grid { grid-template-columns: minmax(0, 1fr) minmax(420px, .9fr); gap: 36px; }
   .hub-hero__visual { min-height: 520px; padding-left: 22px; }
   .hub-hero__image { height: 440px; }
-  .featured-event-card__body { padding: 34px; }
+  .featured-event-card__body { padding: 34px 30px 24px; }
   .featured-event-card h3 { font-size: 24px; }
   .venue-section__grid, .event-context__grid, .location-section__grid { gap: 60px; }
   .guest-grid { grid-template-columns: repeat(2, 1fr); }
@@ -430,7 +443,7 @@ html.motion-ready .conecta-hub .reveal.is-visible { opacity: 1; transform: trans
   .agenda-overview { display: block; }
   .featured-event-card { display: block; min-height: 0; border-radius: 24px; }
   .featured-event-card > img { height: 220px; }
-  .featured-event-card__body { padding: 22px; }
+  .featured-event-card__body { padding: 22px 22px 18px; }
   .featured-event-card__body .eyebrow { margin-bottom: 14px; }
   .featured-event-card h3 { margin-bottom: 17px; font-size: 23px; }
   .featured-event-card .button { width: 100%; }
@@ -458,6 +471,9 @@ html.motion-ready .conecta-hub .reveal.is-visible { opacity: 1; transform: trans
   .past-card { min-width: 270px; }
   .past-card:first-child { min-width: 270px; }
   .past-card img { height: 214px; }
+  .past-card--with-partners { height: 356px; }
+  .past-card--with-partners > img { height: 208px; }
+  .past-card--with-partners .past-card__body { height: 148px; padding: 16px 20px 14px; }
   .regional-section { height: auto; padding: 70px 0; }
   .regional-card { display: block; height: auto; min-height: 0; padding: 24px; border-radius: 26px; }
   .regional-card h2 { font-size: 29px; }

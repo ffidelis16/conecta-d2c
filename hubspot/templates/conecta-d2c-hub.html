@@ -87,11 +87,19 @@
           <article class="featured-event-card reveal">
             <img src="{{ get_asset_url('../assets/images/fortaleza-hub-solar.png') }}" alt="Vista de Fortaleza ao pôr do sol" width="1536" height="1024" loading="lazy">
             <div class="featured-event-card__body">
-              <p class="eyebrow eyebrow--dark">PARA CONVIDADOS</p>
-              <p class="event-date">20 AGO · FORTALEZA, CE</p>
-              <h3>Negócios, conteúdo e conexões em um fim de tarde à beira-mar.</h3>
-              <p>Nuvemshop + Salte Commerce no <strong>Esttaleiro Parrilla do Mar</strong></p>
-              <a class="button button--small" href="https://ffidelis16.github.io/conecta-d2c/preview/evento.html">Ver edição <span aria-hidden="true">→</span></a>
+              <div class="featured-event-card__content">
+                <p class="eyebrow eyebrow--dark">PARA CONVIDADOS</p>
+                <p class="event-date">20 AGO · FORTALEZA, CE</p>
+                <h3>Negócios, conteúdo e conexões em um fim de tarde à beira-mar.</h3>
+                <p>Nuvemshop + Salte Commerce no <strong>Esttaleiro Parrilla do Mar</strong></p>
+                <a class="button button--small" href="https://ffidelis16.github.io/conecta-d2c/preview/evento.html">Ver edição <span aria-hidden="true">→</span></a>
+              </div>
+              <ul class="edition-partners edition-partners--featured" data-event-partners aria-label="Parceiros desta edição">
+                <li class="edition-partners__item edition-partners__item--revi"><img src="{{ get_asset_url('../assets/images/revi-logo.png') }}" alt="revi" loading="lazy"></li>
+                <li class="edition-partners__item"><img src="{{ get_asset_url('../assets/images/salte-logo.png') }}" alt="Salte Commerce" loading="lazy"></li>
+                <li class="edition-partners__item"><img src="{{ get_asset_url('../assets/images/afterclick-logo.png') }}" alt="AfterClick" loading="lazy"></li>
+                <li class="edition-partners__item"><img src="{{ get_asset_url('../assets/images/yssa-logo.png') }}" alt="YSSA" loading="lazy"></li>
+              </ul>
             </div>
           </article>
           <div class="agenda-asides">
@@ -158,7 +166,18 @@
         <!-- Até 10 cards: para adicionar uma galeria, inclua links [data-gallery-image] ocultos dentro do card. -->
         <div class="past-carousel" data-carousel data-gallery-carousel data-max-cards="10" data-motion-carousel>
           <div class="past-carousel__track" data-carousel-track>
-            <article class="past-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Abrir galeria da edição Rio de Janeiro"><img data-gallery-image src="{{ get_asset_url('../assets/images/rio-de-janeiro.webp') }}" alt="Edição anterior no Rio de Janeiro" width="800" height="533"><div><h3>Rio de Janeiro / RJ</h3><p>Parceiro · tema · ano</p></div></article>
+            <article class="past-card past-card--with-partners" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Abrir galeria da edição Rio de Janeiro">
+              <img data-gallery-image src="{{ get_asset_url('../assets/images/rio-de-janeiro.webp') }}" alt="Edição anterior no Rio de Janeiro" width="800" height="533">
+              <div class="past-card__body">
+                <div class="past-card__copy"><h3>Rio de Janeiro / RJ</h3><p>Parceiro · tema · ano</p></div>
+                <ul class="edition-partners edition-partners--past" data-event-partners aria-label="Parceiros desta edição">
+                  <li class="edition-partners__item edition-partners__item--revi"><img src="{{ get_asset_url('../assets/images/revi-logo.png') }}" alt="revi" loading="lazy"></li>
+                  <li class="edition-partners__item"><img src="{{ get_asset_url('../assets/images/salte-logo.png') }}" alt="Salte Commerce" loading="lazy"></li>
+                  <li class="edition-partners__item"><img src="{{ get_asset_url('../assets/images/afterclick-logo.png') }}" alt="AfterClick" loading="lazy"></li>
+                  <li class="edition-partners__item"><img src="{{ get_asset_url('../assets/images/yssa-logo.png') }}" alt="YSSA" loading="lazy"></li>
+                </ul>
+              </div>
+            </article>
             <article class="past-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Abrir galeria da edição Franca"><img data-gallery-image src="{{ get_asset_url('../assets/images/franca.webp') }}" alt="Edição anterior em Franca" width="800" height="450"><div><h3>Franca / SP</h3><p>Parceiro · tema · ano</p></div></article>
             <article class="past-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Abrir galeria da edição Limeira"><img data-gallery-image src="{{ get_asset_url('../assets/images/limeira.webp') }}" alt="Edição anterior em Limeira" width="800" height="663"><div><h3>Limeira / SP</h3><p>Parceiro · tema · ano</p></div></article>
             <article class="past-card" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Abrir galeria da edição Divinópolis"><img data-gallery-image src="{{ get_asset_url('../assets/images/divinopolis.webp') }}" alt="Edição anterior em Divinópolis" width="800" height="533"><div><h3>Divinópolis / MG</h3><p>Parceiro · tema · ano</p></div></article>
