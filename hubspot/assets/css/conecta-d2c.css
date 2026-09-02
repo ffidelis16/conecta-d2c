@@ -126,11 +126,11 @@ html.motion-ready .conecta-hub [data-hero-visual] .next-event-card { animation-d
 .featured-event-card { display: grid; min-height: 420px; grid-template-columns: 47% 53%; overflow: hidden; border-radius: 28px; background: #fff; box-shadow: 0 12px 36px rgba(0,31,62,.08); }
 .featured-event-card > img { width: 100%; height: 100%; object-fit: cover; object-position: 65% center; transition: transform .5s var(--cd-ease-gentle); }
 .featured-event-card:hover > img, .featured-event-card:focus-within > img { transform: scale(1.025) translate3d(0, -3px, 0); }
-.featured-event-card__body { display: flex; flex-direction: column; padding: 40px 36px 28px; }
+.featured-event-card__body { display: flex; flex-direction: column; padding: 28px 36px 28px; }
 .featured-event-card__content { display: flex; flex: 1; min-height: 0; flex-direction: column; justify-content: flex-start; }
 .featured-event-card__body .eyebrow { margin-bottom: 30px; }
 .event-date { margin-bottom: 12px; color: var(--cd-blue); font-size: 14px; font-weight: 800; }
-.featured-event-card h3 { margin-bottom: 26px; font-size: 28px; font-weight: 600; letter-spacing: -.04em; }
+.featured-event-card h3 { margin-bottom: 5px; font-size: 28px; font-weight: 600; letter-spacing: -.04em; }
 .featured-event-card__content > p:not(.eyebrow):not(.event-date) { max-width: 280px; margin-bottom: 22px; font-size: 14px; line-height: 1.6; }
 .featured-event-card .button { width: fit-content; }
 .featured-event-card .button--small { min-height: 40px; margin-top: auto; margin-bottom: 15px; padding: 9px 18px; font-size: 12px; }
