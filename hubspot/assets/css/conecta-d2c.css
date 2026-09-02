@@ -233,8 +233,8 @@ html.motion-ready .conecta-hub .how-section.is-visible::after { opacity: 1; tran
 .past-card--with-partners > img { height: 222px; }
 .past-card--with-partners .past-card__body { display: grid; height: 138px; grid-template-rows: 68px minmax(0, 1fr); padding: 0 24px; }
 .past-card--with-partners .edition-partners { align-self: stretch; margin: 0; padding: 0; }
-.past-card--with-partners .edition-partners__item { height: 15px; }
-.past-card--with-partners .edition-partners__item img { max-height: 15px; }
+.past-card--with-partners .edition-partners__item { height: 24px; overflow: visible; }
+.past-card--with-partners .edition-partners__item img { width: auto; height: auto; max-width: 100%; max-height: 20px; }
 .past-card--with-partners .edition-partners__item--revi img { width: 54px; height: auto; max-height: none; }
 .past-card:hover, .past-card:focus-visible, .past-card.is-activating { box-shadow: 0 18px 34px rgba(0,31,62,.22); }
 .past-card:hover > img { transform: scale(1.025) translate3d(var(--image-x, 0px), var(--image-y, 0px), 0); }
