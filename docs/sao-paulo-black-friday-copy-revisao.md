@@ -33,7 +33,7 @@ A recepção começa às 19h. Em seguida, a programação passa por um raio-X da
 
 ### Contexto
 
-**Black Friday não é assunto de uma só área.**
+**Black Friday não é assunto de uma área só.**
 
 Marketing, growth, e-commerce e operação precisam alinhar prioridades com antecedência. A Mesa Estratégica reúne líderes dessas frentes para discutir o cenário de 2026, os desafios da preparação e o caso da Track&amp;Field.
 
@@ -45,7 +45,7 @@ Rodrigo Paiva, fundador da Kyraly, participa de uma agenda que reúne análise d
 
 ### Programação
 
-**Uma agenda direta, da recepção ao jantar.**
+**Uma agenda completa, do conteúdo ao networking**
 
 A noite começa às 19h. Recepção, abertura e dois painéis compõem a agenda antes do jantar, às 20h30.
 
@@ -57,6 +57,6 @@ Os painéis e o jantar acontecem na Sala Chile, espaço privativo do Rubaiyat Fa
 
 ### CTA final
 
-**Solicite sua participação na Mesa Estratégica de Black Friday 2026.**
+**Participe da mesa mais estratégica da Black Friday 2026.**
 
 O encontro é voltado a executivos C-level e lideranças de marketing, growth, e-commerce e varejo. Os pré-cadastros passam por curadoria da organização.

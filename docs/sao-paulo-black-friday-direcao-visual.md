@@ -44,6 +44,7 @@ A identidade própria do encontro nasce de um **azul-petróleo**, encontro crom�
 - Texto branco somente sobre azul Nuvemshop ou navy.
 - Chartreuse não recebe texto e não é usado como marcador tipográfico de frases.
 - Verde profundo não substitui o azul em botões ou elementos funcionais.
+- Hero e imagem do CTA usam cantos retos; cards e demais imagens usam raio de `9px`.
 
 ## Fontes observadas
 

@@ -19,6 +19,7 @@
   --merge-green: #174b32;
   --merge-lime: #cdff00;
   --merge-muted: #526b70;
+  --merge-radius: 9px;
   --cd-blue: var(--merge-blue);
   --cd-navy: var(--merge-navy);
   --cd-ink: var(--merge-ink);
@@ -222,7 +223,7 @@
 
 .visual-merge .conecta-event--sao-paulo-black-friday .event-hero__visual,
 .visual-merge .conecta-event--sao-paulo-black-friday .event-hero__visual > img {
-  border-radius: 32px 0 0 32px;
+  border-radius: 0;
 }
 
 .visual-merge .conecta-event--sao-paulo-black-friday .event-hero__visual {
@@ -242,7 +243,7 @@
 
 .visual-merge .conecta-event--sao-paulo-black-friday .quick-facts {
   border: 1px solid rgba(205,219,234,.9);
-  border-radius: 24px;
+  border-radius: var(--merge-radius);
   background: rgba(255,255,255,.96);
   color: var(--merge-ink);
   box-shadow: 0 22px 52px rgba(0,31,62,.19);
@@ -256,7 +257,7 @@
 
 .visual-merge .conecta-event--sao-paulo-black-friday .quick-facts__items > .quick-fact {
   border-color: var(--merge-line);
-  border-radius: 14px;
+  border-radius: var(--merge-radius);
   background: #fff;
 }
 
@@ -300,7 +301,7 @@
 .visual-merge .conecta-event--sao-paulo-black-friday .venue-gallery__detail,
 .visual-merge .conecta-event--sao-paulo-black-friday .venue-gallery__food {
   border-color: var(--merge-soft);
-  border-radius: 24px;
+  border-radius: var(--merge-radius);
   box-shadow: 0 18px 44px rgba(0,31,62,.13);
 }
 
@@ -346,7 +347,7 @@
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.16);
-  border-radius: 28px;
+  border-radius: var(--merge-radius);
   background: linear-gradient(140deg, var(--merge-ocean), var(--merge-petrol) 72%, var(--merge-green));
   color: #fff;
   box-shadow: 0 26px 64px rgba(0,31,62,.18);
@@ -409,7 +410,7 @@
 .visual-merge .conecta-event--sao-paulo-black-friday .guest-card {
   position: relative;
   border: 1px solid rgba(0,80,195,.16);
-  border-radius: 24px;
+  border-radius: var(--merge-radius);
   background: #fff;
   box-shadow: 0 20px 52px rgba(0,31,62,.12);
 }
@@ -425,7 +426,7 @@
 }
 
 .visual-merge .conecta-event--sao-paulo-black-friday .guest-card > img {
-  border-radius: 23px 23px 0 0;
+  border-radius: var(--merge-radius) var(--merge-radius) 0 0;
 }
 
 .visual-merge .conecta-event--sao-paulo-black-friday .guest-card > .guest-card__meta {
@@ -485,7 +486,7 @@
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.24);
-  border-radius: 18px;
+  border-radius: var(--merge-radius);
   background: rgba(0,31,62,.23);
 }
 
@@ -511,14 +512,14 @@
 .visual-merge .conecta-event--sao-paulo-black-friday .program-grid li {
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.24);
-  border-radius: 24px;
+  border-radius: var(--merge-radius);
   background: #fff;
   box-shadow: 0 20px 48px rgba(0,31,62,.18);
 }
 
 .visual-merge .conecta-event--sao-paulo-black-friday .program-card__media,
 .visual-merge .conecta-event--sao-paulo-black-friday .program-card__media img {
-  border-radius: 23px 23px 0 0;
+  border-radius: var(--merge-radius) var(--merge-radius) 0 0;
 }
 
 .visual-merge .conecta-event--sao-paulo-black-friday .program-card__body {
@@ -591,7 +592,7 @@
 .visual-merge .conecta-event--sao-paulo-black-friday .location-visuals .location-map,
 .visual-merge .conecta-event--sao-paulo-black-friday .location-photo {
   border: 1px solid var(--merge-line);
-  border-radius: 22px;
+  border-radius: var(--merge-radius);
   background: linear-gradient(120deg, #eff7f5, #e7f3f4);
   box-shadow: 0 18px 44px rgba(0,31,62,.12);
 }
@@ -636,7 +637,7 @@
 
 .visual-merge .conecta-event--sao-paulo-black-friday .event-final-cta__image {
   border: 1px solid rgba(0,80,195,.18);
-  border-radius: 30px 0 0 30px;
+  border-radius: 0;
   box-shadow: 0 24px 58px rgba(0,31,62,.14);
 }
 
@@ -657,7 +658,7 @@
 
 .visual-merge .conecta-event--sao-paulo-black-friday .form-modal__panel {
   border: 1px solid rgba(205,219,234,.72);
-  border-radius: 28px;
+  border-radius: var(--merge-radius);
   background: #fff;
   box-shadow: 0 30px 90px rgba(0,31,62,.34);
 }
@@ -688,7 +689,7 @@
 
 .visual-merge .conecta-event--sao-paulo-black-friday .form-modal__pending {
   border: 1px solid var(--merge-line);
-  border-radius: 14px;
+  border-radius: var(--merge-radius);
   background: var(--merge-soft);
   color: var(--merge-muted);
 }
@@ -750,7 +751,7 @@
   .visual-merge .conecta-event--sao-paulo-black-friday .event-hero__visual,
   .visual-merge .conecta-event--sao-paulo-black-friday .event-hero__visual > img,
   .visual-merge .conecta-event--sao-paulo-black-friday .event-final-cta__image {
-    border-radius: 24px;
+    border-radius: 0;
   }
 
   .visual-merge .conecta-event--sao-paulo-black-friday .quick-facts,
@@ -758,7 +759,7 @@
   .visual-merge .conecta-event--sao-paulo-black-friday .program-grid li,
   .visual-merge .conecta-event--sao-paulo-black-friday .program-card__media,
   .visual-merge .conecta-event--sao-paulo-black-friday .program-card__media img {
-    border-radius: 22px;
+    border-radius: var(--merge-radius);
   }
 
   .visual-merge .conecta-event--sao-paulo-black-friday .program-timeline li {
