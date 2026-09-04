@@ -21,6 +21,7 @@
   --merge-muted: #526b70;
   --merge-copy: #17212b;
   --merge-radius: 9px;
+  --merge-full-bleed-right: max(var(--cd-gutter), calc((100vw - var(--cd-max)) / 2));
   --cd-blue: var(--merge-blue);
   --cd-navy: var(--merge-navy);
   --cd-ink: var(--merge-ink);
@@ -1191,5 +1192,33 @@ html.visual-merge body.conecta-event--sao-paulo-black-friday {
     margin-right: 28px !important;
     margin-left: 28px !important;
     padding-left: 0 !important;
+  }
+}
+
+/* Hero e CTA final: a imagem termina no limite real do viewport. */
+@media (min-width: 1181px) {
+  .visual-merge .conecta-event--sao-paulo-black-friday .event-hero__visual,
+  .visual-merge .conecta-event--sao-paulo-black-friday .event-final-cta__image {
+    width: calc(100% + var(--merge-full-bleed-right));
+    max-width: none;
+    margin-right: calc(-1 * var(--merge-full-bleed-right));
+  }
+}
+
+@media (max-width: 1180px) {
+  .visual-merge .conecta-event--sao-paulo-black-friday .event-hero__visual,
+  .visual-merge .conecta-event--sao-paulo-black-friday .event-final-cta__image {
+    width: calc(100% + (var(--cd-gutter) * 2));
+    max-width: none;
+    margin-right: calc(-1 * var(--cd-gutter));
+    margin-left: calc(-1 * var(--cd-gutter));
+  }
+}
+
+@media (max-width: 760px) {
+  .visual-merge .conecta-event--sao-paulo-black-friday .quick-facts {
+    width: calc(100% - (var(--cd-gutter) * 2));
+    margin-right: auto;
+    margin-left: auto;
   }
 }
