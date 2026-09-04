@@ -1395,3 +1395,81 @@ html.visual-merge body.conecta-event--sao-paulo-black-friday {
     bottom: auto;
   }
 }
+
+/* Mobile: foto integral no hero, card com respiro e composicao editorial sem viuvas. */
+.visual-merge .conecta-event--sao-paulo-black-friday h1,
+.visual-merge .conecta-event--sao-paulo-black-friday h2,
+.visual-merge .conecta-event--sao-paulo-black-friday h3 {
+  text-wrap: balance;
+}
+
+.visual-merge .conecta-event--sao-paulo-black-friday p,
+.visual-merge .conecta-event--sao-paulo-black-friday li {
+  text-wrap: pretty;
+}
+
+@media (max-width: 760px) {
+  .visual-merge .conecta-event--sao-paulo-black-friday .event-hero__visual {
+    position: relative;
+    min-height: 0;
+    padding-top: clamp(280px, 80vw, 320px);
+    padding-bottom: 72px;
+    overflow: hidden;
+    background: var(--merge-navy);
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .event-hero__visual::after {
+    display: none;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .event-hero__visual > img {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .quick-facts {
+    position: relative;
+    z-index: 2;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    margin-top: 16px;
+    margin-right: auto;
+    margin-left: auto;
+    transform: none;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .event-context h2,
+  .visual-merge .conecta-event--sao-paulo-black-friday .event-context h2 em {
+    text-wrap: balance;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-section .section-heading--split,
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-section .section-heading--split > div,
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-section .section-heading--split .eyebrow,
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-section .section-heading--split h2,
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-section .section-heading--split > p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-section .section-heading--split {
+    justify-items: center;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-section .section-heading--split h2,
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-section .section-heading--split > p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-section .section-heading--split > p {
+    max-width: 34ch;
+  }
+}
