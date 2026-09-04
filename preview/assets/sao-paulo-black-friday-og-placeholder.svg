@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0050c3"/><stop offset=".6" stop-color="#07565b"/><stop offset="1" stop-color="#174b32"/></linearGradient><pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#fff" stroke-opacity=".065"/></pattern></defs>
+  <rect width="1200" height="630" fill="url(#bg)"/><rect width="1200" height="630" fill="url(#grid)"/>
+  <path d="M700 630V506h92V438h96V358h96V252h106V132h110v498Z" fill="#fff" fill-opacity=".12"/>
+  <path d="M696 552 790 486l88 14 100-94 82 18 140-292" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1200" cy="132" r="13" fill="#cdff00"/>
+  <g fill="#fff" font-family="Arial, sans-serif"><text x="70" y="105" font-size="17" font-weight="700" letter-spacing="3">NUVEMSHOP · CONECTA D2C</text><text x="70" y="213" font-size="48" font-weight="700">MESA ESTRATÉGICA</text><text x="70" y="270" font-size="48" font-weight="700">DE BLACK FRIDAY 2026</text><text x="70" y="374" font-size="17" font-weight="700" letter-spacing="2">SÃO PAULO · 07 OUT · 19H</text></g>
+  <rect x="70" y="433" width="102" height="5" fill="#cdff00"/><path d="M190 435h338" stroke="#fff" stroke-opacity=".3" stroke-width="2"/>
+</svg>
