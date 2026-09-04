@@ -1365,6 +1365,20 @@ html.visual-merge body.conecta-event--sao-paulo-black-friday {
   }
 }
 
+@media (min-width: 1280px) {
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-section .container {
+    width: min(1120px, calc(100% - 160px));
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-timeline {
+    gap: 18px;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-grid {
+    gap: 28px;
+  }
+}
+
 @media (max-width: 760px) {
   .visual-merge .conecta-event--sao-paulo-black-friday .program-grid > li {
     height: 409px;
