@@ -1073,6 +1073,11 @@ html.visual-merge body.conecta-event--sao-paulo-black-friday {
     white-space: normal;
   }
 
+  .visual-merge .conecta-event--sao-paulo-black-friday .desktop-lines--locked .desktop-line {
+    display: block;
+    white-space: nowrap;
+  }
+
   .visual-merge .conecta-event--sao-paulo-black-friday .event-context__grid {
     grid-template-columns: minmax(0, 1.08fr) minmax(360px, .82fr);
     gap: clamp(48px, 6vw, 86px);
