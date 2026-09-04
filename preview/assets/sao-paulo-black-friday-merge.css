@@ -1473,3 +1473,61 @@ html.visual-merge body.conecta-event--sao-paulo-black-friday {
     max-width: 34ch;
   }
 }
+
+/* Convidado: retrato a esquerda e narrativa a direita, sem alterar dimensoes. */
+@media (min-width: 901px) {
+  .visual-merge .conecta-event--sao-paulo-black-friday .guest-feature {
+    grid-template-columns: minmax(280px, 330px) minmax(0, 1fr);
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .guest-grid--single {
+    grid-row: 1;
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .guest-feature__content {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: end;
+  }
+}
+
+/* Programacao: separa as duas fileiras com respiro e divisor optico discreto. */
+.visual-merge .conecta-event--sao-paulo-black-friday .program-timeline {
+  margin-bottom: 0;
+}
+
+.visual-merge .conecta-event--sao-paulo-black-friday .program-grid {
+  position: relative;
+  margin-top: 80px;
+}
+
+.visual-merge .conecta-event--sao-paulo-black-friday .program-grid::before {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(220,238,255,.24) 12%, rgba(220,238,255,.24) 88%, transparent);
+  content: "";
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .visual-merge .conecta-event--sao-paulo-black-friday .event-hero {
+    padding-bottom: 0;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .venue-section {
+    padding-top: 40px;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-grid {
+    margin-top: 64px;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-grid::before {
+    top: -32px;
+  }
+}
