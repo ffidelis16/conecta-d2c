@@ -1228,3 +1228,97 @@ html.visual-merge body.conecta-event--sao-paulo-black-friday {
     margin-left: auto;
   }
 }
+
+/* Convidado unico: narrativa editorial a esquerda e retrato contido a direita. */
+.visual-merge .conecta-event--sao-paulo-black-friday .guest-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 330px);
+  align-items: center;
+  gap: clamp(64px, 9vw, 138px);
+}
+
+.visual-merge .conecta-event--sao-paulo-black-friday .guest-feature__content {
+  width: 100%;
+  max-width: 680px;
+  margin: 0;
+}
+
+.visual-merge .conecta-event--sao-paulo-black-friday .guest-feature__content h2 {
+  max-width: 650px;
+  margin: 0;
+}
+
+.visual-merge .conecta-event--sao-paulo-black-friday .guest-feature__content > p:not(.eyebrow) {
+  width: 100%;
+  max-width: 560px;
+  margin: 28px 0 0;
+  color: var(--merge-copy);
+  font-size: var(--event-body-size);
+  line-height: calc(var(--event-body-line) + 4px);
+}
+
+.visual-merge .conecta-event--sao-paulo-black-friday .guest-grid--single {
+  display: block;
+  width: min(330px, 100%);
+  margin: 0;
+  padding: 0;
+  justify-self: end;
+  overflow: visible;
+}
+
+.visual-merge .conecta-event--sao-paulo-black-friday .guest-grid--single .guest-card {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  border-radius: var(--merge-radius);
+}
+
+.visual-merge .conecta-event--sao-paulo-black-friday .guest-grid--single .guest-card > .guest-card__photo {
+  display: block;
+  width: 100%;
+  height: 300px;
+  flex: 0 0 300px;
+  border-radius: var(--merge-radius) var(--merge-radius) 0 0;
+  object-fit: cover;
+  object-position: center top !important;
+}
+
+.visual-merge .conecta-event--sao-paulo-black-friday .guest-grid--single .guest-card > .guest-card__meta {
+  padding: 18px 22px 20px !important;
+}
+
+.visual-merge .conecta-event--sao-paulo-black-friday .guest-grid--single .guest-card h3 {
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+@media (max-width: 900px) {
+  .visual-merge .conecta-event--sao-paulo-black-friday .guest-feature {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 46px;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .guest-grid--single {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 760px) {
+  .visual-merge .conecta-event--sao-paulo-black-friday .guest-feature {
+    gap: 36px;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .guest-feature__content > p:not(.eyebrow) {
+    margin-top: 22px;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .guest-grid--single {
+    width: min(320px, 100%);
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .guest-grid--single .guest-card > .guest-card__photo {
+    height: 280px;
+    flex-basis: 280px;
+  }
+}
