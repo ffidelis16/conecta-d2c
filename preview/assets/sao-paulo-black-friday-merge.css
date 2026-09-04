@@ -1322,3 +1322,62 @@ html.visual-merge body.conecta-event--sao-paulo-black-friday {
     flex-basis: 280px;
   }
 }
+
+/* Programacao: mais respiro lateral e cards compactos com alinhamento interno comum. */
+@media (min-width: 761px) {
+  .visual-merge .conecta-event--sao-paulo-black-friday .desktop-lines--locked .desktop-line {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-grid > li {
+    height: 410px;
+    min-height: 410px;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-card__body {
+    height: 220px;
+    min-height: 220px;
+    padding: 0 26px;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-card__body h3 {
+    top: 68px;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-card__body p {
+    top: 112px;
+    bottom: auto;
+  }
+}
+
+@media (min-width: 1181px) {
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-section .container {
+    width: min(1200px, calc(100% - 128px));
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-timeline {
+    gap: 14px;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-grid > li {
+    height: 409px;
+    min-height: 409px;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-card__body {
+    height: 214px;
+    min-height: 214px;
+  }
+
+  .visual-merge .conecta-event--sao-paulo-black-friday .program-card__body p {
+    top: 104px;
+    bottom: auto;
+  }
+}
