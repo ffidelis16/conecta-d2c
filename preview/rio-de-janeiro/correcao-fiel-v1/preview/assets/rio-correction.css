@@ -1,0 +1,254 @@
+/* Derivado local do contrato visual aprovado. Não contém assets editoriais de outra edição. */
+.conecta-event--rio h1,
+.conecta-event--rio h2,
+.conecta-event--rio h3 { text-wrap: balance; }
+.conecta-event--rio p,
+.conecta-event--rio li,
+.conecta-event--rio .quick-facts__items strong { text-wrap: pretty; }
+.conecta-event--rio .button,
+.conecta-event--rio .text-link { white-space: nowrap; }
+.conecta-event--rio .no-widow { white-space: nowrap; }
+.conecta-event--rio .copy-emphasis { color: inherit; font-weight: 600; }
+.conecta-event--rio .copy-emphasis--blue { color: var(--cd-blue); }
+.conecta-event--rio .program-section h2 em { color: #fff; }
+
+.rio-media-slot {
+  display: grid;
+  min-width: 0;
+  overflow: hidden;
+  place-items: center;
+  background:
+    linear-gradient(135deg, rgba(111,184,255,.18), transparent 54%),
+    linear-gradient(180deg, #00386f 0%, #001f3e 100%);
+  color: rgba(255,255,255,.92);
+  text-align: center;
+}
+.rio-media-slot > span {
+  display: inline-flex;
+  max-width: calc(100% - 28px);
+  padding: 8px 10px;
+  border: 1px solid rgba(255,255,255,.42);
+  border-radius: 999px;
+  background: rgba(0,31,62,.35);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+.rio-media-slot--hero { width: 100%; height: 610px; border-radius: 0 0 0 34px; }
+.rio-media-slot--gallery { border-radius: 26px; box-shadow: 0 16px 34px rgba(0,31,62,.13); }
+.rio-media-slot--person { width: 100%; height: var(--participant-photo-height, 290px); border-radius: 0; }
+.rio-media-slot--program { height: 156px; border-radius: 18px 18px 0 0; }
+.rio-media-slot--map,
+.rio-media-slot--venue { height: 500px; }
+.rio-media-slot--final { width: 100%; height: 620px; border-radius: 0; }
+
+.conecta-event--rio .event-hero__image { display: block; width: 100%; height: 610px; border-radius: 0 0 0 34px; object-fit: cover; object-position: 60% center; }
+.conecta-event--rio .event-final-cta__image { display: block; width: 100%; height: 620px; background: #001f3e; object-fit: cover; object-position: 54% center; }
+
+@media (min-width: 761px) {
+  .conecta-event--rio .event-final-cta__image {
+    width: calc(100% + max(0px, (100vw - var(--cd-max)) / 2));
+    max-width: none;
+    margin-right: calc(-1 * max(0px, (100vw - var(--cd-max)) / 2));
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1439px) {
+  .conecta-event--rio .event-final-cta__image {
+    width: calc(100% + var(--cd-gutter));
+    margin-right: calc(-1 * var(--cd-gutter));
+  }
+}
+
+.conecta-event--rio .event-nav__brands { display: flex; min-width: 0; align-items: center; gap: 12px; }
+.conecta-event--rio .event-nav__brand-separator { width: 1px; height: 24px; flex: 0 0 1px; background: rgba(255,255,255,.5); }
+.conecta-event--rio .event-nav.is-scrolled .event-nav__brand-separator { background: rgba(0,39,80,.22); }
+.conecta-event--rio .event-nav__partner-logo { display: block; width: 104px; height: auto; object-fit: contain; }
+.conecta-event--rio .event-nav.is-scrolled .event-nav__partner-logo { filter: brightness(0); }
+
+.conecta-event--rio .quick-facts { box-sizing: border-box; width: min(523px, calc(100% - 32px)); height: auto !important; min-height: 0; overflow: hidden; padding: 24px !important; }
+.conecta-event--rio .quick-facts__heading { display: flex; align-items: center; justify-content: space-between; margin: 0 0 16px !important; padding: 0; }
+.conecta-event--rio .quick-facts > .quick-facts__items { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; margin: 0 !important; }
+.conecta-event--rio .quick-facts__items > .quick-fact { box-sizing: border-box; display: grid; min-width: 0; height: 64px; grid-template-columns: 20px minmax(0, 1fr); align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid var(--cd-line); border-radius: 14px; }
+.conecta-event--rio .quick-fact > span { min-width: 0; gap: 1px; padding: 0; border: 0; }
+.conecta-event--rio .quick-facts__items small { font-size: 10px; line-height: 13px; letter-spacing: .08em; }
+.conecta-event--rio .quick-facts__items strong { min-width: 0; font-size: 13px; line-height: 17px; }
+
+.conecta-event--rio .venue-section,
+.conecta-event--rio .event-context,
+.conecta-event--rio .guests-section,
+.conecta-event--rio .program-section,
+.conecta-event--rio .location-section { height: auto; padding: 112px 0; }
+.conecta-event--rio .venue-section { padding-bottom: 136px; }
+.conecta-event--rio .venue-gallery { position: relative; min-height: 505px; margin: 0 0 24px; }
+.conecta-event--rio .venue-gallery__main { width: 64%; height: 430px; }
+.conecta-event--rio .venue-gallery__detail { position: absolute; top: 58px; right: 0; width: 48%; height: 225px; border: 0; border-radius: 24px; }
+.conecta-event--rio .venue-gallery__food { position: absolute; bottom: 0; left: 24%; width: 50%; height: 215px; border: 0; border-radius: 20px; }
+
+.conecta-event--rio .participants-layout { display: grid; grid-template-areas: "cards copy"; grid-template-columns: minmax(0, 730px) minmax(340px, 1fr); align-items: center; gap: clamp(64px, 8vw, 120px); }
+.conecta-event--rio .participant-cards { grid-area: cards; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; max-width: none; gap: 22px; }
+.conecta-event--rio .participant-cards .guest-card { display: flex; height: auto; min-height: 0; flex-direction: column; border-radius: 20px; background: #fff; }
+.conecta-event--rio .participant-cards .participant-photo { display: block; width: 100%; height: clamp(248px, 20vw, 292px); flex: 0 0 clamp(248px, 20vw, 292px); object-fit: cover; }
+.conecta-event--rio .participant-cards .participant-photo--caio { object-position: 50% 18%; }
+.conecta-event--rio .participant-cards .participant-photo--lucas { object-position: 50% 17%; }
+.conecta-event--rio .participant-cards .guest-card__meta { min-height: 0; padding: 20px 22px 22px; }
+.conecta-event--rio .participant-cards .guest-card h3 { margin-bottom: 6px; font-size: 21px; line-height: 25px; }
+.conecta-event--rio .participant-cards .guest-card h3 a { color: inherit; text-decoration: none; }
+.conecta-event--rio .participant-cards .guest-card h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.conecta-event--rio .participant-cards .guest-card h3 a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.conecta-event--rio .guest-card__meta .participant-role { color: var(--cd-muted); font-size: 13px; line-height: 1.45; }
+.conecta-event--rio .participants-copy { grid-area: copy; display: flex; max-width: 470px; flex-direction: column; align-items: flex-start; padding-left: clamp(32px, 3.3vw, 48px); border-left: 1px solid rgba(0,80,195,.22); }
+.conecta-event--rio .participants-copy .eyebrow { margin-bottom: 22px; }
+.conecta-event--rio .participants-copy h2 { max-width: 470px; margin: 0 0 28px; font-size: clamp(38px, 3.3vw, 46px); line-height: 1.08; }
+.conecta-event--rio .participants-copy__body { display: grid; gap: 16px; }
+.conecta-event--rio .participants-copy__body p { margin: 0; color: #486781; font-size: 15px; line-height: 1.6; }
+.conecta-event--rio .venue-section p strong,
+.conecta-event--rio .event-context p strong,
+.conecta-event--rio .participants-copy p strong,
+.conecta-event--rio .program-section p strong,
+.conecta-event--rio .location-section p strong,
+.conecta-event--rio .event-final-cta p strong { color: inherit; font-weight: 600; }
+
+.conecta-event--rio .program-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.conecta-event--rio .program-grid > li { min-width: 0; min-height: 410px; }
+.conecta-event--rio .program-card__body { min-height: 254px; padding: 0 20px; }
+.conecta-event--rio .program-card__icon { top: 26px; left: 20px; }
+.conecta-event--rio .program-card__body > span { top: 13px; right: 20px; font-size: 26px; }
+.conecta-event--rio .program-card__body h3 { top: 64px; right: 20px; left: 20px; font-size: 19px; line-height: 23px; }
+.conecta-event--rio .program-card__body p { top: 110px; right: 20px; left: 20px; font-size: 13px; line-height: 19px; }
+.conecta-event--rio .program-card__media.rio-media-slot > span {
+  position: static;
+  display: inline-flex;
+  width: auto;
+  height: auto;
+  max-width: calc(100% - 28px);
+  padding: 8px 10px;
+  border: 1px solid rgba(255,255,255,.42);
+  border-radius: 999px;
+  background: rgba(0,31,62,.35);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.conecta-event--rio .partners-section { height: 176px; padding: 0; }
+.conecta-event--rio .partners-section .container { display: grid; height: 176px; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 64px; }
+.conecta-event--rio .partners-section h2 { max-width: 520px; margin: 0; }
+.conecta-event--rio .partners-marquee { overflow: hidden; }
+.conecta-event--rio .partner-logos,
+.conecta-event--rio .partner-logos__group { display: flex; align-items: center; justify-content: flex-end; }
+.conecta-event--rio .partner-logos__group { gap: 20px; }
+.conecta-event--rio .partner-logos .partner-logo--nuvemshop { width: 132px; margin: 0; filter: brightness(0) invert(1); }
+.conecta-event--rio .partner-logos__separator { width: 1px; height: 44px; background: rgba(255,255,255,.36); }
+.rio-partner-mark--large { min-width: 152px; font-size: 25px; }
+.rio-partner-mark--large small { font-size: 9px; }
+
+.conecta-event--rio .location-section__grid,
+.conecta-event--rio .location-visuals { min-height: 500px; }
+.conecta-event--rio .location-visuals { position: relative; }
+.conecta-event--rio .location-map { min-height: 0; }
+.conecta-event--rio .location-photo { border-radius: 0 28px 28px 0; }
+.conecta-event--rio .event-final-cta__image { object-fit: cover; background: #001f3e; }
+
+@media (min-width: 1024px) {
+  .conecta-event--rio .participants-layout { --participant-photo-height: clamp(215px, calc(158px + 5.55vw), 238px); grid-template-columns: clamp(460px, 39vw, 560px) minmax(0, 1fr); gap: clamp(48px, 5vw, 80px); }
+  .conecta-event--rio .participant-cards { gap: clamp(16px, 1.4vw, 20px); }
+  .conecta-event--rio .participant-cards .guest-card { min-height: calc(var(--participant-photo-height) + 115px); }
+  .conecta-event--rio .participant-cards .guest-card__meta { min-height: 115px; padding: clamp(18px, 1.4vw, 20px) clamp(18px, 1.55vw, 22px) 22px; }
+  .conecta-event--rio .participants-copy { width: 100%; max-width: 640px; padding-left: clamp(28px, 2.8vw, 40px); }
+  .conecta-event--rio .participants-copy h2 { max-width: 600px; font-size: clamp(38px, 3.35vw, 48px); }
+}
+
+@media (min-width: 761px) and (max-width: 1023px) {
+  .conecta-event--rio .event-hero { height: auto; padding: 80px 0 96px; }
+  .conecta-event--rio .event-hero__grid { display: flex; min-height: 0; flex-direction: column; gap: 56px; }
+  .conecta-event--rio .event-hero__content { width: 100%; min-height: 0; padding-top: 72px; }
+  .conecta-event--rio .event-hero h1 { max-width: 650px; font-size: 52px; line-height: 1.08; }
+  .conecta-event--rio .event-hero .button-group { position: static; }
+  .conecta-event--rio .event-hero__visual,
+  .conecta-event--rio .rio-media-slot--hero { width: 100%; min-height: 620px; height: 620px; margin: 0; }
+  .conecta-event--rio .venue-section__grid,
+  .conecta-event--rio .location-section__grid { display: flex; flex-direction: column; gap: 56px; }
+  .conecta-event--rio .program-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 1023px) {
+  .conecta-event--rio .event-context__grid,
+  .conecta-event--rio .participants-layout { display: flex; height: auto; flex-direction: column; align-items: stretch; gap: 44px; }
+  .conecta-event--rio .participants-copy { width: 100%; max-width: none; padding-left: 0; border-left: 0; }
+  .conecta-event--rio .participant-cards { width: 100%; }
+}
+
+@media (max-width: 760px) {
+  .conecta-event--rio .event-nav .conecta-nav__inner { grid-template-columns: max-content auto; justify-content: space-between; column-gap: 8px; }
+  .conecta-event--rio .event-nav__brands { gap: 6px; }
+  .conecta-event--rio .event-nav__brands .brand img { width: 76px; }
+  .conecta-event--rio .event-nav__brand-separator { height: 18px; }
+  .conecta-event--rio .event-nav__partner-logo { width: 76px; }
+  .conecta-event--rio .event-nav__confirm { padding-right: 10px; padding-left: 10px; }
+  .conecta-event--rio .quick-facts > div { grid-template-columns: minmax(0, 1fr); }
+  .conecta-event--rio .quick-facts > .quick-facts__items { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .conecta-event--rio .quick-facts__items > .quick-fact { height: 63px; grid-template-columns: 20px minmax(0, 1fr); padding: 10px; }
+  .conecta-event--rio .quick-fact > span { width: 100%; grid-template-columns: minmax(0, 1fr); }
+  .conecta-event--rio .quick-facts__items strong { width: 100%; }
+  .conecta-event--rio .venue-section,
+  .conecta-event--rio .event-context,
+  .conecta-event--rio .guests-section,
+  .conecta-event--rio .program-section,
+  .conecta-event--rio .location-section { padding: 80px 0; }
+  .conecta-event--rio .venue-section { padding-bottom: 96px; }
+  .conecta-event--rio .venue-gallery { min-height: 406px; margin-bottom: 20px; }
+  .conecta-event--rio .venue-gallery__main { height: 342px; }
+  .conecta-event--rio .venue-gallery__detail { top: 36px; height: 172px; }
+  .conecta-event--rio .venue-gallery__food { height: 165px; }
+  .conecta-event--rio .participant-cards { grid-template-columns: 1fr; }
+  .conecta-event--rio .participant-cards .guest-card { min-height: 0; }
+  .conecta-event--rio .participant-cards .participant-photo { height: clamp(250px, 76vw, 320px); flex-basis: clamp(250px, 76vw, 320px); }
+  .conecta-event--rio .program-grid { display: flex; flex-direction: column; gap: 20px; }
+  .conecta-event--rio .program-grid > li { min-height: 0; }
+  .rio-media-slot--program { height: 195px; }
+  .conecta-event--rio .location-section__grid { display: flex; flex-direction: column; gap: 48px; }
+  .conecta-event--rio .location-visuals,
+  .rio-media-slot--map,
+  .rio-media-slot--venue { min-height: 320px; height: 320px; }
+  .conecta-event--rio .partners-section { height: auto; padding: 40px 0; }
+  .conecta-event--rio .partners-section .container { display: block; height: auto; }
+  .conecta-event--rio .partners-section h2 { margin-bottom: 28px; }
+  .conecta-event--rio .partner-logos,
+  .conecta-event--rio .partner-logos__group { width: 100%; justify-content: center; }
+  .conecta-event--rio .partner-logos { margin-top: 30px; animation: none; }
+  .conecta-event--rio .partner-logos__group { gap: 24px; }
+  .conecta-event--rio .partner-logos__separator { display: none; }
+  .conecta-event--rio .partner-logos .partner-logo--nuvemshop { width: 122px; }
+  .rio-partner-mark--large { min-width: 128px; font-size: 21px; }
+  .conecta-event--rio .event-hero__image { height: 400px; border-radius: 26px; object-position: 60% center; }
+  .conecta-event--rio .event-final-cta__image { height: 420px; }
+}
+
+@media (max-width: 499px) {
+  .conecta-event--rio .quick-facts { padding: 20px; }
+  .conecta-event--rio .quick-facts > .quick-facts__items { grid-template-columns: minmax(0, 1fr) !important; }
+  .conecta-event--rio .quick-facts__items > .quick-fact { height: auto; padding: 10px 12px; }
+}
+
+@media (min-width: 500px) and (max-width: 760px) {
+  .conecta-event--rio .quick-facts > .quick-facts__items { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+
+@media (max-width: 340px) {
+  .conecta-event--rio .event-nav .conecta-nav__inner { column-gap: 6px; }
+  .conecta-event--rio .event-nav__brands { gap: 5px; }
+  .conecta-event--rio .event-nav__brands .brand img { width: 64px; }
+  .conecta-event--rio .event-nav__partner-logo { width: 58px; }
+  .conecta-event--rio .event-nav__confirm { padding-right: 11px; padding-left: 11px; font-size: 9px; }
+  .conecta-event--rio .event-context h2,
+  .conecta-event--rio .form-modal__intro h2 { font-size: 32px; }
+  .conecta-event--rio .event-hero h1 { font-size: 35px; line-height: 1.14; }
+  .conecta-event--rio .partner-logos__group { gap: 14px; }
+  .conecta-event--rio .partner-logos .partner-logo--nuvemshop { width: 106px; }
+  .rio-partner-mark--large { min-width: 110px; font-size: 18px; }
+  .rio-media-slot--map > span { display: none; }
+}
