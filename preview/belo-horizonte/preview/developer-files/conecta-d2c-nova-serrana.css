@@ -1711,6 +1711,17 @@
   }
 }
 
+/* BH: as imagens de abertura e CTA ocupam a sangria direita no desktop/tablet. */
+@media (min-width: 761px){
+  .conecta-event--belo-horizonte .event-hero__visual{
+    margin-right: calc(-1 * max(var(--cd-gutter), calc((100vw - var(--cd-max)) / 2)));
+  }
+  .conecta-event--belo-horizonte .event-final-cta__image{
+    width: calc(100% + max(var(--cd-gutter), calc((100vw - var(--cd-max)) / 2)));
+    margin-right: calc(-1 * max(var(--cd-gutter), calc((100vw - var(--cd-max)) / 2)));
+  }
+}
+
 /* BH: ficha factual e programação com leitura alinhada, sem alturas rígidas. */
 @media (min-width: 761px){
   .conecta-event--belo-horizonte .quick-facts__heading{
