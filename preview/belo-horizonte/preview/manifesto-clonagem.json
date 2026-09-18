@@ -1,0 +1,282 @@
+{
+  "schema": 1,
+  "created_at_utc": "2026-09-18T01:24:57.876997+00:00",
+  "root": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana",
+  "entry": "preview-local.html",
+  "extras": [],
+  "locals": [
+    {
+      "path": "developer-files/conecta-d2c-nova-serrana.css",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\developer-files\\conecta-d2c-nova-serrana.css",
+      "bytes": 143247,
+      "sha256": "ba1568a4ace609fa0aaa231f948acb26e02bdad8b100c17cac2e25b53183580f"
+    },
+    {
+      "path": "developer-files/conecta-d2c-nova-serrana.js",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\developer-files\\conecta-d2c-nova-serrana.js",
+      "bytes": 15872,
+      "sha256": "f23b70c7cd5259fd1481a6870331577fac779745d8abcaeb12b1ebf2bf5da848"
+    },
+    {
+      "path": "files-upload/event-calendar.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\event-calendar.svg",
+      "bytes": 607,
+      "sha256": "06db04a64484f64ff5fa441a2e855cc48b97b602c47c65654110c0ea5b3f4bbb"
+    },
+    {
+      "path": "files-upload/event-connections.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\event-connections.svg",
+      "bytes": 1204,
+      "sha256": "7d3da08f24d56a2b27dca44ed465e5e0e514e9cd0a11a700eca94480d3704941"
+    },
+    {
+      "path": "files-upload/event-location.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\event-location.svg",
+      "bytes": 1010,
+      "sha256": "0327c73a6de4d7b97b87bc02f1d4a69acfd6439f969e0c216f2326a7946e0a2b"
+    },
+    {
+      "path": "files-upload/event-panel.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\event-panel.svg",
+      "bytes": 452,
+      "sha256": "e3436e42b9c0424dbcde1bd07f539f297518858f87e90a027d28522b2ae14c88"
+    },
+    {
+      "path": "files-upload/event-sun.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\event-sun.svg",
+      "bytes": 726,
+      "sha256": "55b79b4b6692a42877eca341aef02ae6eb261cf9a650e493f3628ff26206c7f3"
+    },
+    {
+      "path": "files-upload/event-time.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\event-time.svg",
+      "bytes": 498,
+      "sha256": "5ff1d6549cb4b3cf3737c035067ba6d9b187df25e72c29a52f1425015028382c"
+    },
+    {
+      "path": "files-upload/event-users.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\event-users.svg",
+      "bytes": 1290,
+      "sha256": "331ccd78a65d1e11da15bdb5103df2a96a0985e500a023cdcb1f6aa59953d472"
+    },
+    {
+      "path": "files-upload/favicon-nuvemshop.ico",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\favicon-nuvemshop.ico",
+      "bytes": 15086,
+      "sha256": "ec557bb45327f1e86cd9ec4b64b65211f4d6723a0ed884ae20cb4b81c2253ca0"
+    },
+    {
+      "path": "files-upload/footer-abccomm.png",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\footer-abccomm.png",
+      "bytes": 19247,
+      "sha256": "231711a26d53a6c563306424e34d976b1cc86b27edfd1b6e6201171212eaeaab"
+    },
+    {
+      "path": "files-upload/logo-conecta-d2c.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\logo-conecta-d2c.svg",
+      "bytes": 10660,
+      "sha256": "9f194fdfc71685dbd3b5373f60d00d698492e61876a66c6fd9dcffa5879debff"
+    },
+    {
+      "path": "files-upload/nova-serrana-barbieratto-logo.webp",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nova-serrana-barbieratto-logo.webp",
+      "bytes": 12294,
+      "sha256": "fd2a905b60b33ae5e5768b16a389e741a091f61b9af16c6bd6dfcd6c6f95629f"
+    },
+    {
+      "path": "files-upload/nova-serrana-cta-final.jpg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nova-serrana-cta-final.jpg",
+      "bytes": 620114,
+      "sha256": "fe19b5d12bda84c567fe033e8d64dc7ae5f121f924b586db3d62ceb58babc905"
+    },
+    {
+      "path": "files-upload/nova-serrana-ecommerce12x-logo.png",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nova-serrana-ecommerce12x-logo.png",
+      "bytes": 207827,
+      "sha256": "6b04771e1bff8ec03b5849b53f9b70a39b0ef2972f768abe0498ba7285aff152"
+    },
+    {
+      "path": "files-upload/nova-serrana-header.jpg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nova-serrana-header.jpg",
+      "bytes": 576331,
+      "sha256": "4f91ebfad19f65e7fcabd55840e3b9d6f536f1ab8588fd8ef4ca90b8b118ce64"
+    },
+    {
+      "path": "files-upload/nova-serrana-liber-hotel-localizacao.jpg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nova-serrana-liber-hotel-localizacao.jpg",
+      "bytes": 440552,
+      "sha256": "4dff3a1223ef9b00ef016daa7299eef83a8cf64a26106eca183edf82f9f55432"
+    },
+    {
+      "path": "files-upload/nova-serrana-luis-felipe-amadio.jpg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nova-serrana-luis-felipe-amadio.jpg",
+      "bytes": 201792,
+      "sha256": "16a056f609551d38c02b08af7f7f350f7b6772fe8c567f4b73851006c2ff97ec"
+    },
+    {
+      "path": "files-upload/nova-serrana-mapa-liber-hotel.jpg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nova-serrana-mapa-liber-hotel.jpg",
+      "bytes": 125106,
+      "sha256": "e029149601094b3fb37013dc929c557be195b7af014ecf29a4f6c67b77b429cb"
+    },
+    {
+      "path": "files-upload/nova-serrana-mosaico-inferior.jpg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nova-serrana-mosaico-inferior.jpg",
+      "bytes": 341282,
+      "sha256": "0e2576d22022a9eb185df387d11069c01c0a0dead49ba95309b7e64f3af954c5"
+    },
+    {
+      "path": "files-upload/nova-serrana-mosaico-meio.jpg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nova-serrana-mosaico-meio.jpg",
+      "bytes": 218449,
+      "sha256": "6d0d74d0777cd6ac1441deba9baf6db2cd7bc8bb2903aea8fc8bda3b4df5b919"
+    },
+    {
+      "path": "files-upload/nova-serrana-mosaico-principal.jpg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nova-serrana-mosaico-principal.jpg",
+      "bytes": 637413,
+      "sha256": "10c97ca79c14e73881c5a8b6b8b1fb2a62aa20ee789f780c08b1f70ec3180b7c"
+    },
+    {
+      "path": "files-upload/nova-serrana-programacao-happy-hour.jpg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nova-serrana-programacao-happy-hour.jpg",
+      "bytes": 355771,
+      "sha256": "d5ca4404823767cbe7cc63c8ff4d9346d16a258419da1914dba29b8b9600aea7"
+    },
+    {
+      "path": "files-upload/nova-serrana-programacao-imersao.jpg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nova-serrana-programacao-imersao.jpg",
+      "bytes": 272860,
+      "sha256": "b52162dfd2eab240aef94c16e631378815157ca5c4f07d91caf75b7e9163ce6e"
+    },
+    {
+      "path": "files-upload/nova-serrana-programacao-paineis.jpg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nova-serrana-programacao-paineis.jpg",
+      "bytes": 336601,
+      "sha256": "99e0174e73bf5da21180f56fac9c8b979174d3b2f9937668ecad4d995ec16fd2"
+    },
+    {
+      "path": "files-upload/nova-serrana-rafaela-lobato.jpg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nova-serrana-rafaela-lobato.jpg",
+      "bytes": 150748,
+      "sha256": "776499417d207cdc73e69a08a98280c292646b7632b09ce1a755e2761ee0962e"
+    },
+    {
+      "path": "files-upload/nova-serrana-rodrigo-amaral-martins.jpg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nova-serrana-rodrigo-amaral-martins.jpg",
+      "bytes": 117682,
+      "sha256": "82625ac4ae3991fb0da5e9b9a2084f00ae9ae4b9c026dccbfaf392dad4baaf1f"
+    },
+    {
+      "path": "files-upload/nova-serrana-victor-barbieratto.jpg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nova-serrana-victor-barbieratto.jpg",
+      "bytes": 131971,
+      "sha256": "ba7026acdbe53a502b19cc0fe6d620371cd3292532c11707579dd7c3b927db63"
+    },
+    {
+      "path": "files-upload/nuvemshop-logo.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\nuvemshop-logo.svg",
+      "bytes": 9274,
+      "sha256": "acb66fcf5d70f5d130fa3d25bb4285d8eff23c6fa6fe49b7b56fc01d15d9e62f"
+    },
+    {
+      "path": "files-upload/og-conecta-d2c-nova-serrana.jpg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\og-conecta-d2c-nova-serrana.jpg",
+      "bytes": 311219,
+      "sha256": "1c3415e07d702c9d0f8cfc37de83d071d92feeb72cab31934097c6adcd85e945"
+    },
+    {
+      "path": "files-upload/selo-d2c-icon.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\selo-d2c-icon.svg",
+      "bytes": 1565,
+      "sha256": "cd64e1d675c5d089359a1f6b87046aa649d960c910c7e2a6bcdae3b1b6daff80"
+    },
+    {
+      "path": "files-upload/selo-d2c.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\files-upload\\selo-d2c.svg",
+      "bytes": 12311,
+      "sha256": "36a9f13aad38081b883d8db92e046ee18a95aa5db7bac0dc95259955e4710a48"
+    },
+    {
+      "path": "preview-local.html",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\belo-horizonte\\base-nova-serrana\\preview-local.html",
+      "bytes": 22468,
+      "sha256": "d1dc8ff410c12074de0bbf461dab853b4fec802ec83b73d1411d4ad1f56eda87"
+    }
+  ],
+  "externals": [
+    {
+      "url": "https://example.invalid/eventos/conecta-d2c/nova-serrana",
+      "from": "preview-local.html",
+      "kind": "link"
+    },
+    {
+      "url": "https://fonts.googleapis.com",
+      "from": "preview-local.html",
+      "kind": "link"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,ital,wght@6..96,600;6..96,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap",
+      "from": "preview-local.html",
+      "kind": "href"
+    },
+    {
+      "url": "https://fonts.gstatic.com",
+      "from": "preview-local.html",
+      "kind": "link"
+    },
+    {
+      "url": "https://js.hsforms.net/forms/embed/8180620.js",
+      "from": "developer-files/conecta-d2c-nova-serrana.js",
+      "kind": "script-literal"
+    },
+    {
+      "url": "https://maps.app.goo.gl/QfBfrfB1MBGpL9j4A",
+      "from": "preview-local.html",
+      "kind": "link"
+    },
+    {
+      "url": "https://www.facebook.com/nuvemshop/",
+      "from": "preview-local.html",
+      "kind": "link"
+    },
+    {
+      "url": "https://www.google.com/maps/dir/?api=1&destination=Villa+D%27Gusta%2C+Avenida+Dom+Cabral%2C+431%2C+Jardim+do+Lago%2C+Nova+Serrana%2C+MG",
+      "from": "preview-local.html",
+      "kind": "link"
+    },
+    {
+      "url": "https://www.instagram.com/nuvemshop/",
+      "from": "preview-local.html",
+      "kind": "link"
+    },
+    {
+      "url": "https://www.linkedin.com/company/nuvemshop/",
+      "from": "preview-local.html",
+      "kind": "link"
+    },
+    {
+      "url": "https://www.nuvemshop.com.br/",
+      "from": "preview-local.html",
+      "kind": "link"
+    },
+    {
+      "url": "https://www.youtube.com/@nuvemshop",
+      "from": "preview-local.html",
+      "kind": "link"
+    },
+    {
+      "url": "https://x.com/nuvemshop",
+      "from": "preview-local.html",
+      "kind": "link"
+    }
+  ],
+  "limitations": [
+    "Não interpreta JavaScript, imports, fetch, workers nem URLs montadas dinamicamente; use --extra para arquivos locais identificados na inspeção.",
+    "Não baixa recursos externos; fontes, scripts e serviços remotos continuam dependentes da rede e não são validados.",
+    "Não comprova fidelidade visual ou funcionamento; abra a raiz clonada com servidor HTTP e compare no navegador.",
+    "HTML/CSS/SVG devem ser UTF-8. base href, escapes CSS em URLs e srcset complexo são recusados, não considerados cobertos.",
+    "Links de navegação locais não são dependências. data: permanece embutido; URLs remotas em JavaScript são apenas inventariadas quando literais.",
+    "Referências script-literal podem conter placeholders de template não resolvidos; não representam URLs finais verificadas."
+  ]
+}
