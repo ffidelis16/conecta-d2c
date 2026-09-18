@@ -1973,3 +1973,31 @@
     line-height: 14px !important;
   }
 }
+@media (min-width: 1024px) {
+  .conecta-event--ecommerce-prateado .participants-copy {
+    display: grid;
+    width: 100%;
+    max-width: none;
+    grid-template-columns: minmax(0, 1.12fr) minmax(300px, .72fr);
+    align-items: start;
+    gap: clamp(64px, 8vw, 128px);
+  }
+  .conecta-event--ecommerce-prateado .participants-copy h2 {
+    max-width: 660px;
+    margin: 0;
+  }
+  .conecta-event--ecommerce-prateado .participants-copy__body {
+    display: block;
+    max-width: 360px;
+    margin-top: 34px;
+  }
+  .conecta-event--ecommerce-prateado .participants-copy__body p {
+    margin: 0;
+    color: #486781;
+    font-size: 17px;
+    line-height: 1.45;
+  }
+}
+@media (max-width: 1023px) {
+  .conecta-event--ecommerce-prateado .participants-copy__body { margin-top: 22px; }
+}
