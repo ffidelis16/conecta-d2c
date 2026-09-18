@@ -1831,6 +1831,63 @@
 .conecta-event--ecommerce-prateado .form-modal__pending { margin: 0; }
 .conecta-event--ecommerce-prateado .partners-section .container { display: block; }
 .conecta-event--ecommerce-prateado .partners-section h2 { margin: 0; }
+.conecta-event--ecommerce-prateado .guest-card__meta .guest-card__role {
+  margin: 7px 0 13px;
+  color: var(--cd-navy);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.conecta-event--ecommerce-prateado .guest-card__meta .guest-card__bio {
+  margin: 0;
+  color: #486781;
+  font-size: 12px;
+  line-height: 1.52;
+}
+.conecta-event--ecommerce-prateado .partners-section {
+  height: 176px;
+  padding: 0;
+}
+.conecta-event--ecommerce-prateado .partners-section .container {
+  display: grid;
+  height: 176px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 64px;
+}
+.conecta-event--ecommerce-prateado .partners-section h2 { max-width: 510px; }
+.conecta-event--ecommerce-prateado .partners-marquee,
+.conecta-event--ecommerce-prateado .partner-logos {
+  display: flex;
+  width: auto;
+  max-width: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+.conecta-event--ecommerce-prateado .partner-logos__group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.conecta-event--ecommerce-prateado .partner-logos__separator {
+  width: 1px;
+  height: 44px;
+  background: rgba(255,255,255,.36);
+}
+.conecta-event--ecommerce-prateado .partner-wordmark {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -.045em;
+  line-height: 1;
+  white-space: nowrap;
+}
+.conecta-event--ecommerce-prateado .event-final-cta__note {
+  font-size: 12px !important;
+  line-height: 18px !important;
+}
 @media (max-width: 1023px) {
   .conecta-event--ecommerce-prateado .asset-pending--hero { height: 620px; border-radius: 26px; }
   .conecta-event--ecommerce-prateado .location-map.asset-pending,
@@ -1873,4 +1930,46 @@
   .conecta-event--ecommerce-prateado .program-card__body { min-height: 236px; }
   .conecta-event--ecommerce-prateado .program-card__body h3 { top: 64px; }
   .conecta-event--ecommerce-prateado .program-card__body p { top: 126px; }
+}
+@media (min-width: 1024px) {
+  .conecta-event--ecommerce-prateado .participant-cards .guest-card {
+    min-height: 0;
+  }
+  .conecta-event--ecommerce-prateado .participant-cards .guest-card__meta {
+    min-height: 222px;
+  }
+}
+@media (max-width: 1023px) {
+  .conecta-event--ecommerce-prateado .participant-cards .guest-card__meta {
+    min-height: 0;
+  }
+}
+@media (max-width: 760px) {
+  .conecta-event--ecommerce-prateado .partners-section {
+    height: auto;
+    padding: 40px 0;
+  }
+  .conecta-event--ecommerce-prateado .partners-section .container {
+    display: block;
+    height: auto;
+  }
+  .conecta-event--ecommerce-prateado .partners-section h2 {
+    max-width: none;
+    margin-bottom: 28px;
+  }
+  .conecta-event--ecommerce-prateado .partners-marquee,
+  .conecta-event--ecommerce-prateado .partner-logos {
+    justify-content: flex-start;
+  }
+  .conecta-event--ecommerce-prateado .partner-logos__group {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .conecta-event--ecommerce-prateado .partner-logos__separator { height: 28px; }
+  .conecta-event--ecommerce-prateado .partner-wordmark { font-size: 16px; }
+  .conecta-event--ecommerce-prateado .event-final-cta__note {
+    font-size: 10px !important;
+    line-height: 14px !important;
+  }
 }
