@@ -1998,6 +1998,9 @@
   .conecta-event--belo-horizonte .program-section .section-heading > p{
     max-width: none;
   }
+  .conecta-event--belo-horizonte .guest-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 /* BH: regras finais de dimensão e alinhamento, após os ajustes legados. */
