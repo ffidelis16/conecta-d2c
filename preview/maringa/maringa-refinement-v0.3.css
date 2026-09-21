@@ -588,28 +588,31 @@
   }
 }
 
-/* Hero v0.5: conteúdo e CTAs no fluxo, sem faixa vazia após a imagem. */
+/* Header rolado: marca Nuvemshop azul; parceira em preto vem da base. */
 .conecta-event--maringa .event-nav.is-scrolled .event-nav__nuvemshop-logo {
   filter: brightness(0) saturate(100%) invert(25%) sepia(92%) saturate(1767%) hue-rotate(199deg) brightness(89%) contrast(101%);
 }
 
-@media (min-width: 1024px) {
+/* Hero Maringá: mesmo primitivo das LPs atuais, com altura guiada pela copy. */
+@media (min-width: 761px) {
   .conecta-event--maringa .event-hero {
-    height: 560px !important;
-    padding: 0 !important;
+    height: 640px !important;
+    padding: 80px 0 0 !important;
+    overflow: visible !important;
   }
 
   .conecta-event--maringa .event-hero__grid {
+    height: 560px !important;
     min-height: 560px !important;
-    height: 560px;
-    align-items: stretch !important;
+    grid-template-columns: minmax(0, 579px) minmax(0, 1fr) !important;
+    align-items: start !important;
+    gap: 42px !important;
   }
 
   .conecta-event--maringa .event-hero__content {
-    box-sizing: border-box;
     min-height: 560px !important;
-    padding-top: 80px !important;
-    padding-bottom: 80px;
+    height: 560px !important;
+    padding-top: 75px !important;
   }
 
   .conecta-event--maringa .event-hero__content > p:not(.eyebrow) {
@@ -618,13 +621,83 @@
 
   .conecta-event--maringa .event-hero .button-group {
     position: static !important;
-    margin-top: 60px;
+    margin-top: 60px !important;
   }
 
   .conecta-event--maringa .event-hero__visual,
   .conecta-event--maringa .event-hero__visual > img {
     min-height: 560px !important;
     height: 560px !important;
-    margin-top: 0 !important;
+  }
+
+  .conecta-event--maringa .event-hero__visual {
+    margin: 0 calc(-1 * var(--cd-gutter)) 0 0 !important;
+    overflow: hidden !important;
+  }
+
+  .conecta-event--maringa .event-hero__community-seal {
+    top: 76px !important;
+  }
+
+  .conecta-event--maringa .quick-facts {
+    right: 46px !important;
+    bottom: 31px !important;
+    left: auto !important;
+    transform: none !important;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1180px) {
+  .conecta-event--maringa .event-hero {
+    height: auto !important;
+    padding: 116px 0 68px !important;
+  }
+
+  .conecta-event--maringa .event-hero__grid {
+    display: flex !important;
+    height: auto !important;
+    min-height: 0 !important;
+    flex-direction: column;
+    gap: 34px !important;
+  }
+
+  .conecta-event--maringa .event-hero__content {
+    height: auto !important;
+    min-height: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .conecta-event--maringa .event-hero .button-group {
+    margin-top: 60px !important;
+  }
+
+  .conecta-event--maringa .event-hero__visual {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  .conecta-event--maringa .event-hero__visual > img {
+    width: 100%;
+    height: 420px !important;
+    min-height: 0 !important;
+    border-radius: 26px !important;
+  }
+
+  .conecta-event--maringa .event-hero__community-seal {
+    top: 22px !important;
+    left: 22px !important;
+  }
+
+  .conecta-event--maringa .quick-facts {
+    position: relative !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: min(680px, calc(100% - 48px)) !important;
+    margin: -54px auto 0 !important;
+    transform: none !important;
   }
 }
