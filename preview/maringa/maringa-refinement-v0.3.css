@@ -1,0 +1,630 @@
+/* Maringá v0.4: composição da família Weethub/Rio, aplicada somente ao derivado. */
+.conecta-event--maringa h1,
+.conecta-event--maringa h2,
+.conecta-event--maringa h3 {
+  text-wrap: balance;
+}
+
+.conecta-event--maringa .event-hero h1 {
+  max-width: 560px;
+  font-size: clamp(42px, 3.35vw, 52px);
+  line-height: 1.08;
+}
+
+.conecta-event--maringa .event-hero__content > p:not(.eyebrow) {
+  max-width: 530px;
+  margin-bottom: 24px;
+  font-size: 15px;
+  line-height: 1.52;
+}
+
+.conecta-event--maringa .quick-facts {
+  box-sizing: border-box;
+  width: min(523px, calc(100% - 32px));
+  height: auto !important;
+  min-height: 0;
+  overflow: hidden;
+  padding: 22px 24px 20px !important;
+}
+
+.conecta-event--maringa .quick-facts__heading {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 14px !important;
+  padding: 0;
+}
+
+.conecta-event--maringa .quick-facts > .quick-facts__items {
+  display: grid;
+  grid-template-columns: 1.08fr 1fr 1.12fr;
+  gap: 9px;
+  margin: 0 !important;
+}
+
+.conecta-event--maringa .quick-facts__items > .quick-fact {
+  box-sizing: border-box;
+  display: grid;
+  min-width: 0;
+  height: 64px;
+  grid-template-columns: 20px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--cd-line);
+  border-radius: 14px;
+}
+
+.conecta-event--maringa .quick-fact > span {
+  min-width: 0;
+  gap: 1px;
+  padding: 0;
+  border: 0;
+}
+
+.conecta-event--maringa .quick-facts__items small {
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: .08em;
+}
+
+.conecta-event--maringa .quick-facts__items strong {
+  min-width: 0;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.conecta-event--maringa .quick-facts__note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 14px 0 0;
+  color: #506984;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.conecta-event--maringa .quick-facts__note span:first-child {
+  color: var(--cd-blue);
+  font-weight: 700;
+}
+
+.conecta-event--maringa .participants-layout {
+  display: grid;
+  grid-template-areas: "cards copy";
+  grid-template-columns: minmax(0, 730px) minmax(340px, 1fr);
+  align-items: center;
+  gap: clamp(64px, 8vw, 120px);
+}
+
+.conecta-event--maringa .participant-cards {
+  grid-area: cards;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  width: 100%;
+  max-width: none;
+  gap: 22px;
+}
+
+.conecta-event--maringa .participant-cards .guest-card {
+  display: flex;
+  height: auto;
+  min-height: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.conecta-event--maringa .participant-cards .participant-photo {
+  display: block;
+  width: 100%;
+  height: clamp(248px, 20vw, 292px);
+  flex: 0 0 clamp(248px, 20vw, 292px);
+  object-fit: cover;
+}
+
+.conecta-event--maringa .participant-cards .guest-card__meta {
+  min-height: 0;
+  padding: 20px 22px 22px;
+}
+
+.conecta-event--maringa .participant-cards .guest-card h3 {
+  margin-bottom: 6px;
+  font-size: 21px;
+  line-height: 25px;
+}
+
+.conecta-event--maringa .guest-card__meta .participant-role,
+.conecta-event--maringa .guest-card__meta .guest-card__role {
+  color: var(--cd-muted);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.conecta-event--maringa .participants-copy {
+  grid-area: copy;
+  display: flex;
+  max-width: 470px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: clamp(32px, 3.3vw, 48px);
+  border-left: 1px solid rgba(0,80,195,.22);
+}
+
+.conecta-event--maringa .participants-copy .eyebrow {
+  margin-bottom: 22px;
+}
+
+.conecta-event--maringa .participants-copy h2 {
+  max-width: 470px;
+  margin: 0 0 22px;
+  font-size: clamp(36px, 3vw, 44px);
+  line-height: 1.08;
+}
+
+.conecta-event--maringa .participants-copy__body p {
+  margin: 0;
+  color: #486781;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.conecta-event--maringa .program-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.conecta-event--maringa .program-grid > li {
+  display: grid;
+  min-width: 0;
+  min-height: 410px;
+  grid-template-rows: 170px 1fr;
+}
+
+.conecta-event--maringa .program-card__media,
+.conecta-event--maringa .program-card__media > img {
+  height: 170px;
+}
+
+.conecta-event--maringa .program-card__media > img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.conecta-event--maringa .program-card__body {
+  min-height: 240px;
+  padding: 0 22px;
+}
+
+.conecta-event--maringa .program-card__icon {
+  top: 24px;
+  left: 22px;
+}
+
+.conecta-event--maringa .program-card__body > span {
+  top: 12px;
+  right: 22px;
+  font-size: 24px;
+}
+
+.conecta-event--maringa .program-card__body h3 {
+  top: 61px;
+  right: 22px;
+  left: 22px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.conecta-event--maringa .program-card__body p {
+  top: 107px;
+  right: 22px;
+  left: 22px;
+  font-size: 15px;
+  line-height: 21px;
+}
+
+.conecta-event--maringa .partners-section {
+  height: 176px;
+  padding: 0;
+}
+
+.conecta-event--maringa .partners-section .container {
+  display: grid;
+  height: 176px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 64px;
+}
+
+.conecta-event--maringa .partners-section h2 {
+  max-width: 440px;
+  margin: 0;
+  font-size: 25px;
+}
+
+.conecta-event--maringa .partners-marquee {
+  overflow: hidden;
+}
+
+.conecta-event--maringa .partner-logos,
+.conecta-event--maringa .partner-logos__group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.conecta-event--maringa .partner-logos__group {
+  gap: 20px;
+}
+
+.conecta-event--maringa .partner-logos .partner-logo--nuvemshop {
+  width: 132px;
+  margin: 0;
+}
+
+.conecta-event--maringa .partner-logos .partner-logo--eficaz {
+  width: 126px;
+  height: auto;
+}
+
+.conecta-event--maringa .partner-logos__separator {
+  width: 1px;
+  height: 44px;
+  background: rgba(255,255,255,.36);
+}
+
+@media (min-width: 1024px) {
+  .conecta-event--maringa .participants-layout {
+    --participant-photo-height: clamp(225px, calc(155px + 6vw), 260px);
+    grid-template-columns: clamp(560px, 46vw, 640px) minmax(0, 1fr);
+    gap: clamp(52px, 5.5vw, 76px);
+  }
+
+  .conecta-event--maringa .participant-cards {
+    gap: clamp(16px, 1.4vw, 20px);
+  }
+
+  .conecta-event--maringa .participant-cards .participant-photo {
+    height: var(--participant-photo-height);
+    flex-basis: var(--participant-photo-height);
+  }
+
+  .conecta-event--maringa .participant-cards .guest-card__meta {
+    min-height: 115px;
+    padding: clamp(18px, 1.4vw, 20px) clamp(18px, 1.55vw, 22px) 22px;
+  }
+
+  .conecta-event--maringa .participants-copy {
+    width: 100%;
+    max-width: 420px;
+    padding-left: clamp(28px, 2.2vw, 32px);
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1023px) {
+  .conecta-event--maringa .event-hero__grid,
+  .conecta-event--maringa .participants-layout {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 44px;
+  }
+
+  .conecta-event--maringa .participants-copy {
+    width: 100%;
+    max-width: none;
+    padding-left: 0;
+    border-left: 0;
+  }
+
+}
+
+@media (min-width: 761px) and (max-width: 1180px) {
+  .conecta-event--maringa .program-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .conecta-event--maringa .program-grid > li:nth-child(3) {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 760px) {
+  .conecta-event--maringa .event-hero h1 {
+    font-size: 38px;
+  }
+
+  .conecta-event--maringa .quick-facts {
+    width: calc(100% - 40px);
+    margin: 30px 20px 0;
+    padding: 20px !important;
+  }
+
+  .conecta-event--maringa .quick-facts > .quick-facts__items {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .conecta-event--maringa .quick-facts__items > .quick-fact {
+    height: auto;
+    padding: 10px 12px;
+  }
+
+  .conecta-event--maringa .participants-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 44px;
+  }
+
+  .conecta-event--maringa .participants-copy {
+    width: 100%;
+    max-width: none;
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .conecta-event--maringa .participant-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .conecta-event--maringa .participant-cards .participant-photo {
+    height: clamp(250px, 76vw, 320px);
+    flex-basis: clamp(250px, 76vw, 320px);
+  }
+
+  .conecta-event--maringa .program-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .conecta-event--maringa .program-grid > li {
+    min-height: 0;
+  }
+
+  .conecta-event--maringa .program-card__media,
+  .conecta-event--maringa .program-card__media > img {
+    height: 195px;
+  }
+
+  .conecta-event--maringa .program-card__body {
+    min-height: 238px;
+  }
+
+  .conecta-event--maringa .partners-section {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .conecta-event--maringa .partners-section .container {
+    display: block;
+    height: auto;
+  }
+
+  .conecta-event--maringa .partners-section h2 {
+    margin-bottom: 28px;
+  }
+
+  .conecta-event--maringa .partner-logos,
+  .conecta-event--maringa .partner-logos__group {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .conecta-event--maringa .partner-logos {
+    margin-top: 30px;
+    animation: none;
+  }
+
+  .conecta-event--maringa .partner-logos__group {
+    gap: 24px;
+  }
+
+  .conecta-event--maringa .partner-logos__separator {
+    display: none;
+  }
+}
+
+@media (max-width: 340px) {
+  .conecta-event--maringa .event-hero h1 {
+    font-size: 35px;
+    line-height: 1.14;
+  }
+}
+
+/* Ajustes v0.4: respiro simétrico, terceira dobra centralizada e microcopy discreta. */
+@media (min-width: 761px) {
+  .conecta-event--maringa .event-hero {
+    height: auto !important;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+
+  .conecta-event--maringa .event-context {
+    height: auto !important;
+    padding-block: 112px !important;
+  }
+
+  .conecta-event--maringa .event-context__grid {
+    height: auto !important;
+    align-items: center !important;
+  }
+
+  .conecta-event--maringa .event-context__grid > div:first-child {
+    padding-top: 0 !important;
+  }
+
+  .conecta-event--maringa .event-context__grid > .attendees-card {
+    margin-top: 0 !important;
+  }
+}
+
+.conecta-event--maringa .event-final-cta__note {
+  font-size: 9px !important;
+  line-height: 14px !important;
+}
+
+@media (max-width: 760px) {
+  .conecta-event--maringa .event-hero {
+    padding: 116px 0 0 !important;
+  }
+
+  .conecta-event--maringa .event-hero__visual {
+    width: 100vw !important;
+    margin: 34px 0 0 calc(50% - 50vw) !important;
+    padding-bottom: 45px;
+    overflow: visible !important;
+    background: #eaf5ff;
+  }
+
+  .conecta-event--maringa .event-hero__visual > img {
+    display: block;
+    width: 100%;
+    border-radius: 0 !important;
+    object-position: center;
+  }
+
+  .conecta-event--maringa .event-hero__visual .quick-facts {
+    position: relative !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: calc(100% - 40px) !important;
+    margin: 30px auto 0 !important;
+    transform: none !important;
+  }
+
+  .conecta-event--maringa .venue-section {
+    margin-top: 0 !important;
+    padding-top: 80px !important;
+    background: #f8f8f8 !important;
+  }
+
+  .conecta-event--maringa .program-grid > li {
+    min-height: 402px;
+    height: 402px;
+    grid-template-rows: 195px minmax(207px, 1fr);
+  }
+
+  .conecta-event--maringa .program-card__media,
+  .conecta-event--maringa .program-card__media > img {
+    height: 195px;
+  }
+}
+
+/* Cards de programação: mesma altura, conteúdo no fluxo e sem área ociosa. */
+.conecta-event--maringa .program-grid > li {
+  min-height: 374px;
+  height: 374px;
+  grid-template-rows: 170px minmax(204px, 1fr);
+}
+
+.conecta-event--maringa .program-card__body {
+  position: relative !important;
+  display: grid !important;
+  min-height: 0 !important;
+  height: auto !important;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-content: start;
+  gap: 12px 16px;
+  padding: 18px 22px !important;
+}
+
+.conecta-event--maringa .program-card__icon {
+  position: static !important;
+  width: 22px;
+  height: 22px;
+  margin: 0 !important;
+}
+
+.conecta-event--maringa .program-card__body > span {
+  position: static !important;
+  margin: 0 !important;
+  align-self: start;
+  font-size: 23px !important;
+  line-height: 22px !important;
+}
+
+.conecta-event--maringa .program-card__body h3 {
+  position: static !important;
+  grid-column: 1 / -1;
+  margin: 0 !important;
+  font-size: 19px !important;
+  line-height: 23px !important;
+}
+
+.conecta-event--maringa .program-card__body p {
+  position: static !important;
+  grid-column: 1 / -1;
+  margin: 0 !important;
+  font-size: 14px !important;
+  line-height: 19px !important;
+}
+
+/* Semibold pontual para levar leitura sem transformar o texto em chamadas. */
+.conecta-event--maringa .event-hero__content > p strong,
+.conecta-event--maringa .venue-section p:not(.eyebrow) strong,
+.conecta-event--maringa .event-context__grid > div > p strong,
+.conecta-event--maringa .participants-copy__body strong,
+.conecta-event--maringa .program-section .section-heading > p strong,
+.conecta-event--maringa .event-final-cta__card > div > p strong {
+  color: inherit;
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .conecta-event--maringa .program-grid > li {
+    min-height: 402px;
+    height: 402px;
+    grid-template-rows: 195px minmax(207px, 1fr);
+  }
+}
+
+/* Hero v0.5: conteúdo e CTAs no fluxo, sem faixa vazia após a imagem. */
+.conecta-event--maringa .event-nav.is-scrolled .event-nav__nuvemshop-logo {
+  filter: brightness(0) saturate(100%) invert(25%) sepia(92%) saturate(1767%) hue-rotate(199deg) brightness(89%) contrast(101%);
+}
+
+@media (min-width: 1024px) {
+  .conecta-event--maringa .event-hero {
+    height: 560px !important;
+    padding: 0 !important;
+  }
+
+  .conecta-event--maringa .event-hero__grid {
+    min-height: 560px !important;
+    height: 560px;
+    align-items: stretch !important;
+  }
+
+  .conecta-event--maringa .event-hero__content {
+    box-sizing: border-box;
+    min-height: 560px !important;
+    padding-top: 80px !important;
+    padding-bottom: 80px;
+  }
+
+  .conecta-event--maringa .event-hero__content > p:not(.eyebrow) {
+    margin-bottom: 0 !important;
+  }
+
+  .conecta-event--maringa .event-hero .button-group {
+    position: static !important;
+    margin-top: 60px;
+  }
+
+  .conecta-event--maringa .event-hero__visual,
+  .conecta-event--maringa .event-hero__visual > img {
+    min-height: 560px !important;
+    height: 560px !important;
+    margin-top: 0 !important;
+  }
+}

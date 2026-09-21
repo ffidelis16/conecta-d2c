@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="675" viewBox="0 0 900 675" role="img" aria-labelledby="title desc">
+  <title id="title">Lideranças de Maringá e região</title>
+  <desc id="desc">Cartão visual para empresários e executivos convidados para o Conecta D2C Maringá.</desc>
+  <rect width="900" height="675" fill="#dceeff"/>
+  <path d="M-40 580C146 412 310 630 488 468S748 452 940 320" fill="none" stroke="#0050c3" stroke-width="74" opacity=".16"/>
+  <rect x="74" y="74" width="172" height="172" rx="86" fill="#0050c3"/>
+  <path d="M126 178c14-32 57-32 71 0m-91 32c24-42 90-42 114 0" fill="none" stroke="#96ffbc" stroke-linecap="round" stroke-width="12"/>
+  <text x="74" y="340" fill="#0050c3" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4">MARINGÁ E REGIÃO</text>
+  <text x="74" y="414" fill="#001f3e" font-family="Georgia, serif" font-size="58" font-style="italic">Quem decide</text>
+  <text x="74" y="478" fill="#001f3e" font-family="Georgia, serif" font-size="58" font-style="italic">também constrói</text>
+  <text x="74" y="542" fill="#001f3e" font-family="Georgia, serif" font-size="58" font-style="italic">a conversa.</text>
+</svg>

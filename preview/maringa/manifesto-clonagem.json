@@ -1,0 +1,259 @@
+{
+  "schema": 1,
+  "created_at_utc": "2026-09-21T03:43:44.595176+00:00",
+  "root": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1",
+  "entry": "index.html",
+  "extras": [],
+  "locals": [
+    {
+      "path": "assets/cta-final.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\cta-final.svg",
+      "bytes": 780,
+      "sha256": "53e69a0591fca15b0e6de970b07d42f24a88b6bc499cf9d4a977c995e88091f4"
+    },
+    {
+      "path": "assets/event-calendar.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\event-calendar.svg",
+      "bytes": 607,
+      "sha256": "06db04a64484f64ff5fa441a2e855cc48b97b602c47c65654110c0ea5b3f4bbb"
+    },
+    {
+      "path": "assets/event-connections.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\event-connections.svg",
+      "bytes": 1204,
+      "sha256": "7d3da08f24d56a2b27dca44ed465e5e0e514e9cd0a11a700eca94480d3704941"
+    },
+    {
+      "path": "assets/event-location.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\event-location.svg",
+      "bytes": 1010,
+      "sha256": "0327c73a6de4d7b97b87bc02f1d4a69acfd6439f969e0c216f2326a7946e0a2b"
+    },
+    {
+      "path": "assets/event-panel.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\event-panel.svg",
+      "bytes": 452,
+      "sha256": "e3436e42b9c0424dbcde1bd07f539f297518858f87e90a027d28522b2ae14c88"
+    },
+    {
+      "path": "assets/event-sun.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\event-sun.svg",
+      "bytes": 726,
+      "sha256": "55b79b4b6692a42877eca341aef02ae6eb261cf9a650e493f3628ff26206c7f3"
+    },
+    {
+      "path": "assets/event-time.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\event-time.svg",
+      "bytes": 498,
+      "sha256": "5ff1d6549cb4b3cf3737c035067ba6d9b187df25e72c29a52f1425015028382c"
+    },
+    {
+      "path": "assets/event-users.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\event-users.svg",
+      "bytes": 1290,
+      "sha256": "331ccd78a65d1e11da15bdb5103df2a96a0985e500a023cdcb1f6aa59953d472"
+    },
+    {
+      "path": "assets/favicon-nuvemshop.ico",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\favicon-nuvemshop.ico",
+      "bytes": 15086,
+      "sha256": "ec557bb45327f1e86cd9ec4b64b65211f4d6723a0ed884ae20cb4b81c2253ca0"
+    },
+    {
+      "path": "assets/footer-abccomm.png",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\footer-abccomm.png",
+      "bytes": 19247,
+      "sha256": "231711a26d53a6c563306424e34d976b1cc86b27edfd1b6e6201171212eaeaab"
+    },
+    {
+      "path": "assets/hero.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\hero.svg",
+      "bytes": 778,
+      "sha256": "e83d2b5405f041cb8bfea107de2cc841e8c4df72ae579507c05128c9523f9f37"
+    },
+    {
+      "path": "assets/local.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\local.svg",
+      "bytes": 776,
+      "sha256": "5c06e4c831dfe8e19ffa8dbe5292ec65aa28f317d2e23ccad1f5ce1553a97b6f"
+    },
+    {
+      "path": "assets/logo-conecta-d2c.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\logo-conecta-d2c.svg",
+      "bytes": 10660,
+      "sha256": "9f194fdfc71685dbd3b5373f60d00d698492e61876a66c6fd9dcffa5879debff"
+    },
+    {
+      "path": "assets/mapa.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\mapa.svg",
+      "bytes": 773,
+      "sha256": "04997bb3eb2aeca8ddf92b367cc5e522e9af49c93ceb3289d1add787a4316bfe"
+    },
+    {
+      "path": "assets/mosaico-detail.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\mosaico-detail.svg",
+      "bytes": 776,
+      "sha256": "932dfcd38cdc8aa191f5939378ce5e40e590fcd6b691de30aabbc68e541eaf79"
+    },
+    {
+      "path": "assets/mosaico-food.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\mosaico-food.svg",
+      "bytes": 773,
+      "sha256": "4fc1cc5c6c508dcd16fc8c332a8c3c35f8602d0607843034b8532585402d3313"
+    },
+    {
+      "path": "assets/mosaico-main.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\mosaico-main.svg",
+      "bytes": 774,
+      "sha256": "a1e527b66daabfd9789f43582a86ccc7d20ebc1288315f60d1feab04ec1a2551"
+    },
+    {
+      "path": "assets/nuvemshop-logo.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\nuvemshop-logo.svg",
+      "bytes": 9274,
+      "sha256": "acb66fcf5d70f5d130fa3d25bb4285d8eff23c6fa6fe49b7b56fc01d15d9e62f"
+    },
+    {
+      "path": "assets/parceiro-apoio.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\parceiro-apoio.svg",
+      "bytes": 340,
+      "sha256": "3d2e499cc0f8e7782860a05c3dca3a763af1503d610b467581266321d0fb9421"
+    },
+    {
+      "path": "assets/parceiro-principal.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\parceiro-principal.svg",
+      "bytes": 343,
+      "sha256": "37299f86c70447027fc8c7668a9c6079abce3991cc38c68ca3d853927dd9d715"
+    },
+    {
+      "path": "assets/pessoa-01.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\pessoa-01.svg",
+      "bytes": 884,
+      "sha256": "db150829e3d99ede3701bf1b1a4c0a3aec4b5dc05ac6421cbb77eb6554a62c4a"
+    },
+    {
+      "path": "assets/pessoa-02.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\pessoa-02.svg",
+      "bytes": 884,
+      "sha256": "3ee0c1791ca99a31993d4146e5767bf3faf8567d369e4ca6964c899fff00ba58"
+    },
+    {
+      "path": "assets/pessoa-03.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\pessoa-03.svg",
+      "bytes": 884,
+      "sha256": "9d6b6719f5212ba00533018a99fb99f8bc05c3725b8d4b76ff2dd2c2fb695f49"
+    },
+    {
+      "path": "assets/programa-01.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\programa-01.svg",
+      "bytes": 777,
+      "sha256": "909e9199871fefdc20085df73a5e7e6c76fd3eb1c3c6bc2342e408a68117ff28"
+    },
+    {
+      "path": "assets/programa-02.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\programa-02.svg",
+      "bytes": 777,
+      "sha256": "0bbd2427a26fd2b700c1d25a299ef9e86d7b0928d1828c903db5c365e043397c"
+    },
+    {
+      "path": "assets/programa-03.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\programa-03.svg",
+      "bytes": 777,
+      "sha256": "e488873c6ce897639f48b84d3c042b8ac36eeb192f68ca82afbf7d97b7bf4f1c"
+    },
+    {
+      "path": "assets/programa-04.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\programa-04.svg",
+      "bytes": 777,
+      "sha256": "874ecc52505ff448e63153a1584e53d5ce27148b1b0149d21b5f75e29f234a22"
+    },
+    {
+      "path": "assets/selo-d2c-icon.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\selo-d2c-icon.svg",
+      "bytes": 1565,
+      "sha256": "cd64e1d675c5d089359a1f6b87046aa649d960c910c7e2a6bcdae3b1b6daff80"
+    },
+    {
+      "path": "assets/selo-d2c.svg",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\assets\\selo-d2c.svg",
+      "bytes": 12311,
+      "sha256": "36a9f13aad38081b883d8db92e046ee18a95aa5db7bac0dc95259955e4710a48"
+    },
+    {
+      "path": "base.css",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\base.css",
+      "bytes": 182799,
+      "sha256": "dd64b95ef44740005519c4d9ab71a516d3269e79ec80cc06fc4b67734c2d58bf"
+    },
+    {
+      "path": "base.js",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\base.js",
+      "bytes": 2103,
+      "sha256": "2459b6da4ea251aa0846f9755451d4e5dd0c5aea1d58fa7794d4751c9b8b4682"
+    },
+    {
+      "path": "index.html",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\index.html",
+      "bytes": 29013,
+      "sha256": "552ea6b56354d6133a864abda7b82e3ee3265b4aa8edafe5b825c0520f4f4942"
+    },
+    {
+      "path": "template.css",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\template.css",
+      "bytes": 14662,
+      "sha256": "f2e186c035498e944c78702c07e121a34ed93d1e4170f9c862e2acb2e37b6b3c"
+    },
+    {
+      "path": "template.js",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\template.js",
+      "bytes": 2544,
+      "sha256": "5c41b9aa854d89fac5c80320afd018f7060c34049c40b93dd3eb62bc25920ac5"
+    },
+    {
+      "path": "typography.js",
+      "source": "C:\\Users\\ffide\\Projects\\conecta-d2c\\preview\\template-conecta-base-v1\\typography.js",
+      "bytes": 4520,
+      "sha256": "518b558cbf11f8ce78cea6b96b8e32193747e2efa57ad1eae746fa420b168e74"
+    }
+  ],
+  "externals": [
+    {
+      "url": "https://www.facebook.com/nuvemshop/",
+      "from": "index.html",
+      "kind": "link"
+    },
+    {
+      "url": "https://www.instagram.com/nuvemshop/",
+      "from": "index.html",
+      "kind": "link"
+    },
+    {
+      "url": "https://www.linkedin.com/company/nuvemshop/",
+      "from": "index.html",
+      "kind": "link"
+    },
+    {
+      "url": "https://www.nuvemshop.com.br/",
+      "from": "index.html",
+      "kind": "link"
+    },
+    {
+      "url": "https://www.youtube.com/@nuvemshop",
+      "from": "index.html",
+      "kind": "link"
+    },
+    {
+      "url": "https://x.com/nuvemshop",
+      "from": "index.html",
+      "kind": "link"
+    }
+  ],
+  "limitations": [
+    "Não interpreta JavaScript, imports, fetch, workers nem URLs montadas dinamicamente; use --extra para arquivos locais identificados na inspeção.",
+    "Não baixa recursos externos; fontes, scripts e serviços remotos continuam dependentes da rede e não são validados.",
+    "Não comprova fidelidade visual ou funcionamento; abra a raiz clonada com servidor HTTP e compare no navegador.",
+    "HTML/CSS/SVG devem ser UTF-8. base href, escapes CSS em URLs e srcset complexo são recusados, não considerados cobertos.",
+    "Links de navegação locais não são dependências. data: permanece embutido; URLs remotas em JavaScript são apenas inventariadas quando literais.",
+    "Referências script-literal podem conter placeholders de template não resolvidos; não representam URLs finais verificadas."
+  ]
+}

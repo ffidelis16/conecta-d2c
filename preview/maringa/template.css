@@ -1,0 +1,596 @@
+/* Adaptação autorizada: estrutura da Economia Prateada, conteúdo metalinguístico. */
+/* Mosaico: protagonista vertical, detalhe quadrado e apoio horizontal.
+   A composição inteira cabe na própria caixa; os apoios nunca se tocam. */
+.conecta-template .venue-gallery {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1 / 1;
+  margin: 0;
+  isolation: isolate;
+}
+.conecta-template .venue-gallery > img {
+  position: absolute;
+  display: block;
+  margin: 0;
+  object-fit: cover;
+  object-position: center;
+  border-radius: clamp(18px, 2vw, 28px);
+  transform: none !important;
+}
+.conecta-template .venue-gallery .venue-gallery__main {
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  width: 70%;
+  height: 88%;
+  z-index: 0;
+  box-shadow: none;
+}
+.conecta-template .venue-gallery .venue-gallery__detail {
+  top: 16%;
+  right: 0;
+  left: auto;
+  bottom: auto;
+  width: 43%;
+  height: 43%;
+  z-index: 2;
+  box-shadow: 0 12px 24px -12px #001f3e30;
+}
+.conecta-template .venue-gallery .venue-gallery__food {
+  top: auto;
+  bottom: 0;
+  left: auto;
+  right: 10%;
+  width: 55%;
+  height: 31%;
+  z-index: 3;
+  box-shadow: 0 12px 24px -12px #001f3e30;
+}
+.conecta-template {
+  --card-body-size: 16px;
+  --card-body-leading: 1.6;
+}
+.conecta-template .participant-cards .guest-card__meta p.guest-card__bio {
+  font-size: var(--card-body-size) !important;
+  line-height: var(--card-body-leading) !important;
+  margin: 22px 0 0 !important;
+  padding-top: 20px;
+}
+.conecta-template .participant-cards .guest-card__meta p.guest-card__role {
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  color: #59636e;
+  font-weight: 400;
+}
+.conecta-template .guest-card__role strong {
+  font-weight: 700;
+  color: inherit;
+}
+.conecta-template .program-section .program-card__body p {
+  font-size: var(--card-body-size) !important;
+  line-height: var(--card-body-leading) !important;
+}
+@media (min-width: 761px) and (max-width: 1180px) {
+  .conecta-template .program-section .program-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 360px) {
+  .conecta-template h2,
+  .conecta-template h2 em {
+    font-size: 30px !important;
+  }
+}
+.conecta-template .participant-cards .guest-card__meta {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.conecta-template .participant-cards .guest-card__meta .eyebrow {
+  margin: 0 0 12px;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.conecta-template .participant-cards .guest-card__meta h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #001f3e;
+}
+.conecta-template .participant-cards .guest-card__role {
+  margin: 0;
+}
+.conecta-template .participant-cards .guest-card__bio {
+  margin: 22px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid #d4e2ed;
+  font-size: var(--card-body-size);
+  line-height: var(--card-body-leading);
+  font-weight: 400;
+  color: #294964;
+}
+.conecta-template .participant-cards .guest-card__bio:empty {
+  display: none;
+}
+.conecta-template .program-section .program-card__body {
+  padding: 26px 24px 28px;
+}
+.conecta-template .program-section .program-card__body h3 {
+  font-size: 21px;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+.conecta-template .program-section .program-card__body p,
+.conecta-template .attendees-card ul {
+  font-size: var(--card-body-size);
+  line-height: var(--card-body-leading);
+}
+@media (min-width: 1280px) {
+  .conecta-template .event-hero__visual .quick-facts {
+    width: calc(100% - 48px);
+    max-width: 680px;
+    padding: 30px;
+  }
+  .conecta-template .quick-facts__items {
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .conecta-template .quick-facts__items > .quick-fact {
+    min-height: 92px;
+    padding: 16px 14px;
+    gap: 12px;
+  }
+  .conecta-template .quick-facts__items > .quick-fact {
+    grid-template-columns: 1fr;
+  }
+  .conecta-template .quick-facts__items strong {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+  .conecta-template .quick-facts__items small {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  .conecta-template .event-hero__visual .quick-facts > .quick-facts__venue,
+  .conecta-template
+    .event-hero__visual
+    .quick-facts
+    > .quick-facts__venue
+    > strong {
+    font-size: 14px !important;
+    line-height: 1.5;
+  }
+}
+.conecta-template {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.conecta-template h1 em,
+.conecta-template h2 em {
+  font-family: Georgia, "Times New Roman", serif;
+}
+.conecta-template h1,
+.conecta-template h2,
+.conecta-template h3 {
+  text-wrap: balance;
+}
+.conecta-template p,
+.conecta-template li {
+  text-wrap: pretty;
+}
+.conecta-template #encontro {
+  background: #f8f8f8 !important;
+}
+.conecta-template .attendees-card {
+  background: #001f3e !important;
+  color: #fff;
+  box-shadow: 0 12px 28px #001f3e14;
+}
+.conecta-template .attendees-card h3 {
+  color: #fff;
+}
+.conecta-template .attendees-card .eyebrow {
+  color: #96ffbc;
+}
+.conecta-template .attendees-card ul {
+  display: grid;
+  gap: 16px;
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+  color: #dceeff;
+}
+.conecta-template .attendees-card li {
+  position: relative;
+  padding-left: 22px;
+}
+.conecta-template .attendees-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  margin: 0;
+  border-radius: 50%;
+  background: #96ffbc;
+}
+.conecta-template[data-material="light"] .attendees-card {
+  background: #eaf5ff !important;
+}
+.conecta-template[data-material="light"] .attendees-card h3,
+.conecta-template[data-material="silver"] .attendees-card h3 {
+  color: #001f3e;
+}
+.conecta-template[data-material="light"] .attendees-card ul,
+.conecta-template[data-material="silver"] .attendees-card ul {
+  color: #001f3e;
+}
+.conecta-template[data-material="light"] .attendees-card .eyebrow,
+.conecta-template[data-material="silver"] .attendees-card .eyebrow {
+  color: #0050c3;
+}
+.conecta-template[data-material="light"] .attendees-card li::before,
+.conecta-template[data-material="silver"] .attendees-card li::before {
+  background: #0050c3;
+}
+.conecta-template[data-material="silver"] .attendees-card {
+  background: linear-gradient(
+    125deg,
+    #fbfdff 0%,
+    #d7e3ed 26%,
+    #f7fbfe 49%,
+    #c9d8e5 74%,
+    #edf4f9 100%
+  ) !important;
+  box-shadow:
+    inset 0 1px 0 white,
+    0 16px 34px #001f3e19;
+}
+.conecta-template .participant-cards,
+.conecta-template .program-grid {
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+}
+.conecta-template .participant-cards .guest-card {
+  height: 100%;
+  min-height: 0;
+}
+.conecta-template .participant-cards .guest-card__meta {
+  min-height: 0;
+}
+.conecta-template .program-section .program-grid > li {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.conecta-template .program-section .program-card__body {
+  height: auto;
+  min-height: 0;
+  flex: 1;
+}
+.conecta-template .program-card__media {
+  flex-shrink: 0;
+}
+.conecta-template [data-asset-slot] {
+  object-position: center;
+}
+.conecta-template .event-nav__media-k-logo {
+  filter: brightness(0) invert(1);
+  width: 124px;
+  height: 29px;
+}
+.conecta-template .event-nav.is-scrolled .event-nav__media-k-logo {
+  filter: brightness(0);
+}
+.conecta-template .partner-logos img {
+  filter: brightness(0) invert(1);
+}
+.conecta-template .conecta-footer__bottom > img {
+  filter: none;
+}
+.conecta-template .footer-socials .linkedin-icon,
+.conecta-template .footer-socials .linkedin-icon * {
+  stroke: none;
+}
+.conecta-template .partners-marquee {
+  overflow: hidden;
+  width: 100%;
+  scrollbar-width: none;
+}
+.conecta-template .partners-marquee::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.conecta-template .partner-logos {
+  display: flex;
+  width: max-content !important;
+  max-width: none;
+  min-width: 100%;
+  gap: 0;
+}
+.conecta-template .partner-logos__group {
+  display: flex;
+  width: max-content !important;
+  max-width: none;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: 100%;
+  gap: 32px;
+  padding-inline: 16px;
+}
+.conecta-template .partner-logos__group[aria-hidden] {
+  display: none;
+}
+.conecta-template .partner-logos__group img {
+  flex-shrink: 0;
+}
+.conecta-template .partner-logos__separator {
+  flex-shrink: 0;
+}
+.conecta-template .partner-wordmark {
+  font:
+    700 16px Arial,
+    sans-serif;
+  color: white;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.conecta-template .partners-pause {
+  color: white;
+  border: 1px solid #ffffff77;
+  background: transparent;
+  padding: 8px 14px;
+  border-radius: 99px;
+  margin-bottom: 22px;
+  font-size: 12px;
+}
+.conecta-template .partners-marquee:focus-within .partner-logos,
+.conecta-template[data-motion="off"] .partner-logos,
+.conecta-template[data-motion="off"] .event-hero__community-seal-ring {
+  animation-play-state: paused !important;
+}
+.conecta-template .template-tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  padding: 22px var(--cd-gutter);
+  background: #edf5fb;
+  border-block: 1px solid #d2e2f0;
+  font-size: 12px;
+}
+.template-tools button {
+  border: 0;
+  padding: 0;
+  color: #0050c3;
+  background: none;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.template-tools a {
+  color: #0050c3;
+}
+.conecta-template .template-form-slot {
+  padding: 28px;
+  border: 1px dashed #88adc9;
+  border-radius: 16px;
+  background: #f6fafd;
+}
+.conecta-template .template-form-slot .button {
+  margin: 12px 0 20px;
+}
+.conecta-template .template-form-slot .text-link {
+  display: block;
+  font-size: 13px;
+}
+.conecta-template .quick-facts__heading p {
+  white-space: normal;
+}
+.conecta-template .quick-fact strong {
+  white-space: normal;
+}
+.conecta-template .quick-facts__items > .quick-fact {
+  height: auto;
+  min-height: 64px;
+  background: #f5f7f9;
+}
+.conecta-template .event-hero__content > .eyebrow {
+  font-size: 12px !important;
+  line-height: 1.4;
+  color: var(--cd-blue);
+  letter-spacing: 0.08em;
+  max-width: none;
+}
+.conecta-template .quick-facts {
+  container-type: inline-size;
+  container-name: facts;
+}
+.conecta-template .partners-section .container {
+  height: auto;
+  grid-template-columns: minmax(240px, 0.85fr) minmax(0, 1.5fr);
+  gap: 40px;
+}
+.conecta-template .partners-heading,
+.conecta-template .partners-marquee {
+  min-width: 0;
+}
+.conecta-template .partners-pause {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.conecta-template .partners-section .container {
+  align-items: center;
+}
+.conecta-template .partners-section {
+  height: auto;
+  padding: 40px 0;
+}
+.conecta-template .partners-marquee {
+  justify-content: flex-start;
+}
+.conecta-template .partner-logos {
+  flex: none;
+}
+@container facts (max-width:400px) {
+  .conecta-template .quick-facts__items {
+    grid-template-columns: 1fr !important;
+  }
+  .conecta-template .quick-facts__items > .quick-fact {
+    grid-column: auto !important;
+  }
+}
+@media (max-width: 1023px) {
+  .conecta-template .partners-section .container {
+    display: block;
+    height: auto;
+  }
+  .conecta-template .partners-heading {
+    margin-bottom: 28px;
+  }
+  .conecta-template .partners-marquee {
+    overflow-x: auto;
+  }
+  .conecta-template .program-section .section-heading--split {
+    grid-template-columns: 1fr;
+  }
+}
+.conecta-template .reveal {
+  opacity: 1;
+  transform: none;
+}
+.conecta-template .button:active {
+  transform: scale(0.98);
+}
+.conecta-template .button:hover {
+  transform: none;
+}
+.conecta-template .form-modal {
+  transition: opacity 0.18s ease-out;
+}
+.conecta-template .form-modal.is-open {
+  visibility: visible;
+}
+@keyframes template-partners {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (min-width: 1024px) and (max-width: 1180px) {
+  .conecta-template .venue-section__grid {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* Sangrias do modelo: a mídia alcança a viewport; conteúdo e ficha ficam no grid. */
+@media (min-width: 1024px) {
+  .conecta-template .event-hero__visual {
+    width: calc(
+      100% + max(var(--cd-gutter), calc((100vw - var(--cd-max)) / 2))
+    );
+    margin-right: calc(
+      -1 * max(var(--cd-gutter), calc((100vw - var(--cd-max)) / 2))
+    );
+  }
+  .conecta-template .event-hero__visual > img,
+  .conecta-template .event-final-cta__image {
+    max-width: none;
+    border-radius: 0;
+  }
+}
+@media (min-width: 1181px) {
+  .conecta-template .event-final-cta__image {
+    width: calc(
+      100% + max(var(--cd-gutter), calc((100vw - var(--cd-max)) / 2))
+    );
+    margin-right: calc(
+      -1 * max(var(--cd-gutter), calc((100vw - var(--cd-max)) / 2))
+    );
+  }
+}
+@media (min-width: 761px) and (max-width: 1180px) {
+  .conecta-template .event-final-cta__image {
+    width: calc(100% + (var(--cd-gutter) * 2));
+    margin-right: calc(-1 * var(--cd-gutter));
+    margin-left: calc(-1 * var(--cd-gutter));
+  }
+}
+@media (max-width: 760px) {
+  .conecta-template .event-hero__visual {
+    width: calc(100% + (var(--cd-gutter) * 2)) !important;
+    margin: 34px calc(-1 * var(--cd-gutter)) 0 !important;
+  }
+  .conecta-template .event-final-cta__image {
+    width: calc(100% + (var(--cd-gutter) * 2)) !important;
+    margin-right: calc(-1 * var(--cd-gutter)) !important;
+    margin-left: calc(-1 * var(--cd-gutter)) !important;
+  }
+  .conecta-template .partners-marquee {
+    overflow: hidden;
+  }
+  .conecta-template .partner-logos {
+    min-width: 0;
+    animation: template-partners var(--partner-duration, 30s) linear infinite;
+  }
+  .conecta-template .partner-logos__group {
+    min-width: 0;
+    padding-inline: 16px;
+    gap: 24px;
+  }
+  .conecta-template .partner-logos__group[aria-hidden] {
+    display: flex;
+  }
+  .conecta-template .partner-logos__group img {
+    max-width: none;
+    width: 150px;
+    height: 30px;
+    object-fit: contain;
+  }
+  .conecta-template .participant-cards,
+  .conecta-template .program-grid {
+    grid-auto-rows: 1fr;
+  }
+  .conecta-template .program-section .program-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .conecta-template .event-nav__media-k-logo {
+    width: 96px;
+    height: 24px;
+  }
+  .conecta-template .template-form-slot {
+    padding: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .conecta-template .partner-logos,
+  .conecta-template .event-hero__community-seal-ring {
+    animation: none !important;
+  }
+  .conecta-template .partners-marquee {
+    overflow-x: auto;
+  }
+  .conecta-template .partner-logos__group[aria-hidden] {
+    display: none;
+  }
+  .conecta-template .partners-pause {
+    display: none;
+  }
+  .conecta-template .button {
+    transition: none;
+  }
+  .conecta-template .form-modal,
+  .conecta-template .form-modal__panel {
+    transition: none;
+  }
+}
