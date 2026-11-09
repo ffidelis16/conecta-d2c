@@ -1,0 +1,163 @@
+{
+  "version": "0.7.2",
+  "color": "#1B1B1B",
+  "count": 26,
+  "logos": [
+    {
+      "id": "agency-wavecommerce",
+      "name": "WaveCommerce",
+      "file": "agency-wavecommerce.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-tec4u",
+      "name": "TEC4U",
+      "file": "agency-tec4u.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-weethub",
+      "name": "Weethub",
+      "file": "agency-weethub.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-salte-commerce",
+      "name": "Salte Commerce",
+      "file": "agency-salte-commerce.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-simples-inovacao",
+      "name": "Simples Inovação",
+      "file": "agency-simples-inovacao.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-oceanus",
+      "name": "Oceanus",
+      "file": "agency-oceanus.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-oasis",
+      "name": "Oasis",
+      "file": "agency-oasis.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-kyraly",
+      "name": "Kyraly",
+      "file": "agency-kyraly.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-metodo-start",
+      "name": "Método Start",
+      "file": "agency-metodo-start.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-nacionalnet-marketing-digital",
+      "name": "Nacionalnet Marketing Digital",
+      "file": "agency-nacionalnet-marketing-digital.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-pandorium",
+      "name": "Pandorium",
+      "file": "agency-pandorium.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-eficaz",
+      "name": "Eficaz",
+      "file": "agency-eficaz.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-score-media",
+      "name": "Score Media",
+      "file": "agency-score-media.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-guru-de-brecho",
+      "name": "Guru de Brechó",
+      "file": "agency-guru-de-brecho.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-blu-assessoria",
+      "name": "Blu Assessoria",
+      "file": "agency-blu-assessoria.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-econcept",
+      "name": "Econcept",
+      "file": "agency-econcept.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-dr-growth",
+      "name": "Dr. Growth",
+      "file": "agency-dr-growth.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-base-do-e-commerce",
+      "name": "Base do E-commerce",
+      "file": "agency-base-do-e-commerce.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-barbieratto",
+      "name": "Barbieratto",
+      "file": "agency-barbieratto.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-aure-digital",
+      "name": "Aure Digital",
+      "file": "agency-aure-digital.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-almah",
+      "name": "Almah",
+      "file": "agency-almah.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-agrada",
+      "name": "Agrada",
+      "file": "agency-agrada.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-alfinet",
+      "name": "Alfinet",
+      "file": "agency-alfinet.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-universo-ecommerce",
+      "name": "Universo E-commerce",
+      "file": "agency-universo-ecommerce.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-after-click",
+      "name": "After Click",
+      "file": "agency-after-click.svg",
+      "color": "#1B1B1B"
+    },
+    {
+      "id": "agency-yssa",
+      "name": "YSSA",
+      "file": "agency-yssa.svg",
+      "color": "#1B1B1B"
+    }
+  ]
+}
